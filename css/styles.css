@@ -66,7 +66,7 @@ h1 {
 	font-weight: 700;
 	text-decoration: underline;
 	text-align: center;
-	margin: 5px auto;
+	margin: 37px auto;
 }
 
 h2 {
@@ -181,7 +181,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 	width: 70px; 
 	height: 70px; 
 	flex: 0;
-	margin: 5px;
+	margin: 0 5px;
 }
 
 .about-me {
@@ -195,7 +195,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 	padding: 20px;
 	border: 3px solid var(--grey);
 }
-
 
 .about-me_paragraph::first-letter {
 	font-size: 40px;
@@ -214,7 +213,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 	margin: 0 auto;
 	padding: 10px;
 	border: 3px solid var(--grey)
-	
 }
 
 .contact-form {
@@ -232,10 +230,10 @@ button:hover, button:focus, .button:hover, .button:focus {
 	width: 125px;
 	/* auto keeps the ratio the same */
 	height: auto; 
-	margin-top: 5%;
+	margin-top: 10px;
 	margin-right: 8%;
 	border-radius: 50%;
-	
+	margin-left: 20px;
 }
 
 .profile {
@@ -246,8 +244,8 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 .profile_paragraph {
 	display: inline;
-	margin: 60px auto;
-	text-indent: 40px;
+	padding: 60px;
+	text-indent: 35px;
 }
 
 .page-footer {
@@ -409,6 +407,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 	}
 	h1 {
 		font-size: 22px;
+		margin: 32px auto;
 	}
 }
 
