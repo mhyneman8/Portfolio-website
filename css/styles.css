@@ -1,19 +1,20 @@
 /*
-Colors:
+Colors: 
 	#0b0c10 - black
 	#1f2833 - navy blue
 	#c5c6c7 - grey
 	#66fcf1 - light blue
 	#45a29e - blue
 
-	dark grey (text): #2b2b2b
+
+	dark grey (text): #2b2b2b 
 	Primary Color (purple): #357b70;
 	Secondary Color (orange): #e0b354;
 
 	Color ratio checker https://contrast-ratio.com/#white-on-%23357b70
 	 Add base styling here (fonts, sizes, spacing etc)
 
-?s: I'm gettin an error message on the contact.html The value of the "for" attribute of the "label" element must be the ID of a non-hidden form control
+?s 
 */
 
 /* adds to all html elements */
@@ -53,8 +54,7 @@ header {
   	text-align: center;
   	border-bottom: 2px solid var(--grey);
 }
-
-/*
+	/*
 	background-color: var(--black);
 	color: var(--light-blue);
 	border-bottom: 2px solid var(--grey);
@@ -86,10 +86,9 @@ a {
 	transition-duration: 0.3s;
 }
 
-/* focus is for accessibility*/
-a:hover,
-a:focus {
-	/* gets rid of underline */
+	/* focus is for accessibility*/
+a:hover, a:focus {
+	/*gets rid of underline */
 	text-decoration: underline;
 	opacity: 0.5;
 }
@@ -106,7 +105,7 @@ a:active {
  	background-color: var(--primary-color);
  	color: white;
  	text-decoration: none;
- 	width: 250px;
+ 	width: 250px; 
  	text-align: center;
  	margin: 40px auto;
  	/* space between text and outside */
@@ -179,8 +178,8 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 .mh-logo {
 	border-radius: 35px;
-	width: 70px;
-	height: 70px;
+	width: 70px; 
+	height: 70px; 
 	flex: 0;
 	margin: 0 5px;
 }
@@ -230,7 +229,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 	float: left;
 	width: 125px;
 	/* auto keeps the ratio the same */
-	height: auto;
+	height: auto; 
 	margin-top: 10px;
 	margin-right: 8%;
 	border-radius: 50%;
@@ -292,7 +291,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 	display: inline-block;
 	width: 33%;
 }
-
 /* end grid fallback */
 
 /* specify declarations that depend on browsers support */
@@ -345,7 +343,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 .contact-para {
 	text-align: center;
 }
-
 .contact-me {
 		display: flex;
 		flex-direction: column;
@@ -357,7 +354,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 		min-width: 330px;
 		text-align: center;
 	}
-
 .contact-form {
 	margin: 40px auto;
 	display: block;
@@ -378,26 +374,18 @@ button:hover, button:focus, .button:hover, .button:focus {
 	animation: 5s snow-color-change-reverse infinite alternate linear;
 }
 
-#dot_top-left,
-#dot_left,
-#dot_right-center {
+#dot_top-left, #dot_left, #dot_right-center {
 	animation: 10s dot-move infinite normal linear;
 }
 
-#dot_top-right,
-#dot_center-top,
-#dot_right-right2 {
+#dot_top-right, #dot_center-top, #dot_right-right2 {
 	animation: 5s dot-move infinite normal linear;
 }
 
-#dot_right-left,
-#dot_center-bottom {
+#dot_right-left, #dot_center-bottom {
 	animation: 3s dot-move infinite normal linear;
 }
-
-#dot_right-bottom,
-#dot_center,
-#dot-right-right1 {
+#dot_right-bottom, #dot_center, #dot-right-right1 {
 	animation: 8s dot-move infinite normal linear;
 }
 
@@ -411,14 +399,12 @@ button:hover, button:focus, .button:hover, .button:focus {
 		grid-column: auto / auto;
 		grid-row: auto / auto;
 	}
-
 	.contact-me {
 		border: 2px solid var(--grey);
 		background-color: var(--black);
 		margin: 10px auto;
 		padding: 20px;
 	}
-
 	h1 {
 		font-size: 22px;
 		margin: 32px auto;
@@ -429,28 +415,24 @@ button:hover, button:focus, .button:hover, .button:focus {
 	.grid {
 		grid-template-columns: 1fr;
 	}
-
 	.contact-label {
 		display: block;
 	}
-
 	.contact-me {
 		border: 1px solid var(--grey);
 		padding: 8px 10px;
 		margin: 10px auto;
 	}
-
-		.contact-form {
+	.contact-form {
 		border: 1px solid var(--grey);
 		margin: 30px auto;
 		text-align: center;
 	}
-
 	.navigation-list {
 		display: none;
 	}
-
-/* dropdown button */
+	
+	/*dropdown button */
 	.dropbtn {
 		background-color: var(--primary-color);
 		color: white;
@@ -462,13 +444,11 @@ button:hover, button:focus, .button:hover, .button:focus {
 		border-radius: 3px;
 		line-height: 5px;
 	}
-
 	/* container div needed to position the dropdown content */
 	.dropdown {
 		position: relative;
 		display: inline-block;
 	}
-
 	/* dropdown content (hidden by default)*/
 	.dropdown-content {
 		display: none;
@@ -480,7 +460,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 		z-index: 1;
 	}
-
 	/* links inside the dropdown */
 	.dropdown-content a {
 		color: black;
@@ -499,7 +478,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 	}
 	/* change background color of dropdown button when content is shown */
 	.dropdown:hover .dropbtn {
-
+		
 		opacity: 0.5;
 	}
 }
