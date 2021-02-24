@@ -2,13 +2,16 @@
 <html>
 
 <head>
-	
-	<meta charset="utf-8" name="viewport" content="width=device-width, initial 1-scale=1">
+
+	<meta charset="utf-8">
+
 	<title>Contact MH</title>
+
+	<meta name="viewport" content="width=device-width, initial 1-scale=1">
 
 <!-- reset browser default style (first link) -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-	
+
 <!-- favicon, icon on tab -->
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
 
@@ -22,14 +25,14 @@
 </head>
 
 <body>
-	
+
 	<!-- nav bar -->
 	<header class="page-header">
 		<!-- logo -->
 		<img src="img/logo.jpg" alt="MH logo" class="mh-logo  page-header__item">
 		<nav class="main-navigation page-header__item">
 			<ul role="menubar" class="navigation-list">
-				<li role="presentation"> 
+				<li role="presentation">
 					<a href="index.html" role="menuitem" class="navigation-list__item" >Home</a>
 				</li>
 				<li role="presentation">
@@ -65,34 +68,34 @@
 		</p>
 		<!-- linked to call -->
 		<div class="contact-me">
-			<label for="phone"><span class="contact-label">Phone Number: </span></label>
+			<label for="phone" class="contact-label">Phone Number: </label>
 			<a href="tel:7735557722" id="phone" >Call: (773) 555-7722</a>
 
 		<!-- link to email -->
-			<label for="email"><span class="contact-label">Email: </span></label>
+			<label for="email" class="contact-label">Email: </label>
 			<a href="mailto:mallory.hyneman@gmail.com" id="email">mallory(dot)hyneman(at)gmail(dot)com</a>
-		</div>	
-		
-	
+		</div>
+
+
 	<!--contact form -->
 <form action="/action.php" method="post" id="contact-form" class="contact-form">
-  
+
   	<h2 class="form-label">Send me a message!</h2>
- 
+
   	<label class="form-label" for="contact-email">E-mail:* </label>
    	<input type="email" required id="contact-email">
- 
- 
+
+
  	<label class="form-label" for="contact-phone" >Telephone: </label>
   	<input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="###-###-####"  id="contact-phone">
- 
+
  	 <label class="form-label" for="contact-message">Message:* </label>
   	<textarea required maxlength="240" placeholder="240 max characters" rows="6" cols="30" id="contact-message"></textarea>
-  
-  
+
+
   	<input type="submit" value="Send Message" class="button_secondary button">
 </form>
-	
+
 	</main>
 
 <!-- footer -->
@@ -115,5 +118,3 @@
 </body>
 
 </html>
-
-	
