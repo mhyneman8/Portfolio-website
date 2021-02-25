@@ -270,7 +270,7 @@ button:focus,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: absolute; bottom: 0;
+  position: bottom: 0;
   background-color: #0b0c10;
   border-top: 2px solid #c5c6c7;
   text-align: center;
