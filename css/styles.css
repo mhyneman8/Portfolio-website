@@ -264,7 +264,8 @@ button:focus,
   border-top: 2px solid var(--grey);
   text-align: center;
   width: 100%;
-  height: 15%;
+  height: -webkit- 15%;
+  height: auto;
 }
 
 .social-media {
