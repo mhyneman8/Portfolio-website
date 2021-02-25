@@ -260,6 +260,7 @@ button:focus,
   clear: both;
   display: block;
   flex-direction: column;
+  position: absolute, bottom: 0;
   background-color: var(--black);
   border-top: 2px solid var(--grey);
   text-align: center;
