@@ -1,11 +1,3 @@
-Skip to content
-mydea/stylelint.config.js Secret
-Created 4 years ago • Report abuse
- Code
- Revisions 1
- Forks 2
-Example stylelint config
-stylelint.config.js
 "use strict"
 
 module.exports = {
@@ -138,17 +130,3 @@ module.exports = {
     "value-list-max-empty-lines": 0,
   },
 }
-
-Leave a comment
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
