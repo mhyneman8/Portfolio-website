@@ -7,19 +7,19 @@
 
 	<title>MH's Projects</title>
 
-  <meta name="viewport" content="width=device-width, initial 1-scale=1">
+  <meta name="viewport" content="width=device-width,initial 1-scale=1">
 
-<!-- resets browser default styles (first link) -->
+  <!-- resets browser default styles (first link) -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
-<!-- favicon, icon on tab -->
+  <!-- favicon, icon on tab -->
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
 
-<!-- google font Lora -->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <!-- google font Lato and Playfair Display -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
-<!-- styelesheet css (last link) -->
+  <!-- styelesheet css (last link) -->
 	<link rel="stylesheet" type="text/css" href="css/style.production.css">
 
 </head>
@@ -34,28 +34,33 @@
 		<nav class="main-navigation page-header__item">
 			<ul role="menubar" class="navigation-list">
 				<li role="presentation">
-					<a href="index.html" role="menuitem" class="navigation-list__item" >Home</a>
+					<a href="index.html" role="menuitem" class="navigation-list__item" >
+            Home
+          </a>
 				</li>
 				<li role="presentation">
-					<a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
+					<a href="about.html" role="menuitem" class="navigation-list__item">
+            About Me
+          </a>
 				</li>
 				<li role="presentation">
 					<a href="projects.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Projects</a>
 				</li>
 				<li role="presentation">
-					<a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+					<a href="contact.html" role="menuitem" class="navigation-list__item">
+            Contact
+          </a>
 				</li>
 			</ul>
 		<div class="dropdown">
-			<button class="dropbtn">_ <br>_<br>_
-					</button>
+      <img class="dropbtn" src="img/nav_bar.png" alt="navigation">
 					<div class="dropdown-content">
 						<a href="index.html">Home</a>
 						<a href="about.html">About Me</a>
 						<a href="projects.html">Projects</a>
 						<a href="contact.html">Contact</a>
-					</div>
-		</div>
+					</div> <!-- end of dropdown-content -->
+		</div> <!-- end of dropdown -->
 
 		</nav>
 	</header>
@@ -64,34 +69,34 @@
 		<section>
 			<h1>My Projects</h1>
 
-<!-- input project pics -->
+      <!-- input project pics -->
 			<article class="grid">
 
 				<div class="grid__item">
           <a href="https://www.motherbgreen.com/" target="_blank" >
 					<img class="project_img" src="img/mbg-website.png" alt="MBG Home Page">
-        </a>
+          </a>
           <h2>MBG Website</h2>
 					<p>The MBG website was revitalized by utilizing a combination of SquareSpace design tools and custom CSS. </p>
-				</div>
+				</div> <!-- end of grid__item -->
 
 				<div class="grid__item">
 					<img class="project_img" src="https://via.placeholder.com/150" alt="Project 2">
 					<h2>Project Title: </h2>
 					<p>showcasing skill</p>
-				</div>
+				</div> <!-- end of grid__item -->
 
 				<div class="grid__item">
 					<img class="project_img" src="https://via.placeholder.com/150" alt="project title">
 					<h2>Project Title: </h2>
 					<p>showcasing skill</p>
-				</div>
+				</div> <!-- end of grid__item -->
 
 				<div class="grid__item">
 					<img class="project_img" src="https://via.placeholder.com/150" alt="project title">
 					<h2>Project Title: </h2>
 					<p>showcasing skill</p>
-				</div>
+				</div> <!-- end of grid__item-->
 			</article>
 		</section>
 
@@ -101,18 +106,18 @@
 <footer class="page-footer">
 	<h2>Find me on</h2>
 
-	<div class="social-media">
-	<!-- Github Icon -->
-		<img src="img/github.svg" class="social-media" alt="Github">
-	<!-- Twitter Icon -->
-		<img src="img/twitter.svg" class="social-media" alt="Twitter">
-	<!-- Linkedin Icon -->
-		<img src="img/linkedin.svg" class="social-media" alt="LinkedIn">
-	</div>
+  <div class="social-media">
+    <!-- Github Icon -->
+    <a href="https://github.com/mhyneman8" target="_blank">
+    <img src="img/github.svg" class="social-media" alt="Github">
+    </a>
+    <!-- Linkedin Icon -->
+    <a href="https://www.linkedin.com/in/mallory-hyneman-984431102/" target="_blank">
+    <img src="img/linkedin.png" class="social-media" alt="LinkedIn">
+    </a>
+  </div> <!-- end of social-media -->
 
 </footer>
-
-
 
 	<script src="js/tota11y.min.js"></script>
 </body>
