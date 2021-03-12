@@ -93,7 +93,7 @@ a:focus {
 
 a:active {
   /* selected link */
-  color: var(--secondary-darker);
+  color: var(--black);
 }
 
 .button {
