@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
   <!-- link stylesheet (should be last) -->
-	<link rel="stylesheet" type="text/css" href="css/style.production.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
 
@@ -34,33 +34,33 @@
 			<ul role="menubar" class="navigation-list">
 				<li role="presentation">
 					<a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active" >
-            Home
-          </a>
+            	Home
+         			</a>
 				</li>
 				<li role="presentation">
 					<a href="about.html" role="menuitem" class="navigation-list__item">
-            About Me
-          </a>
+            	About Me
+          			</a>
 				</li>
 				<li role="presentation">
 					<a href="projects.html" role="menuitem" class="navigation-list__item">
-            Projects
-          </a>
+            	Projects
+          			</a>
 				</li>
 				<li role="presentation">
 					<a href="contact.html" role="menuitem" class="navigation-list__item">
-            Contact
-          </a>
+            	Contact
+          			</a>
 				</li>
 			</ul>
 			<div class="dropdown">
-        <img class="dropbtn" src="img/nav_bar.png" alt="navigation">
-					<div class="dropdown-content">
-						<a href="index.html">Home</a>
-						<a href="about.html">About Me</a>
-						<a href="projects.html">Projects</a>
-						<a href="contact.html">Contact</a>
-					</div> <!-- end of dropdown-content -->
+        		<img class="dropbtn" src="img/nav_bar.png" alt="navigation">
+				<div class="dropdown-content">
+					<a href="index.html">Home</a>
+					<a href="about.html">About Me</a>
+					<a href="projects.html">Projects</a>
+					<a href="contact.html">Contact</a>
+				</div> <!-- end of dropdown-content -->
 		  </div><!-- end of dropdown -->
 		</nav>
 	</header>
@@ -72,15 +72,22 @@
 
 		<div class="profile">
 
-		  <h1>Mallory Hyneman Web Development</h1>
+			<h1>Mallory Hyneman
+				<br>
+				Web Development
+			</h1>
+			<div>
+				<p class="profile_paragraph">
+					Welcome to my page! I am a web developer from Chicago with experience leading teams working on multiple objectives, while communicating effectively, and maintaining project organization. Comfortable with MERN full stack projects.
+				</p>
+				<div class="button_out">
+					<!-- button goes to projects page -->
+					<a href="projects.html" class="index_button button">Check out some of my code</a>
+				</div> <!-- end of button_out -->
+			</div>
+			
 
-		  <p class="profile_paragraph">Welcome to my page! I am a web developer from Chicago. My current focus is frontend development.</p>
-      <div class="button_out">
-        <!-- button goes to projects page -->
-        <a href="projects.html" class="index_button button">Check out some of my code</a>
-      </div> <!-- end of button_out -->
-
-  	</div> <!-- profile -->
+  		</div> <!-- profile -->
 
 	</main>
 

@@ -1,13 +1,5 @@
 /*
-Colors:
-  #0b0c10 - black
-  #1f2833 - navy blue
-  #c5c6c7 - grey
-  #66fcf1 - light blue
-  #45a29e - blue
-
   Color ratio checker https://contrast-ratio.com/#white-on-%23357b70
-   Add base styling here (fonts, sizes, spacing etc)
 
 ?s
 */
@@ -71,6 +63,7 @@ h2 {
   font-size: var(--h2-size);
   text-align: center;
   font-family: 'Playfair Display', serif;
+  margin: 5px auto;
 }
 
 .grid p {
@@ -92,7 +85,6 @@ a:focus {
 }
 
 a:active {
-  /* selected link */
   color: var(--black);
 }
 
@@ -106,12 +98,8 @@ a:active {
   width: 15.625rem;
   text-align: center;
   margin: 3.75rem auto;
-
-  /* space between text and outside */
   padding: 0.625rem;
-
-  /* rounded corners */
-  border-radius: 0.188rem;
+  border-radius: 3px;
   border-bottom: 0.125rem solid rgba(0, 0, 0, 0.3);
   transition: 0.9s ease;
 }
@@ -120,10 +108,7 @@ button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-  /* mouse turns to hand */
   cursor: pointer;
-
-  /* reduces opacity */
   opacity: 0.9;
 }
 
@@ -136,13 +121,13 @@ button:focus,
   border: 0.094rem solid var(--light-blue);
   min-width: 16.25rem;
   margin: 3.75rem auto;
-  /* givese bottom border with width, solid, color  */
   border-bottom: 0.125rem solid var(--boarder-shadow);
   border-right: 0.125rem solid var(--boarder-shadow);
 }
 
 .button_out {
   max-width: 800px;
+  margin: 105px auto;
 }
 
 .primary_button:hover,
@@ -164,9 +149,13 @@ button:focus,
 
 .page-header {
   display: flex;
-  width: 100%;
   padding: 1.25rem;
   height: 6.25rem;
+  clear: both;
+  width: 100%;
+  max-width: 1120px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .page-header__item {
@@ -186,7 +175,6 @@ button:focus,
 }
 
 .navigation-list {
-  /* gets rid of bullet points */
   list-style-type: none;
 }
 
@@ -204,20 +192,18 @@ button:focus,
   width: 4.1rem;
   height: 4.1rem;
   flex: 0;
-  margin: 0 0.313rem;
-}
-
-.about_me {
-  border: 0.188rem solid var(--grey);
-  margin: 10% auto;
-  max-width: 43.75rem;
-  padding: 7% 10%;
+  margin: 1% 5%;
 }
 
 .about-me_paragraph {
   display: block;
   position: relative;
   line-height: 2.4;
+  text-align: left;
+  border: 0.188rem solid var(--grey);
+  margin: 4% auto;
+  max-width: 43.75rem;
+  padding: 7% 10%;
 }
 
 .about-me_paragraph::first-letter {
@@ -227,7 +213,7 @@ button:focus,
 
 .about-me-list {
   display: block;
-  margin: 1.25rem 20%;
+  margin: 4.25rem 20%;
   text-align: center;
   border: 0.188rem solid var(--grey);
 }
@@ -239,9 +225,11 @@ button:focus,
 .about_table {
   position: relative;
   text-align: center;
-  margin: 0 auto;
   padding: 0.625rem;
   border: 0.188rem solid var(--grey);
+  margin: 1.25rem auto;
+  width: 84%;
+  max-width: 43.75rem;
 }
 
 .contact-form {
@@ -255,18 +243,15 @@ button:focus,
 }
 
 .profile_picture {
-  display: inline-block;
   float: left;
   width: 7.813rem;
   border: 0.063rem solid var(--grey);
-  /* auto keeps the ratio the same */
   height: auto;
   margin: 1% 8% 50% 10%;
   border-radius: 50%;
 }
 
 main {
-  /* margin outside, padding inside */
   max-width: 800px;
   min-width: 2.813rem;
   margin: 5% auto;
@@ -279,12 +264,10 @@ main {
 
 .profile_paragraph {
   display: inline;
-  padding: 3.75rem;
   line-height: 2.2;
 }
 
 .page-footer {
-  /* means elements can't float on both sides */
   clear: both;
   display: block;
   flex-direction: column;
@@ -309,12 +292,6 @@ main {
   border-radius: 2.188rem;
 }
 
-.page-header {
-  clear: both;
-  display: flex;
-  width: 100%;
-}
-
 .dropdown {
   display: none;
 }
@@ -323,6 +300,7 @@ main {
   text-align: center;
   display: block;
   margin: 0.5rem auto;
+  font-size: 1.5625rem;
 }
 
 #contact-email {
@@ -364,29 +342,38 @@ main {
     min-height: auto;
     padding: 1.25rem;
     text-align: center;
+    border-radius: 2px;
   }
+}
 
-  .grid__item:last-child {
-    grid-column: 3 / 3;
-    grid-row: 1 / 3;
-  }
+.code-btn {
+  background-color: var(--light-blue);
+  width: 50px;
+  text-align: center;
+  margin: 10px auto;
+  border-radius: 2px;
+  height: 20px;
+  position: relative;
+}
+
+.code {
+  color: var(--black);
+  font-size: 10px;
+  position: absolute;
+  top: 3px;
+  left: 14px;
+
 }
 
 .project_img {
-  margin: 5%;
-  border-radius: 0.625rem;
-  width: 9.375rem;
-  height: 11.25rem;
-}
-
-.about_table {
-  text-align: center;
-  margin: 1.25rem auto;
+  border-radius: 2px;
+  width: 13.375rem;
+  height: 12.25rem;
 }
 
 .chicago_image {
   display: block;
-  margin: 0.313rem auto;
+  margin: -38px auto;
   width: 80%;
 }
 
@@ -411,6 +398,7 @@ main {
   max-width: 53.125rem;
   min-width: 20.625rem;
   text-align: center;
+  width: 80%;
 }
 
 .contact-form {
@@ -421,12 +409,6 @@ main {
 
 .snowflake_left,
 .snowflake_right {
-  /* all the following goes in one property
-  animation-duration: 4s;
-  animation-name: color-change;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear; */
   animation: 5s snow-color-change infinite alternate linear;
 }
 
@@ -470,19 +452,21 @@ main {
 
   .profile_picture {
       margin: 4% 6%;
+      width: 6rem;
   }
 
   .profile_paragraph {
-    margin: 3rem auto;
-    text-align: center;
+    margin: 1rem auto;
+    text-align: left;
     min-width: 200px;
     max-width: 400px;
+    display: inline-block;
   }
 
   .main-navigation {
     margin-right: 3%;
   }
-
+/* 750 */
   .mh-logo {
     width: 3.5rem;
     height: 3.5rem;
@@ -497,13 +481,28 @@ main {
   }
 
   h1 {
-    font-size: 1.375rem;
+    font-size: 1.9rem;
     margin: 2rem auto;
     letter-spacing: 0.063rem;
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 560px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .primary_button,
+  .index_button {
+    min-width: 7.25rem;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+  
   .grid {
     grid-template-columns: 1fr;
   }
@@ -523,7 +522,7 @@ main {
   .navigation-list {
     display: none;
   }
-
+ 
   .mh-logo {
     width: 3rem;
     height: 3rem;
@@ -531,21 +530,19 @@ main {
   }
 
   .profile_picture {
-      margin: 3% 5% 50% 5%;
+      margin: 0.625rem 2.5rem;
   }
 
   .profile_paragraph {
     margin: 10% auto;
     min-width: 90px;
-    max-width: 100px;
+    display: block;
   }
 
   .primary_button {
-    margin-right: 8%;
+    margin-right: 10% auto;
     justify-content: center;
   }
-
-
 
   /* dropdown button */
  .dropbtn {
@@ -598,6 +595,16 @@ main {
   /* change background color of dropdown button when content is shown */
   .dropdown:hover .dropbtn {
     opacity: 0.5;
+  }
+}
+
+@media all and (max-width: 360px) {
+  .profile_paragraph {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
   }
 }
 

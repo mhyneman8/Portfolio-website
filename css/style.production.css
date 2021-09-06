@@ -269,7 +269,7 @@ button:focus,
 }
 
 .profile_picture {
-  display: inline-block;
+  /* display: inline-block; */
   float: left;
   width: 7.813rem;
   border: 0.063rem solid #c5c6c7;
