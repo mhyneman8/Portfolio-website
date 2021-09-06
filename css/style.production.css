@@ -287,12 +287,8 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-<<<<<<< Updated upstream
   position: relative;
   bottom: 0;
-=======
-  position: relative; bottom: 0;
->>>>>>> Stashed changes
   background-color: #0b0c10;
   border-top: 0.125rem solid #c5c6c7;
   text-align: center;
