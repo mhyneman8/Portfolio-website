@@ -127,6 +127,7 @@ button:focus,
 
 .button_out {
   max-width: 800px;
+  margin: 105px auto;
 }
 
 .primary_button:hover,
@@ -148,9 +149,13 @@ button:focus,
 
 .page-header {
   display: flex;
-  width: 100%;
   padding: 1.25rem;
   height: 6.25rem;
+  clear: both;
+  width: 100%;
+  max-width: 1120px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .page-header__item {
@@ -259,7 +264,6 @@ main {
 
 .profile_paragraph {
   display: inline;
-  padding: 3.75rem;
   line-height: 2.2;
 }
 
@@ -286,15 +290,6 @@ main {
   margin: 0 auto;
   justify-content: space-around;
   border-radius: 2.188rem;
-}
-
-.page-header {
-  clear: both;
-  display: flex;
-  width: 100%;
-  max-width: 1120px;
-  text-align: center;
-  margin: 0 auto;
 }
 
 .dropdown {
@@ -454,13 +449,15 @@ main {
 
   .profile_picture {
       margin: 4% 6%;
+      width: 6rem;
   }
 
   .profile_paragraph {
-    margin: 3rem auto;
-    text-align: center;
+    margin: 1rem auto;
+    text-align: left;
     min-width: 200px;
     max-width: 400px;
+    display: inline-block;
   }
 
   .main-navigation {
@@ -481,13 +478,28 @@ main {
   }
 
   h1 {
-    font-size: 2.375rem;
+    font-size: 1.9rem;
     margin: 2rem auto;
     letter-spacing: 0.063rem;
   }
 }
 
 @media all and (max-width: 560px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .primary_button,
+  .index_button {
+    min-width: 7.25rem;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+  
   .grid {
     grid-template-columns: 1fr;
   }
@@ -507,7 +519,7 @@ main {
   .navigation-list {
     display: none;
   }
- /* 560 */
+ 
   .mh-logo {
     width: 3rem;
     height: 3rem;
@@ -515,21 +527,19 @@ main {
   }
 
   .profile_picture {
-      margin: 3% 5% 50% 5%;
+      margin: 0.625rem 2.5rem;
   }
 
   .profile_paragraph {
     margin: 10% auto;
     min-width: 90px;
-    max-width: 100px;
+    display: block;
   }
 
   .primary_button {
     margin-right: 10% auto;
     justify-content: center;
   }
-
-
 
   /* dropdown button */
  .dropbtn {
@@ -582,6 +592,16 @@ main {
   /* change background color of dropdown button when content is shown */
   .dropdown:hover .dropbtn {
     opacity: 0.5;
+  }
+}
+
+@media all and (max-width: 360px) {
+  .profile_paragraph {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
   }
 }
 
