@@ -277,6 +277,7 @@ main {
   border-top: 0.125rem solid var(--grey);
   text-align: center;
   width: 100%;
+  max-width: 1120px;
   height: -webkit- 15%;
   height: auto;
 }
