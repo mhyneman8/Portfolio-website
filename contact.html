@@ -9,17 +9,17 @@
 
 	<meta name="viewport" content="width=device-width,initial 1-scale=1">
 
-  <!-- reset browser default style (first link) -->
+  	<!-- reset browser default style (first link) -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
-  <!-- favicon, icon on tab -->
+  	<!-- favicon, icon on tab -->
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
 
-  <!-- google font Lato and Playfair Display -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<!-- google font Lato and Playfair Display -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
-  <!-- styelesheet css -->
+  	<!-- styelesheet css -->
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
@@ -34,27 +34,27 @@
 			<ul role="menubar" class="navigation-list">
 				<li role="presentation">
 					<a href="index.html" role="menuitem" class="navigation-list__item" >
-            Home
-          </a>
+            	Home
+         			</a>
 				</li>
 				<li role="presentation">
 					<a href="about.html" role="menuitem" class="navigation-list__item">
-            About Me
-          </a>
+            	About Me
+          			</a>
 				</li>
 				<li role="presentation">
 					<a href="projects.html" role="menuitem" class="navigation-list__item">
-            Projects
-          </a>
+            	Projects
+          			</a>
 				</li>
 				<li role="presentation">
 					<a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">
-            Contact
-          </a>
+            	Contact
+          			</a>
 				</li>
 			</ul>
 			<div class="dropdown">
-        <img class="dropbtn" src="img/nav_bar.png" alt="navigation">
+        		<img class="dropbtn" src="img/nav_bar.png" alt="navigation">
 					<div class="dropdown-content">
 						<a href="index.html">Home</a>
 						<a href="about.html">About Me</a>
@@ -68,15 +68,15 @@
 	<main>
 		<h1>Contact</h1>
 
-		<p class="contact-para">
+		<!-- <p class="contact-para">
 			Mallory Hyneman <br>
 			123 Street <br>
 			Chicago, IL <br>
-		</p>
+		</p> -->
 		<!-- linked to call -->
 		<div class="contact-me">
-			<p class="display-block">Phone Number: </p>
-			<a href="tel:7735557722" id="phone" >Call: (773) 555-7721</a>
+			<!-- <p class="display-block">Phone Number: </p>
+			<a href="tel:7735557722" id="phone" >Call: (773) 555-7721</a> -->
 
 		  <!-- link to email -->
 			<p class="display-block">Email: </p>
@@ -84,40 +84,40 @@
 		</div> <!-- end of content-me -->
 
 	  <!--contact form -->
-    <form action="/action.php" method="post" id="contact-form" class="contact-form">
+		<form action="/action.php" method="post" id="contact-form" class="contact-form">
 
-  	   <h2 class="form-label">Send me a message!</h2>
+		<h2 class="form-label">Send me a message!</h2>
 
-  	   <label class="form-label" for="contact-email">E-mail:* </label>
-   	   <input type="email" required id="contact-email">
+		<label class="form-label" for="contact-email">E-mail:* </label>
+		<input type="email" required id="contact-email">
 
- 	     <label class="form-label" for="contact-phone" >Telephone: </label>
-  	   <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-phone">
+			<label class="form-label" for="contact-phone" >Telephone: </label>
+			<input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-phone">
 
- 	     <label class="form-label" for="contact-message">Message:* </label>
-  	   <textarea required maxlength="240" placeholder="240 max characters" rows="6" cols="30" id="contact-message"></textarea>
+			<label class="form-label" for="contact-message">Message:* </label>
+			<textarea required maxlength="240" placeholder="240 max characters" rows="6" cols="30" id="contact-message"></textarea>
 
-  	    <input type="submit" value="Send Message" class="button_secondary button">
-    </form>
+			<input type="submit" value="Send Message" class="button_secondary button">
+		</form>
 
 	</main>
 
-<!-- footer -->
-<footer class="page-footer">
-	<h2>Find me on</h2>
+	<!-- footer -->
+	<footer class="page-footer">
+		<h2>Find me on</h2>
 
-  <div class="social-media">
-    <!-- Github Icon -->
-    <a href="https://github.com/mhyneman8" target="_blank">
-    <img src="img/github.svg" class="social-media" alt="Github">
-    </a>
-    <!-- Linkedin Icon -->
-    <a href="https://www.linkedin.com/in/mallory-hyneman-984431102/" target="_blank">
-    <img src="img/linkedin.png" class="social-media" alt="LinkedIn">
-    </a>
-  </div> <!-- end of social-media -->
+		<div class="social-media">
+		<!-- Github Icon -->
+			<a href="https://github.com/mhyneman8" target="_blank">
+				<img src="img/github.svg" class="social-media" alt="Github">
+			</a>
+			<!-- Linkedin Icon -->
+			<a href="https://www.linkedin.com/in/mallory-hyneman-984431102/" target="_blank">
+				<img src="img/linkedin.png" class="social-media" alt="LinkedIn">
+			</a>
+		</div> <!-- end of social-media -->
 
-</footer>
+	</footer>
 
 	<script src="js/tota11y.min.js"></script>
 </body>

@@ -300,6 +300,7 @@ main {
   text-align: center;
   display: block;
   margin: 0.5rem auto;
+  font-size: 1.5625rem;
 }
 
 #contact-email {
@@ -341,6 +342,7 @@ main {
     min-height: auto;
     padding: 1.25rem;
     text-align: center;
+    border-radius: 2px;
   }
 }
 
@@ -371,7 +373,7 @@ main {
 
 .chicago_image {
   display: block;
-  margin: -100px auto;
+  margin: -38px auto;
   width: 80%;
 }
 
@@ -396,6 +398,7 @@ main {
   max-width: 53.125rem;
   min-width: 20.625rem;
   text-align: center;
+  width: 80%;
 }
 
 .contact-form {
