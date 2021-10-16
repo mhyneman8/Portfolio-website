@@ -11,8 +11,8 @@
 
 :root {
   --primary-color: #1f2833;
-  --secondary-color: #45a29e;
-  --light-blue: #66fcf1;
+  --secondary-color: #952e6b;
+  --light-blue: #db2b8e;
   --black: #0b0c10;
   --grey: #c5c6c7;
   --snow-light: #91cded;
@@ -35,28 +35,73 @@ body {
   font-weight: var(--f-weight-main);
   font-size: var(--f-size-main);
   line-height: var(--l-height-main);
-  color: var(--grey);
+  color: white;
 }
 
-header {
-  background: var(--black);
-  background: -moz-linear-gradient(-45deg, var(--black) 0%, var(--primary-color) 52%, var(--grey) 100%);
-  background: -webkit-linear-gradient(-45deg, var(--black) 0%, var(--primary-color) 52%, var(--grey) 100%);
-  background: linear-gradient(155deg, var(--black) 0%, var(--primary-color) 52%, var(--grey) 100%);
-  min-height: 7.5rem;
+.title {
+  display: block !important;
+  background-color: var(--primary-color);
   text-align: center;
-  border-bottom: 0.125rem solid var(--grey);
+  color: rgb(148, 143, 143);
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  letter-spacing: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: 
+    typing 3.5s steps(40, end),
+    welcome 0s ease-in 5s forwards;
 }
 
+@keyframes typing {
+  from { width: 0}
+  to { width: 100% }
+}
+
+@keyframes welcome {
+  to {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+}
+  @-webkit-keyframes welcome {
+    to {
+      width: 0;
+      height: 0;
+      visibility: hidden;
+    }
+  }
+
+.opening {
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 120px;
+  line-height: 6.5;
+  margin: 10px 0;
+}
+
+.h1,
 h1 {
-  color: var(--secondary-color);
+  color: var(--light-blue);
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
+  font-size: 55px;
   font-weight: 700;
   text-align: center;
   margin: 2.313rem auto;
 }
 
+#typedtext {
+  min-height: 160px;
+}
 
 h2 {
   color: var(--secondary-color);
@@ -82,10 +127,6 @@ a:hover,
 a:focus {
   text-decoration: underline;
   opacity: 0.5;
-}
-
-a:active {
-  color: var(--black);
 }
 
 .button {
@@ -118,11 +159,14 @@ button:focus,
 
 .primary_button,
 .index_button {
-  border: 0.094rem solid var(--light-blue);
-  min-width: 16.25rem;
+  border: 2px solid var(--light-blue);
+  font-size: 18px;
+  color: var(--light-blue);
+  min-width: 17.25rem;
   margin: 3.75rem auto;
-  border-bottom: 0.125rem solid var(--boarder-shadow);
-  border-right: 0.125rem solid var(--boarder-shadow);
+  padding: 20px;
+  border-bottom: 2px solid #772c64;
+  border-right: 2px solid #772c64;
 }
 
 .button_out {
@@ -172,19 +216,6 @@ button:focus,
   margin-right: 5.5rem;
   margin-top: 0.6rem;
   font-size: 20px;
-}
-
-.navigation-list {
-  list-style-type: none;
-}
-
-.navigation-list li {
-  display: inline-block;
-  margin-left: 0.938rem;
-}
-
-.navigation-list__item--active {
-  color: var(--grey);
 }
 
 .mh-logo {
@@ -262,9 +293,11 @@ main {
   text-align: center;
 }
 
-.profile_paragraph {
+.profile_paragraph p {
   display: inline;
   line-height: 2.2;
+  max-width: 400px;
+  text-align: left;
 }
 
 .page-footer {
@@ -295,6 +328,86 @@ main {
 }
 
 .dropdown {
+  display: none;
+}
+
+/* dropdown button */
+.dropbtn {
+  background-image: url(../img/nav_bar.png);
+  background-repeat: no-repeat;
+  background-size: 48px;
+  height: 48px;
+  width: 48px;
+  margin-right: -64px;
+  border: none;
+}
+/* container div needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  height: 2.188rem;
+  margin-top: 0.063rem;
+  margin-right: 0.625rem;
+  border: none;
+  }
+
+/* dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 0.188rem;
+  background-color: var(--black);
+  width: 100%;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.menu {
+  display: flex;
+  flex-direction:column;
+  text-align: center;
+  border: 1px solid grey;
+  margin-top: 15%;
+  width: 100%;
+}
+
+.menu-item {
+  font-size: 20px;
+  color: white;
+  margin: 20px auto;
+}
+
+.menu-title {
+  text-align: center;
+  margin: 40px auto;
+  font-size: 42px;
+  color: var(--light-blue);
+}
+
+.close {
+  display: inline;
+  top: 25px;
+  right: 42px;
+  background-color: #772c64;
+  color: white;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  -webkit-box-shadow: 5px 9px 12px 0px rgba(0,0,0,0.68); 
+  box-shadow: 5px 9px 12px 0px rgba(0,0,0,0.68);
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
   display: none;
 }
 
@@ -497,13 +610,6 @@ main {
   p {
     font-size: 16px;
   }
-
-  .primary_button,
-  .index_button {
-    min-width: 7.25rem;
-    margin: 0 auto;
-    font-size: 14px;
-  }
   
   .grid {
     grid-template-columns: 1fr;
@@ -546,58 +652,7 @@ main {
     justify-content: center;
   }
 
-  /* dropdown button */
- .dropbtn {
-    height: 3.013rem;
-    margin-top: 0.5rem;
-    margin-right: 0;
-    border: none;
-  }
-  /* container div needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-    height: 2.188rem;
-    margin-top: 0.063rem;
-    margin-right: 0.625rem;
-    border: none;
-    }
-
-  /* dropdown content (hidden by default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    border-radius: 0.188rem;
-    background-color: #f1f1f1;
-    min-width: 6.25rem;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-
-  /* links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 0.625rem 0.875rem;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  /* change color of dropdown links on hover */
-  .dropdown-content a:hover {
-    background-color: var(--grey);
-  }
-
-  /* show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-  /* change background color of dropdown button when content is shown */
-  .dropdown:hover .dropbtn {
-    opacity: 0.5;
-  }
+  
 }
 
 @media all and (max-width: 360px) {

@@ -25,41 +25,32 @@
 </head>
 
 <body>
+	<!-- welcome screen -->
+	<div class="title">
+		<h1 class="opening">Welcome</h1>
+	</div>
 
 	<!-- nav bar -->
 	<header class="page-header">
 		<!-- logo -->
 		<img src="img/logo2.png" alt="MH logo" class="mh-logo  page-header__item">
+		
 		<nav class="main-navigation page-header__item">
-			<ul role="menubar" class="navigation-list">
-				<li role="presentation">
-					<a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active" >
-            	Home
-         			</a>
-				</li>
-				<li role="presentation">
-					<a href="about.html" role="menuitem" class="navigation-list__item">
-            	About Me
-          			</a>
-				</li>
-				<li role="presentation">
-					<a href="projects.html" role="menuitem" class="navigation-list__item">
-            	Projects
-          			</a>
-				</li>
-				<li role="presentation">
-					<a href="contact.html" role="menuitem" class="navigation-list__item">
-            	Contact
-          			</a>
-				</li>
-			</ul>
 			<div class="dropdown">
-        		<img class="dropbtn" src="img/nav_bar.png" alt="navigation">
+				<button class="dropbtn" src="img/nav_bar.png" alt="navigation"></button>
+
 				<div class="dropdown-content">
-					<a href="index.html">Home</a>
-					<a href="about.html">About Me</a>
-					<a href="projects.html">Projects</a>
-					<a href="contact.html">Contact</a>
+					
+					<div>
+						<h3 class="menu-title">Mallory Hyneman</h3>
+						<button class="close">X</button>
+					</div>
+					<div class="menu">
+						<a class="menu-item" href="index.html">Home</a>
+						<a class="menu-item" href="about.html">About Me</a>
+						<a class="menu-item" href="projects.html">Projects</a>
+						<a class="menu-item" href="contact.html">Contact</a>
+					</div>
 				</div> <!-- end of dropdown-content -->
 		  </div><!-- end of dropdown -->
 		</nav>
@@ -68,26 +59,30 @@
 	<main>
 
 		<!--pic of me -->
-		<img src="img/MH.jpg" alt="Mallory Hyneman Photo" class="profile_picture">
+		<!-- <img src="img/MH.jpg" alt="Mallory Hyneman Photo" class="profile_picture"> -->
 
-		<div class="profile">
+		<div id="typedtext" class="h1">
 
-			<h1>Mallory Hyneman
+		</div>
+		<!-- <div class="profile"> -->
+
+			<!-- <h1>Mallory Hyneman
 				<br>
 				Web Development
-			</h1>
-			<div>
+			</h1> -->
+			<div class="profile_paragraph">
 				<p class="profile_paragraph">
 					Welcome to my page! I am a web developer from Chicago with experience leading teams working on multiple objectives, while communicating effectively, and maintaining project organization. Comfortable with MERN full stack projects.
 				</p>
-				<div class="button_out">
-					<!-- button goes to projects page -->
-					<a href="projects.html" class="index_button button">Check out some of my code</a>
-				</div> <!-- end of button_out -->
 			</div>
+			<div class="button_out">
+				<!-- button goes to projects page -->
+				<a href="projects.html" class="index_button button">Check out some of my code</a>
+			</div> <!-- end of button_out -->
+			
 			
 
-  		</div> <!-- profile -->
+  		<!-- </div>  profile -->
 
 	</main>
 
@@ -109,6 +104,7 @@
 </footer>
   <!-- accessibility check -->
 	<script src="js/tota11y.min.js"></script>
+	<script src="js/scripts.js"></script>
 
 </body>
 
