@@ -7,7 +7,7 @@
 
 	<title>MH's Projects</title>
 
-  <meta name="viewport" content="width=device-width,initial 1-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- resets browser default styles (first link) -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
   <!-- styelesheet css (last link) -->
-	<link rel="stylesheet" type="text/css" href="css/style.production.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
 
@@ -59,24 +59,13 @@
       <!-- input project pics -->
 			<article class="grid">
 
-				<!-- MBG Website -->
-				<div class="grid__item">
-					<a href="https://www.motherbgreen.com/" target="_blank" >
-								<img class="project_img" src="img/mbg-website.png" alt="MBG Home Page">
-					</a>
-					<h2>MBG Website</h2>
-					<!-- <div class="code-btn">
-						<a href="" role="button" class="code">
-							Code
-						</a>
-					</div> -->
-					<p>The MBG website was revitalized by utilizing a combination of SquareSpace design tools and custom CSS. </p>
-				</div> <!-- end of grid__item -->
-
 				<!-- Pokedex -->
 				<div class="grid__item">
 					<a href="https://mhyneman8.github.io/simple-js-app/" target="_blank" >
-								<img class="project_img" src="img/pokedex.png" alt="pokedex">
+						<div class="project_img pokedex-pic">
+							<img class="static" src="img/pokedex.png" alt="pokedex">
+							<img class="active" src="img/pokedexDemo.gif" alt="Pokedex GIF">
+						</div>
 					</a>
 					<h2>Pokedex </h2>
 					<div class="code-btn">
@@ -91,7 +80,10 @@
 				<!-- ToDo List -->
 				<div class="grid__item">
 					<a href="https://mhyneman8.github.io/todo/" target="_blank">
-						<img class="project_img" src="img/todo.png" alt="Todo List">
+						<div class="project_img pokedex-pic">
+							<img class="static" src="img/todo.png" alt="Todo List">
+							<img class="active" src="img/todoDemo.gif" alt="Pokedex GIF">
+						</div>
 					</a>
 					<h2>ToDo List</h2>
 					<div class="code-btn">
@@ -132,6 +124,37 @@
 					<p>Is the client-side of an application based on its exsiting server-side code (REST API and database), using React.</p>
 				</div> <!-- end of grid__item-->
 
+				<!-- Chat App -->
+				<div class="grid__item">
+					<a href="https://myflix-mh.netlify.app" target="_blank">
+						<div class="chat-app-pic project_img">
+							<img class="chat-static" src="img/HomeScreen.jpg" alt="myFlix" target="_blank">
+							<img class="chat-active " src="img/chatApp.gif" alt="Chat App Gif">
+						</div>
+					</a>
+					<h2>Chat App</h2>
+					<div class="code-btn">
+						<a href="https://github.com/mhyneman8/chat-app" role="button" class="code" target="_blank">
+							Code
+						</a>
+					</div>
+					<p>Is the client-side of an application based on its exsiting server-side code (REST API and database), using React.</p>
+				</div> <!-- end of grid__item-->
+
+				<!-- MBG Website -->
+				<div class="grid__item">
+					<a href="https://www.motherbgreen.com/" target="_blank" >
+								<img class="project_img" src="img/mbg-website.png" alt="MBG Home Page">
+					</a>
+					<h2>MBG Website</h2>
+					<!-- <div class="code-btn">
+						<a href="" role="button" class="code">
+							Code
+						</a>
+					</div> -->
+					<p>The MBG website was revitalized by utilizing a combination of SquareSpace design tools and custom CSS. </p>
+				</div> <!-- end of grid__item -->
+
 			</article>
 		</section>
 
@@ -155,6 +178,7 @@
 </footer>
 
 	<script src="js/tota11y.min.js"></script>
+	<script src="js/scripts.js"></script>
 </body>
 
 </html>
