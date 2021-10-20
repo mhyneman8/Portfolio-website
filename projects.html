@@ -15,12 +15,17 @@
   <!-- favicon, icon on tab -->
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
 
+	<!-- google font Roboto -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
   <!-- google font Lato and Playfair Display -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
   <!-- styelesheet css (last link) -->
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/style.production.css">
 
 </head>
 
@@ -29,7 +34,9 @@
 	<!-- nav bar -->
 	<header class="page-header">
 		<!-- logo -->
-		<img src="img/logo2.png" alt="MH logo" class="mh-logo  page-header__item">
+		<a href="index.html">
+			<img src="img/MH_Logo.png" alt="MH logo" class="mh-logo  page-header__item">
+		</a>
 
 		<nav class="main-navigation page-header__item">
 			<div class="dropdown">
@@ -62,9 +69,9 @@
 				<!-- Pokedex -->
 				<div class="grid__item">
 					<a href="https://mhyneman8.github.io/simple-js-app/" target="_blank" >
-						<div class="project_img pokedex-pic">
+						<div class="project_img">
 							<img class="static" src="img/pokedex.png" alt="pokedex">
-							<img class="active" src="img/pokedexDemo.gif" alt="Pokedex GIF">
+							<img class="left-projects" src="img/pokedexDemo.gif" alt="Pokedex GIF">
 						</div>
 					</a>
 					<h2>Pokedex </h2>
@@ -80,9 +87,9 @@
 				<!-- ToDo List -->
 				<div class="grid__item">
 					<a href="https://mhyneman8.github.io/todo/" target="_blank">
-						<div class="project_img pokedex-pic">
-							<img class="static" src="img/todo.png" alt="Todo List">
-							<img class="active" src="img/todoDemo.gif" alt="Pokedex GIF">
+						<div class="project_img">
+							<img class="static " src="img/todo.png" alt="Todo List">
+							<img class="center-projects" src="img/todoDemo.gif" alt="Pokedex GIF">
 						</div>
 					</a>
 					<h2>ToDo List</h2>
@@ -113,7 +120,11 @@
 				<!-- myFlix -->
 				<div class="grid__item">
 					<a href="https://myflix-mh.netlify.app" target="_blank">
-						<img class="project_img" src="img/myFlix.jpg" alt="myFlix" target="_blank">
+						<!-- <img class="project_img" src="img/myFlix.jpg" alt="myFlix" target="_blank"> -->
+						<div class="project_img">
+							<img class="static" src="img/myFlix.jpg" alt="MyFLix Home page">
+							<img class="left-projects" src="img/myflixDemo.gif" alt="myFlix GIF">
+						</div>
 					</a>
 					<h2>MyFlix</h2>
 					<div class="code-btn">
@@ -126,25 +137,28 @@
 
 				<!-- Chat App -->
 				<div class="grid__item">
-					<a href="https://myflix-mh.netlify.app" target="_blank">
+					<!-- <a href="" target="_blank"> -->
 						<div class="chat-app-pic project_img">
 							<img class="chat-static" src="img/HomeScreen.jpg" alt="myFlix" target="_blank">
 							<img class="chat-active " src="img/chatApp.gif" alt="Chat App Gif">
 						</div>
-					</a>
+					<!-- </a> -->
 					<h2>Chat App</h2>
 					<div class="code-btn">
 						<a href="https://github.com/mhyneman8/chat-app" role="button" class="code" target="_blank">
 							Code
 						</a>
 					</div>
-					<p>Is the client-side of an application based on its exsiting server-side code (REST API and database), using React.</p>
+					<p>Is the client-side of an application based on its existing server-side code (REST API and database), using React.</p>
 				</div> <!-- end of grid__item-->
 
 				<!-- MBG Website -->
 				<div class="grid__item">
 					<a href="https://www.motherbgreen.com/" target="_blank" >
-								<img class="project_img" src="img/mbg-website.png" alt="MBG Home Page">
+						<div class="project_img">
+							<img class="static" src="img/mbg-website.png" alt="MBG Home Page">
+							<img class="right-projects" src="img/mbgDemo.gif" alt="MBG GIF">
+						</div>
 					</a>
 					<h2>MBG Website</h2>
 					<!-- <div class="code-btn">
@@ -154,6 +168,73 @@
 					</div> -->
 					<p>The MBG website was revitalized by utilizing a combination of SquareSpace design tools and custom CSS. </p>
 				</div> <!-- end of grid__item -->
+
+				<!-- Changed by Forkfull -->
+				<div class="grid__item">
+					<a href="https://mhyneman8.github.io/changed/" target="_blank" >
+						<div class="project_img">
+							<img class="static" src="img/changed.jpg" alt="Changed by the Forkfull">
+							<img class="left-projects" src="img/changedDemo.gif" alt="Changed GIF">
+						</div>
+					</a>
+					<h2>Changed by the Forkfull</h2>
+					<div class="code-btn">
+						<a href="https://github.com/mhyneman8/changed" role="button" class="code" target="_blank">
+							Code
+						</a>
+					</div>
+					<p>A small website with HTML, CSS, and JavaScript for a food forest non-profit.</p>
+					
+				</div> <!-- end of grid__item -->
+
+				<!-- movie API -->
+				<div class="grid__item">
+					<!-- <a href="" target="_blank" > -->
+							<img class="project_img" src="img/movieAPi.jpg" alt="movie Api">
+					<!-- </a> -->
+					<h2>Movie API</h2>
+					<div class="code-btn">
+						<a href="https://github.com/mhyneman8/movie_api" role="button" class="code" target="_blank">
+							Code
+						</a>
+					</div>
+					<p>The server-side componenet of a 'movies' web applicatoin. This API stores information about different movies, directors, and genres. Users will be able to sign up, update their personal information, and create a list of their favorite movies.</p>
+					
+				</div> <!-- end of grid__item -->
+
+				<!-- Mesh Devs -->
+				<div class="grid__item">
+					<a href="https://www.meshdevs.com" target="_blank" >
+						<div class="project_img">
+							<img class="static" src="img/mesh.jpg" alt="Mesh Development">
+							<img class="right-projects" src="img/meshDemo.gif" alt="Mesh GIF">
+						</div>
+					</a>
+					<h2>Mesh Web Development</h2>
+					<div class="code-btn">
+						<a href="https://github.com/mhyneman8/MESHdev" role="button" class="code" target="_blank">
+							Code
+						</a>
+					</div>
+					<p>This was build with HTML, css, and JavaScript for a small buisness. I worked with another developer to meet a short deadline.</p>
+				</div> <!-- end of grid__item -->
+
+				<!-- Angular myFlix -->
+				<div class="grid__item">
+					<a href="" target="_blank">
+						<div class="project_img">
+							<img class="static" src="img/angular.jpg" alt="Angular myFlix">
+							<img class="left-projects" src="img/angularDemo.gif" alt="Angular myFlix GIF">
+						</div>
+					</a>
+					<h2>MyFlix Angular</h2>
+					<div class="code-btn">
+						<a href="https://github.com/mhyneman8/myFlix-Angular-client" role="button" class="code" target="_blank">
+							Code
+						</a>
+					</div>
+					<p>Is the client-side of an application based on its exsiting server-side code (REST API and database), using React.</p>
+				</div> <!-- end of grid__item-->
 
 			</article>
 		</section>

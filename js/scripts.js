@@ -52,15 +52,13 @@ dropdown();
 
 function close() {
     const closeBtn = document.querySelector('.close');
-    closeBtn.addEventListener('click', close);
+    closeBtn.addEventListener('click', closeMenu);
  
-    function close() {
+    function closeMenu() {
         const content = document.querySelector('.dropdown-content');
         if (content.classList.contains('show')) {
             content.classList.remove('show');
         }
-        // content.classList.remove('show');
-        // content.addClass('hide');
     }
 }
 close();
