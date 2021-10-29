@@ -8,11 +8,24 @@ A go-to page for information about me, and to see my projects.
 - [@MalloryHyneman](https://www.github.com/mhyneman8)
 
   
-## Deployment
+## View
 
-To deploy this project go to
+To view this project go to
 
 https://mhyneman8.github.io/Portfolio-website/index.html
+
+## Deployment
+To deploy this project:
+
+Clone this repository
+git clone https://github.com/mhyneman8/Portfolio-website.git
+
+Go to root directory
+
+Install dependencies
+npm install
+
+Run by opening index.html in your browser
 
 
   ## Color Reference
