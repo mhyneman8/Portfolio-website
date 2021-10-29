@@ -127,11 +127,26 @@ h1 {
 
 #typedtext {
   min-height: 10rem;
+  border-bottom: 1px solid black;
+}
+
+#typedtext::after {
+  border-bottom: 1px solid var(--light-blue);
+  animation: blink infinite;
+}
+@keyframes blink {
+  0% {
+    display: hidden;
+  }
+  100% {
+    display: block;
+  }
 }
 
 h2 {
   color: var(--light-blue);
   font-size: var(--h2-size);
+  font-weight: 600;
   text-align: center;
   font-family: 'Playfair Display', serif;
   margin: 0.3125rem auto;
@@ -469,7 +484,7 @@ main {
   color: var(--light-blue);
 }
 
-.close {
+.nav-close {
   display: inline;
   top: 1.5625rem;
   right: 2.625rem;
@@ -517,7 +532,7 @@ main {
 /* start grid fallback */
 .grid__item {
   display: inline-block;
-  width: 33%;
+  width: 100%;
 }
 
 /* end grid fallback */
@@ -535,107 +550,117 @@ main {
     background-color: var(--grey);
     width: auto;
     min-height: auto;
-    padding: 1.25rem;
+    padding: 5px;
     text-align: center;
     border-radius: 2px;
   }
 }
 
 .code-btn {
-  background-color: var(--light-blue);
-  width: 3.125rem;
+  width: 200px;
   text-align: center;
-  margin: 0.625rem auto;
-  border-radius: 2px;
-  height: 1.25rem;
+  margin: 0 auto;
+  height: 50px;
   position: relative;
 }
 
 .code {
+  background-color: var(--light-blue);
   color: var(--black);
-  font-size: 0.625rem;
-  position: absolute;
-  top: 0.1875rem;
-  left: 0.875rem;
+  font-size: 14px;
+  height: 25px;
+  width: 95px;
+  padding: 1px;
+  border-radius: 2px;
+  border: 2px solid var(--secondary-color);
+  display: inline-block;
+  margin: 5px auto;
+}
+
+.code:hover {
+  color: white;
 }
 
 .project_img {
   position: relative;
+  height: 200px;
+  width: 250px;
+}
+
+@media all and (max-width: 800px) {
+  .project_img {
+    text-align: center;
+    margin: 10px auto;
+  }
+}
+
+.movie_img {
+  border: 1px solid var(--secondary-color);
   border-radius: 0.125rem;
-  height: 12.5rem;
+  width: inherit;
+  height: inherit;
 }
 
 .static {
   position: relative;
-  width: 13.375rem;
-  height: 12.5rem;
-  left: 0;
-  top: 0;
+  width: inherit;
+  height: inherit;
   border: 1px solid var(--secondary-color);
-  text-align: center;
-  margin: 0 auto;
+  border-radius: 0.125rem;
   z-index: 2;
 }
+
 .chat-static:hover,
 .static:hover {
   opacity: 0;
 }
 
-.active {
-  width: 13.375rem;
-  height: 12.5rem;
-}
-
-.center-projects {
-  position: absolute;
-  text-align: center;
-  margin: 0 auto;
-  width: 13.375rem;
-  height: 12.5rem;
-  left: 0.4375rem;
-}
-
-.left-projects {
-  position: absolute;
-  text-align: center;
-  margin: 0 auto;
-  width: 13.375rem;
-  height: 12.5rem;
-  left: 0;
-}
-
-.right-projects {
-  position: absolute;
-  text-align: center;
-  margin: 0 auto;
-  width: 13.375rem;
-  height: 12.5rem;
-  left: 1.25rem;
-}
-
-@media all and (max-width: 800px) {
-  .left-projects,
-  .right-projects,
-  .center-projects {
-    left: 4.1875rem;
-  }
-}
-
 .chat-static {
   position: relative;
-  width: 6.25rem;
+  width: 7.25rem;
   height: 12.5rem;
   z-index: 2;
 }
+
+.active,
 .chat-active {
   position: absolute;
-  object-fit: cover;
-  z-index: 1;
+  width: inherit;
+  height: inherit;
+  border: 1px solid var(--secondary-color);
+  border-radius: 0.125rem;
   top: 0;
-  left: 4.0625rem;
-  width: 6.25rem;
-  height: 12.5rem;
+  left: 0;
 }
+
+.modal-dialog {
+  margin-top: 20% !important;
+  z-index: 5;
+}
+
+.modal-text {
+  color: var(--black);
+  text-align: left;
+}
+
+.modal-title {
+  color: var(--black);
+  text-align: center;
+  margin: 5px auto;
+}
+
+.btn-primary {
+  color: white;
+  background-color: var(--light-blue);
+  border: 1px solid black
+}
+
+.btn-secondary {
+  color: var(--light-blue);
+  background-color: white;
+}
+
+
 
 .chicago_image {
   display: block;

@@ -36,7 +36,6 @@ var aText = new Array(
     }
     
     setTimeout("typewriter()", 5100);
-    // typewriter()
 
 function dropdown() {
     const dropbtn = document.querySelector('.dropbtn');
