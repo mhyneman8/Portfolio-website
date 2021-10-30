@@ -36,7 +36,6 @@ var aText = new Array(
     }
     
     setTimeout("typewriter()", 5100);
-    // typewriter()
 
 function dropdown() {
     const dropbtn = document.querySelector('.dropbtn');
@@ -51,7 +50,7 @@ function dropdown() {
 dropdown();
 
 function close() {
-    const closeBtn = document.querySelector('.close');
+    const closeBtn = document.querySelector('.nav-close');
     closeBtn.addEventListener('click', closeMenu);
  
     function closeMenu() {

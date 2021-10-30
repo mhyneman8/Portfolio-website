@@ -25,7 +25,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
   <!-- styelesheet css (last link) -->
-	<link rel="stylesheet" type="text/css" href="css/style.production.css">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
 
@@ -46,7 +47,7 @@
 					
 					<div>
 						<h3 class="menu-title">Mallory Hyneman</h3>
-						<button class="close">X</button>
+						<button class="nav-close">X</button>
 					</div>
 					<div class="menu">
 						<a class="menu-item" href="index.html">Home</a>
@@ -71,16 +72,21 @@
 					<a href="https://mhyneman8.github.io/simple-js-app/" target="_blank" >
 						<div class="project_img">
 							<img class="static" src="img/pokedex.png" alt="pokedex">
-							<img class="left-projects" src="img/pokedexDemo.gif" alt="Pokedex GIF">
+							<img class="projects-active" src="img/pokedexDemo.gif" alt="Pokedex GIF">
 						</div>
 					</a>
 					<h2>Pokedex </h2>
 					<div class="code-btn">
-						<a href="https://github.com/mhyneman8/simple-js-app" role="button" class="code" target="_blank">
+						<!-- <a href="https://github.com/mhyneman8/simple-js-app" role="button" class="code" target="_blank">
 							Code
+						</a> -->
+						<button type="button" class="code" data-toggle="modal" data-target="#pokedex-modal">
+							Quick-view
+						</button>
+						<a href="projects/pokedex.html" role="button" class="code">
+							More Details
 						</a>
 					</div>
-					<p>A small web application with HTML, CSS, and JavaScript that loads data from an external API and enables the viewing of data points in detail.</p>
 					
 				</div> <!-- end of grid__item -->
 
@@ -89,32 +95,42 @@
 					<a href="https://mhyneman8.github.io/todo/" target="_blank">
 						<div class="project_img">
 							<img class="static " src="img/todo.png" alt="Todo List">
-							<img class="center-projects" src="img/todoDemo.gif" alt="Pokedex GIF">
+							<img class="projects-active" src="img/todoDemo.gif" alt="ToDO GIF">
 						</div>
 					</a>
 					<h2>ToDo List</h2>
 					<div class="code-btn">
-						<a href="https://github.com/mhyneman8/todo" role="button" class="code" target="_blank">
+						<!-- <a href="https://github.com/mhyneman8/todo" role="button" class="code" target="_blank">
 							Code
+						</a> -->
+						<button type="button" class="code" data-toggle="modal" data-target="#todo-modal">
+							Quick-view
+						</button>
+						<a href="projects/todo.html" role="button" class="code">
+							More Details
 						</a>
-					</div>
-					<p>Uses JavaScript to add, crossout, delete, rearrange list items.</p>
-					
+					</div>	
 				</div> <!-- end of grid__item -->
 
 				<!-- Meet App -->
 				<div class="grid__item">
-					<a href="https://mhyneman8.github.io/meet/" target="_blank">
-						<img class="project_img" src="img/meetApp.jpg" alt="Meet app">
-					</a>
-					<h2>Meet App</h2>
-					<div class="code-btn">
-						<a href="https://github.com/mhyneman8/meet" role="button" class="code" target="_blank">
-							Code
+					<div class="project_img">
+						<a href="https://mhyneman8.github.io/meet/" target="_blank">
+							<img class="project_img" src="img/meetApp.jpg" alt="Meet app">
 						</a>
 					</div>
-					<p>Is a serverless, progressive web application (PWA) built with React, using a test-driven development (TDD) technique. The Meet app uses the Google Calendar API to fetch upcoming events.</p>
-					
+					<h2>Meet App</h2>
+					<div class="code-btn">
+						<!-- <a href="https://github.com/mhyneman8/meet" role="button" class="code" target="_blank">
+							Code
+						</a> -->
+						<button type="button" class="code" data-toggle="modal" data-target="#meet-modal">
+							Quick-view
+						</button>
+						<a href="projects/meet.html" role="button" class="code">
+							More Details
+						</a>
+					</div>
 				</div> <!-- end of grid__item-->
 
 				<!-- myFlix -->
@@ -123,33 +139,43 @@
 						<!-- <img class="project_img" src="img/myFlix.jpg" alt="myFlix" target="_blank"> -->
 						<div class="project_img">
 							<img class="static" src="img/myFlix.jpg" alt="MyFLix Home page">
-							<img class="left-projects" src="img/myflixDemo.gif" alt="myFlix GIF">
+							<img class="projects-active" src="img/myflixDemo.gif" alt="myFlix GIF">
 						</div>
 					</a>
 					<h2>MyFlix</h2>
 					<div class="code-btn">
-						<a href="https://github.com/mhyneman8/myFlix-client" role="button" class="code" target="_blank">
+						<!-- <a href="https://github.com/mhyneman8/myFlix-client" role="button" class="code" target="_blank">
 							Code
+						</a> -->
+						<button type="button" class="code" data-toggle="modal" data-target="#myflix-modal">
+							Quick-view
+						</button>
+						<a href="projects/myflix.html" role="button" class="code">
+							More Details
 						</a>
 					</div>
-					<p>Is the client-side of an application based on its exsiting server-side code (REST API and database), using React.</p>
 				</div> <!-- end of grid__item-->
 
 				<!-- Chat App -->
 				<div class="grid__item">
 					<!-- <a href="" target="_blank"> -->
-						<div class="chat-app-pic project_img">
+						<div class="project_img">
 							<img class="chat-static" src="img/HomeScreen.jpg" alt="myFlix" target="_blank">
 							<img class="chat-active " src="img/chatApp.gif" alt="Chat App Gif">
 						</div>
 					<!-- </a> -->
 					<h2>Chat App</h2>
 					<div class="code-btn">
-						<a href="https://github.com/mhyneman8/chat-app" role="button" class="code" target="_blank">
+						<!-- <a href="https://github.com/mhyneman8/chat-app" role="button" class="code" target="_blank">
 							Code
+						</a> -->
+						<button type="button" class="code" data-toggle="modal" data-target="#chat-modal">
+							Quick-view
+						</button>
+						<a href="projects/chat.html" role="button" class="code">
+							More Details
 						</a>
 					</div>
-					<p>Is the client-side of an application based on its existing server-side code (REST API and database), using React.</p>
 				</div> <!-- end of grid__item-->
 
 				<!-- MBG Website -->
@@ -157,16 +183,21 @@
 					<a href="https://www.motherbgreen.com/" target="_blank" >
 						<div class="project_img">
 							<img class="static" src="img/mbg-website.png" alt="MBG Home Page">
-							<img class="right-projects" src="img/mbgDemo.gif" alt="MBG GIF">
+							<img class="projects-active" src="img/mbgDemo.gif" alt="MBG GIF">
 						</div>
 					</a>
 					<h2>MBG Website</h2>
-					<!-- <div class="code-btn">
-						<a href="" role="button" class="code">
+					<div class="code-btn">
+						<!-- <a href="" role="button" class="code">
 							Code
+						</a> -->
+						<button type="button" class="code" data-toggle="modal" data-target="#mbg-modal">
+							Quick-view
+						</button>
+						<a href="projects/mbg.html" role="button" class="code">
+							More Details
 						</a>
-					</div> -->
-					<p>The MBG website was revitalized by utilizing a combination of SquareSpace design tools and custom CSS. </p>
+					</div>
 				</div> <!-- end of grid__item -->
 
 				<!-- Changed by Forkfull -->
@@ -174,32 +205,43 @@
 					<a href="https://mhyneman8.github.io/changed/" target="_blank" >
 						<div class="project_img">
 							<img class="static" src="img/changed.jpg" alt="Changed by the Forkfull">
-							<img class="left-projects" src="img/changedDemo.gif" alt="Changed GIF">
+							<img class="projects-active" src="img/changedDemo.gif" alt="Changed GIF">
 						</div>
 					</a>
 					<h2>Changed by the Forkfull</h2>
 					<div class="code-btn">
-						<a href="https://github.com/mhyneman8/changed" role="button" class="code" target="_blank">
+						<!-- <a href="https://github.com/mhyneman8/changed" role="button" class="code" target="_blank">
 							Code
+						</a> -->
+						<button type="button" class="code" data-toggle="modal" data-target="#changed-modal">
+							Quick-view
+						</button>
+						<a href="projects/changed.html" role="button" class="code">
+							More Details
 						</a>
 					</div>
-					<p>A small website with HTML, CSS, and JavaScript for a food forest non-profit.</p>
-					
 				</div> <!-- end of grid__item -->
 
 				<!-- movie API -->
 				<div class="grid__item">
-					<!-- <a href="" target="_blank" > -->
-							<img class="project_img" src="img/movieAPi.jpg" alt="movie Api">
-					<!-- </a> -->
+					<a href="https://mhyneman8.github.io/movie_api" target="_blank" >
+						<div class="project_img">
+							<img class="movie_img" src="img/movieAPi.jpg" alt="movie Api">
+						</div>
+					</a>
+
 					<h2>Movie API</h2>
 					<div class="code-btn">
-						<a href="https://github.com/mhyneman8/movie_api" role="button" class="code" target="_blank">
+						<!-- <a href="https://github.com/mhyneman8/movie_api" role="button" class="code" target="_blank">
 							Code
+						</a> -->
+						<button type="button" class="code" data-toggle="modal" data-target="#movie-modal">
+							Quick-view
+						</button>
+						<a href="projects/movie.html" role="button" class="code">
+							More Details
 						</a>
 					</div>
-					<p>The server-side componenet of a 'movies' web applicatoin. This API stores information about different movies, directors, and genres. Users will be able to sign up, update their personal information, and create a list of their favorite movies.</p>
-					
 				</div> <!-- end of grid__item -->
 
 				<!-- Mesh Devs -->
@@ -207,33 +249,43 @@
 					<a href="https://www.meshdevs.com" target="_blank" >
 						<div class="project_img">
 							<img class="static" src="img/mesh.jpg" alt="Mesh Development">
-							<img class="right-projects" src="img/meshDemo.gif" alt="Mesh GIF">
+							<img class="projects-active" src="img/meshDemo.gif" alt="Mesh GIF">
 						</div>
 					</a>
 					<h2>Mesh Web Development</h2>
 					<div class="code-btn">
-						<a href="https://github.com/mhyneman8/MESHdev" role="button" class="code" target="_blank">
+						<!-- <a href="https://github.com/mhyneman8/MESHdev" role="button" class="code" target="_blank">
 							Code
+						</a> -->
+						<button type="button" class="code" data-toggle="modal" data-target="#mesh-modal">
+							Quick-view
+						</button>
+						<a href="projects/mesh.html" role="button" class="code">
+							More Details
 						</a>
 					</div>
-					<p>This was build with HTML, css, and JavaScript for a small buisness. I worked with another developer to meet a short deadline.</p>
 				</div> <!-- end of grid__item -->
 
 				<!-- Angular myFlix -->
 				<div class="grid__item">
-					<a href="" target="_blank">
+					<a href="https://mhyneman8.github.io/myFlix-Angular-client/welcome" target="_blank">
 						<div class="project_img">
 							<img class="static" src="img/angular.jpg" alt="Angular myFlix">
-							<img class="left-projects" src="img/angularDemo.gif" alt="Angular myFlix GIF">
+							<img class="projects-active" src="img/angularDemo.gif" alt="Angular myFlix GIF">
 						</div>
 					</a>
 					<h2>MyFlix Angular</h2>
 					<div class="code-btn">
-						<a href="https://github.com/mhyneman8/myFlix-Angular-client" role="button" class="code" target="_blank">
+						<!-- <a href="https://github.com/mhyneman8/myFlix-Angular-client" role="button" class="code" target="_blank">
 							Code
+						</a> -->
+						<button type="button" class="code" data-toggle="modal" data-target="#angular-modal">
+							Quick-view
+						</button>
+						<a href="projects/angular.html" role="button" class="code">
+							More Details
 						</a>
 					</div>
-					<p>Is the client-side of an application based on its exsiting server-side code (REST API and database), using React.</p>
 				</div> <!-- end of grid__item-->
 
 			</article>
@@ -256,8 +308,271 @@
     </a>
   </div> <!-- end of social-media -->
 
-</footer>
+  <!-- Modals -->
 
+  <!-- pokedex modal -->
+  <div class="modal fade" id="pokedex-modal" tabindex="-1" role="dialog" aria-labelledby="PokedexModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h3 class="modal-title" id="pokedex-modal-label">Pokedex</h3>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+			<img class="w-50 mb-2" src="img/pokedex/homepage.jpg" alt="">
+
+			<h4 class="modal-title">User Goals</h4>
+			<p class="modal-text">
+				Users will be able to view a list of pokemon and see more details for a given pokemon item on demand.
+			</p>
+
+			<h4 class="modal-title">Technologies</h4>
+			<p class="modal-text">HTML 10%, CSS 15%, JavaSript 76%</p>
+
+			<h4 class="modal-title">Key Features</h4>
+			<ul class="modal-text">
+				<li>Load data from an external source (API)</li>
+				<li>View a list of items</li>
+				<li>On user action, view details for that item</li>
+			</ul>
+		</div> <!-- end of modal-body -->
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  <a href="projects/pokedex.html" type="button" class="btn btn-primary">More Details</a>
+		</div> <!-- end of modal-footer -->
+	  </div> <!-- end of modal-content -->
+	</div> <!-- end of modal-dialog -->
+  </div> <!-- end of pokedex-modal -->
+
+  <!-- ToDo modal -->
+  <div class="modal fade" id="todo-modal" tabindex="-1" role="dialog" aria-labelledby="ToDoModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h3 class="modal-title" id="pokedex-modal-label">ToDo List</h3>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+			<img class="w-50 mb-2" src="img/todo.png" alt="">
+
+			<h4 class="modal-title">User Goals</h4>
+			<p class="modal-text">
+				Users are able to add, crossout, delete, and rearrange todo list items.
+			</p>
+
+			<h4 class="modal-title">Technologies</h4>
+			<p class="modal-text">HTML 20%, CSS 29%, JavaSript 51%</p>
+
+			<h4 class="modal-title">Key Features</h4>
+			<ul class="modal-text">
+				<li>Add, crossout, and delete list item</li>
+				<li>Move list around</li>
+				<li>Rearrange list items</li>
+			</ul>
+		</div> <!-- end of modal-body -->
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  <a href="projects/todo.html" type="button" class="btn btn-primary">More Details</a>
+		</div> <!-- end of modal-footer -->
+	  </div> <!-- end of modal-content -->
+	</div> <!-- end of modal-dialog -->
+  </div> <!-- end of todo-modal -->
+
+  <!-- Meet modal -->
+  <div class="modal fade" id="meet-modal" tabindex="-1" role="dialog" aria-labelledby="MeetModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h3 class="modal-title" id="pokedex-modal-label">Meet App</h3>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+				<img class="w-50 mb-2" src="img/meetApp.jpg" alt="">
+
+				<h4 class="modal-title">User Goals</h4>
+				<p class="modal-text">
+					Users will be able to find coding events near them, by filtering city and number of events.
+				</p>
+	
+				<h4 class="modal-title">Technologies</h4>
+				<p class="modal-text">HTML 15%, CSS 11%, JavaSript 72%, Gherkin 3%, React, TDD</p>
+	
+				<h4 class="modal-title">Key Features</h4>
+				<ul class="modal-text">
+					<li>Filter events by city</li>
+					<li>Show/hide event details</li>
+					<li>Specify number of events</li>
+					<li>Use the app when offline</li>
+					<li>Add an app shortcut to the home screen</li>
+					<li>View a chart sowing the number of upcoming events by city</li>
+				</ul>
+		</div> <!-- end of modal-body -->
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  <a href="projects/meet.html" type="button" class="btn btn-primary">More Details</a>
+		</div> <!-- end of modal-footer -->
+	  </div> <!-- end of modal-content -->
+	</div> <!-- end of modal-dialog -->
+  </div> <!-- end of meet-modal -->
+
+  <!-- myFlix modal -->
+  <div class="modal fade" id="myflix-modal" tabindex="-1" role="dialog" aria-labelledby="myflixModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h3 class="modal-title" id="pokedex-modal-label">MyFlix</h3>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+			<p class="modal-text">MyFlix is the client-side of an application based on its existing server-side code (REST API and database), using React.</p>
+		</div> <!-- end of modal-body -->
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  <a href="projects/myflix.html" type="button" class="btn btn-primary">More Details</a>
+		</div> <!-- end of modal-footer -->
+	  </div> <!-- end of modal-content -->
+	</div> <!-- end of modal-dialog -->
+  </div> <!-- end of myflix-modal -->
+
+  <!-- Chat modal -->
+  <div class="modal fade" id="chat-modal" tabindex="-1" role="dialog" aria-labelledby="ChatModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="pokedex-modal-label">Chat App</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+			<p class="modal-text">Chat App is a simple chat phone application built with React Native.</p>
+		</div> <!-- end of modal-body -->
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  <a href="projects/chat.html" type="button" class="btn btn-primary">More Details</a>
+		</div> <!-- end of modal-footer -->
+	  </div> <!-- end of modal-content -->
+	</div> <!-- end of modal-dialog -->
+  </div> <!-- end of chat-modal -->
+
+  <!-- mbg modal -->
+  <div class="modal fade" id="mbg-modal" tabindex="-1" role="dialog" aria-labelledby="MBGModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h3 class="modal-title" id="pokedex-modal-label">Mother B Green Cleaning</h3>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+			<p class="modal-text">The Mother B Green website is a revitalization by utilizing a combination of SquareSpace design tools and custom CSS.</p>
+		</div> <!-- end of modal-body -->
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  <a href="projects/mbg.html" type="button" class="btn btn-primary">More Details</a>
+		</div> <!-- end of modal-footer -->
+	  </div> <!-- end of modal-content -->
+	</div> <!-- end of modal-dialog -->
+  </div> <!-- end of mbg-modal -->
+
+  <!-- changed modal -->
+  <div class="modal fade" id="changed-modal" tabindex="-1" role="dialog" aria-labelledby="ChangedModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h3 class="modal-title" id="pokedex-modal-label">Changed by the Forkfull</h3>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+			<p class="modal-text">Changed is a small website built with HTML, CSS, and JavaScript for a non-profit food forest.</p>
+		</div> <!-- end of modal-body -->
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  <a href="projects/changed.html" type="button" class="btn btn-primary">More Details</a>
+		</div> <!-- end of modal-footer -->
+	  </div> <!-- end of modal-content -->
+	</div> <!-- end of modal-dialog -->
+  </div> <!-- end of changed-modal -->
+
+  <!-- movie api modal -->
+  <div class="modal fade" id="movie-modal" tabindex="-1" role="dialog" aria-labelledby="MovieApiModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="pokedex-modal-label">Movie API</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+			<p class="modal-text">The server-side componenet of a 'movies' web application. This API stores information about different movies, directs, and genres. Users are able to sign up, update their personal information, and create a list of their favorite movies.</p>
+		</div> <!-- end of modal-body -->
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  <a href="projects/movie.html" type="button" class="btn btn-primary">More Details</a>
+		</div> <!-- end of modal-footer -->
+	  </div> <!-- end of modal-content -->
+	</div> <!-- end of modal-dialog -->
+  </div> <!-- end of movie api-modal -->
+
+  <!-- mesh modal -->
+  <div class="modal fade" id="mesh-modal" tabindex="-1" role="dialog" aria-labelledby="MeshModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h3 class="modal-title" id="pokedex-modal-label">MESH Web Development</h3>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+			<p class="modal-text">This website was built with HTML, CSS, and JavaScript for a small buisness. I worked with another developer to meet a short deadline.</p>
+		</div> <!-- end of modal-body -->
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  <a href="projects/mesh.html" type="button" class="btn btn-primary">More Details</a>
+		</div> <!-- end of modal-footer -->
+	  </div> <!-- end of modal-content -->
+	</div> <!-- end of modal-dialog -->
+  </div> <!-- end of mesh-modal -->
+
+  <!-- myFlix angular modal -->
+  <div class="modal fade" id="angular-modal" tabindex="-1" role="dialog" aria-labelledby="MyFlixAngularModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h3 class="modal-title" id="pokedex-modal-label">MyFlix Angular</h3>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+			<p class="modal-text">MyFlix is the client-side application based on its existing server-side code (REST API and database). This was built using Angular. </p>
+		</div> <!-- end of modal-body -->
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  <a href="projects/angular.html" type="button" class="btn btn-primary">More Details</a>
+		</div> <!-- end of modal-footer -->
+	  </div> <!-- end of modal-content -->
+	</div> <!-- end of modal-dialog -->
+  </div> <!-- end of myflix angular-modal -->
+
+</footer>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
 	<script src="js/tota11y.min.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
