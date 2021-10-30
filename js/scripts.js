@@ -50,7 +50,7 @@ function dropdown() {
 dropdown();
 
 function close() {
-    const closeBtn = document.querySelector('.close');
+    const closeBtn = document.querySelector('.nav-close');
     closeBtn.addEventListener('click', closeMenu);
  
     function closeMenu() {

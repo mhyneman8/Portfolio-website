@@ -130,16 +130,22 @@ h1 {
   border-bottom: 1px solid black;
 }
 
-#typedtext::after {
-  border-bottom: 1px solid var(--light-blue);
-  animation: blink infinite;
+.typedtext::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 1%;
+  border-bottom: 1px solid black;
+  top: 20px;
+  animation: blink .65s infinite ease;
 }
+
 @keyframes blink {
   0% {
-    display: hidden;
+    opacity: 0;
   }
   100% {
-    display: block;
+    opacity: 1;
   }
 }
 
@@ -168,6 +174,7 @@ a:hover,
 a:focus {
   text-decoration: underline;
   opacity: 0.5;
+  color: white;
 }
 
 .button {
@@ -268,7 +275,7 @@ button:focus,
 }
 
 .mh-logo {
-  border-radius: 2.188rem;
+  border-radius: 35px;
   width: 4.1rem;
   height: 4.1rem;
   flex: 0;
@@ -414,7 +421,7 @@ main {
   padding: 0.313rem;
   margin: 0 auto;
   justify-content: space-around;
-  border-radius: 2.188rem;
+  border-radius: 35px;
 }
 
 .dropdown {
@@ -454,7 +461,7 @@ main {
   left: 0;
   bottom: 0;
   top: 0;
-  border-radius: 0.188rem;
+  border-radius: 3px;
   background-color: var(--black);
   width: 100%;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
@@ -552,7 +559,7 @@ main {
     min-height: auto;
     padding: 5px;
     text-align: center;
-    border-radius: 2px;
+    border-radius: 3px;
   }
 }
 
@@ -571,7 +578,7 @@ main {
   height: 25px;
   width: 95px;
   padding: 1px;
-  border-radius: 2px;
+  border-radius: 3px;
   border: 2px solid var(--secondary-color);
   display: inline-block;
   margin: 5px auto;
@@ -596,7 +603,7 @@ main {
 
 .movie_img {
   border: 1px solid var(--secondary-color);
-  border-radius: 0.125rem;
+  border-radius: 3px;
   width: inherit;
   height: inherit;
 }
@@ -606,7 +613,7 @@ main {
   width: inherit;
   height: inherit;
   border: 1px solid var(--secondary-color);
-  border-radius: 0.125rem;
+  border-radius: 3px;
   z-index: 2;
 }
 
@@ -622,19 +629,19 @@ main {
   z-index: 2;
 }
 
-.active,
+.projects-active,
 .chat-active {
   position: absolute;
   width: inherit;
   height: inherit;
   border: 1px solid var(--secondary-color);
-  border-radius: 0.125rem;
+  border-radius: 3px;
   top: 0;
   left: 0;
 }
 
 .modal-dialog {
-  margin-top: 20% !important;
+  /* margin-top: 20% !important; */
   z-index: 5;
 }
 
@@ -644,9 +651,8 @@ main {
 }
 
 .modal-title {
-  color: var(--black);
-  text-align: center;
-  margin: 5px auto;
+  text-align: left;
+  color: var(--secondary-color);
 }
 
 .btn-primary {
@@ -660,7 +666,89 @@ main {
   background-color: white;
 }
 
+.links {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  right: -10px;
+  top: 170px;
+}
 
+.links-btn {
+  margin-bottom: 10px;
+  color: var(--light-blue);
+  border: 1px solid var(--secondary-color);
+  padding: 7px;
+  width: 75px;
+  border-radius: 10px;
+}
+
+.carousel {
+  width: 600px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.carousel-indicators {
+  z-index: 2;
+}
+
+.carousel-img {
+  text-align: center !important;
+  margin: 50px auto !important;
+  height: 300px;
+  width: 350px;
+}
+
+.ref-text {
+  text-align: left;
+  margin: 30px auto;
+  text-indent: 40px;
+  line-height: 1.7;
+}
+
+.loading-gif {
+  width: 282px;
+  height: 156px;
+  object-fit: cover;
+  margin: 10px;
+  float: right;
+  border: 1px solid var(--secondary-color);
+  border-radius: 3px;
+}
+
+.pidgeotto-modal {
+  float: right;
+  width: 40%;
+  height: auto;
+  border: 1px solid var(--secondary-color);
+  border-radius: 3px;
+  margin: 10px 10px 10px 30px;
+}
+
+.modal-code {
+  width: 70%;
+  height: auto;
+  margin: 20px auto;
+  border: 1px solid var(--secondary-color);
+}
+
+.power-gif {
+  width: 326px;
+  height: 325;
+  object-fit: cover;
+  float: right;
+  margin: 10px 10px 20px 30px;
+  border: 1px solid var(--secondary-color);
+}
+
+.loading-code {
+  width: 350px;
+  height: auto;
+  float: left;
+  margin: 10px 30px 10px 0;
+  border: 1px solid var(--secondary-color);
+}
 
 .chicago_image {
   display: block;
