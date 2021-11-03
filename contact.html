@@ -73,23 +73,23 @@
 			<a href="tel:7735557722" id="phone" >Call: (773) 555-7721</a> -->
 
 		  <!-- link to email -->
-			<p class="display-block">Email: </p>
-			<a href="mailto:mallory.hyneman@gmail.com" id="email">mallory(dot)hyneman(at)gmail(dot)com</a>
-		</div> <!-- end of content-me -->
+			<!-- <p class="display-block">Email: </p>
+			<a href="mailto:mallory.hyneman@gmail.com" id="email">mallory(dot)hyneman(at)gmail(dot)com</a> -->
+	<!--	</div>  end of content-me -->
 
 	  <!--contact form -->
-		<form action="/action.php" method="post" id="contact-form" class="contact-form">
+		<form action="contact-form-handler.php" method="post" id="contact-form" class="contact-form">
 
-		<h2 class="form-label">Send me a message!</h2>
+			<h2 class="form-label">Lets Chat!</h2>
 
-		<label class="form-label" for="contact-email">E-mail:* </label>
-		<input type="email" required id="contact-email">
+			<label class="form-label" for="name" >Full Name:* </label>
+			<input name="name" type="text" id="contact-name" required>
 
-			<label class="form-label" for="contact-phone" >Telephone: </label>
-			<input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-phone">
+			<label class="form-label" for="contact-email">E-mail:* </label>
+			<input name="email" type="email" required id="contact-email">
 
 			<label class="form-label" for="contact-message">Message:* </label>
-			<textarea required maxlength="240" placeholder="240 max characters" rows="6" cols="30" id="contact-message"></textarea>
+			<textarea name="message" required rows="6" cols="30" id="contact-message"></textarea>
 
 			<input type="submit" value="Send Message" class="button_secondary button">
 		</form>
