@@ -342,7 +342,8 @@ button:focus,
 }
 
 .contact-title {
-  font-size: 2.56rem;
+  font-size: 2.56rem !important;
+  margin-bottom: 3.125rem !important;
 }
 
 .profile_picture {
