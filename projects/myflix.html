@@ -86,13 +86,13 @@
                 </ol>
                 <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block carousel-img" src="../img/pokedex/homepage.jpg" alt="First slide">
+                    <img class="d-block carousel-img" src="../img/myFlix/myFlix.jpg" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block carousel-img" src="../img/pokedex/modal.jpg" alt="Second slide">
+                    <img class="d-block carousel-img" src="../img/myFlix/favorite.jpg" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block carousel-img" src="../img/pokedexDemo.gif" alt="Third slide">
+                    <img class="d-block carousel-img" src="../img/myFlix/movieView.jpg" alt="Third slide">
                 </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -108,111 +108,74 @@
 
         <div class="reflection">
             <h4>Overview</h4>
-            <p>myFlix is a single-page, responsive application with routing, rich interactions, and several interface views.
+            <p class="ref-text">myFlix is a single-page, responsive application with routing, rich interactions, and several interface views.
                 This is the client-side to the Movie API. It lets movie enthusiasts access information about different movies, directors, 
                 and genres, whenever they want. Users have the ability to create an account, update their personal data, and save a list of their favorite movies.
             </p>
 
-            <h4>Purpose & Context</h4>
-            This is a personal project that was built to satisfy a full stack development course project at CareerFoundry. This project is used to demonstrate my abilities using JavaScript.
-            <span class="bold">User Stories:</span>
-            <br>
-            As a user, I want to be able to access information on movies, directors, and genres so that I can learn more about movies I've watched or am interested in.
-            <br>
-            As a user, I want to be able to create a profile so I can save data about my favorite movies.
-            <br>
-            <p></p>
+            <img class="float-right w-50 m-3 border" src="../img/myFlix/movieView.gif" alt="">
 
-            <h4>Objective</h4>
-            <p></p>
+            <h4>Purpose & Context</h4>
+            <p class="ref-text">This is a personal project that was built to satisfy a full stack development course project at CareerFoundry. This project is used to demonstrate my abilities using React and JavaScript.</p>
+            <span class="bold text-left mb-1">User Stories:</span>
+            <p class="ref-text">
+            As a user, I want to be able to access information on movies, directors, and genres so that I can learn more about movies I've watched or am interested in.
+            </p>
+            <p class="ref-text">
+            As a user, I want to be able to create a profile so I can save data about my favorite movies.
+            </p>
+
+            <img class="d-block w-60 text-center m-auto border" src="../img/myFlix/profile.gif" alt="">
+
+            <h4 class="mt-4">Objective</h4>
+            <p class="ref-text"> Using React, build the client-side of a movie app based on its existing server-side code (REST API and database)</p>
+
+            <img class="w-50 border float-right m-3" src="../img/myFlix/favorite.jpg" alt="">
 
             <h4>Approach</h4>
-            <p>
-                <span class="bold">Technologies:</span> React, React Redux, Bootstrap, Parcel, Node
-                <br>
-                After completing the API, 
+            <p class="ref-text">
+                <span class="bold">Technologies:</span> 
+                React, React Redux, Bootstrap, JSX, Parcel, Node
             </p>
 
-            <h4>Challenges</h4>
-            <p></p>
+            <ul class="text-left">
+                <li>Create Repo and Set up Parcel</li>
+                <li>Used JSX to create MainView, MovieCard, and MovieView components</li>
+                <li>Connected components myFlix API to fetch movie data from the database</li>
+                <li>Added login and registration views, and integrated with MainView component</li>
+                <li>Added some styling with React Bootstrap</li>
+                <li>Added routing to source code</li>
+                <li>Create director, genre, and profile views</li>
+                <li>Director view fetches and displays data about the a particular director and lists their other movies </li>
+                <li>Genre view fetches and displays data about a particular genre and other movies with same genre</li>
+                <li>User Profile allows user to update their information, deregister, display user's favorite movies, and allows to remove a favorite movie</li>
+                <li>Code to send JWT token alongside client requests for authenticated users</li>
+                <li>Implement client-side form validation for login and registration views based on server-side validation</li>
+                <li>Added React Redux to implement the Flux design pattern</li>
+            </ul>
+
+            <img class="w-60 text-center m-auto border" src="../img/myFlix/myflixDemo.gif" alt="">
+
+            <h4 class="mt-4">Challenges</h4>
+            <p class="ref-text">This project was by far the most challenging project I have done so far. This was my first time using React, and it took a little bit for me to understand it. To help understand it, I would reread the lesson information, along with supplementing it with videos. Once I understood how it worked, I really appreciated the way it is broken out into components. Another challenge I had was with the Profile View. It took a lot of google searches and help from the tech community to figure out how to get the users favorite movies to display. Once I got through everything I wanted I felt so accomplished. If I was to go back to this project I would add a few more features, like being able to search for actors and see all their movies. And letting users add new movies to the database.</p>
+            <img class="border float-right w-50 ml-3" src="../img/myFlix/search.gif" alt="">
 
             <h4>Duration</h4>
-            <p></p>
-            
-            <h4>Credits</h4>
-            <p>
-                <span class="bold">Role:</span> Lead developer
-                <span class="bold">Tutor:</span> Andrew something
-                <span class="bold">Mentor:</span> Alexis Something
-            </p>
             <p class="ref-text">
-                
-            </p>
-            <p class="ref-text">
-               
-            </p>
-            <img class="loading-code" src="../img/pokedex/loadingScreen.jpg" alt="">
-            <p class="ref-text">
-                
+                This project took a little under 2 months. The challenges I experienced set me back a couple weeks. 
             </p>
             
-            <p class="ref-text">
-                
+            <h4 class="text-left mt-5">Credits</h4>
+            <p class="m-auto text-left pb-4">
+                <span class="bold display-inline-block">Role:</span> Lead developer
+                <br>
+                <span class="bold display-inline-block">Tutor:</span> Andrew Muscara
+                <br>
+                <span class="bold display-inline-block">Mentor:</span> Alexis Gormley
             </p>
-
-            <p class="ref-text">
-            
-            </p>
-            
-            <p class="ref-text">
-                
-            </p>
-            <img class="loading-gif" src="../img/pokedex/loading.gif" alt="">
-            <p class="ref-text">
-                
-            </p>
-            <img class="modal-code" src="../img/pokedex/modalDetails.jpg" alt="">
-            <p class="ref-text">
-               
-            </p>
-            <img class="pidgeotto-modal" src="../img/pokedex/modal.jpg" alt="">
-            <p class="ref-text">
-                
-            </p>
-            
-            <p class="ref-text">
-                
-            </p>
-            <img class="w-50 loading-code" src="../img/pokedex/powerDownBtn.jpg" alt="">
-            <p class="ref-text">
-                
-            </p>
-            <img class="power-gif" src="../img/pokedex/power.gif" alt="">
-            <p class="ref-text">
-               
-            </p>
-            
-            <p class="ref-text">
-                
-            </p>
-            <img class="text-center m-3" src="../img/pokedexDemo.gif" alt="">  
+           
         </div> <!-- end of reflection -->
- 		<div class="reflection">
-            1) A brief description of the project. You can use the project brief or your 
-            README file as inspiration. In your description, try also to reflect on your work
-             by answering the following questions (you don't need too much detail; the key points are fine):
-                - What was your role for this project and what tasks did you face?
-                - What decisions did you take and why? What were the consequences?
-                - If you could, what would you do differently?
-                - What lessons did you learn during this project?
-            2) A screenshot to represent the project.
-            3) A link to the project’s GitHub repository.
-            4) A link to the live, hosted version of your app (if possible). If you don’t have a live version, include screenshots that show the app’s functionality or a recording of your app in use.
-            5) A list of the technologies used for each project (React, CSS etc. — again, you can pull this from your README file).
-            6) Any other relevant materials you created for the project; for example, user flows, user stories, and/or a Kanban board. Be sure to explain how you worked with these materials during the project.
-        </div>
-
-	</main>
+ 	</main>
 
 	<!-- footer -->
 	<footer class="page-footer">

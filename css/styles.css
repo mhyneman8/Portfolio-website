@@ -689,6 +689,11 @@ li {
   border: 1px solid black
 }
 
+.btn-primary:hover {
+  background-color: #952e6b;
+  border-color: #772c64;
+}
+
 .btn-secondary {
   color: var(--light-blue);
   background-color: white;
