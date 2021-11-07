@@ -172,7 +172,7 @@ a {
 /* focus is for accessibility */
 a:hover,
 a:focus {
-  text-decoration: underline;
+  text-decoration: none;
   opacity: 0.5;
   color: white;
 }
@@ -201,7 +201,8 @@ button:focus,
   opacity: 0.9;
 }
 
-.index_button:hover {
+.index_button:hover ,
+.index_button:focus {
   background-color: var(--secondary-color);
 }
 
@@ -377,6 +378,11 @@ main {
   text-align: center;
 }
 
+li {
+  padding-left: 10px;
+  padding-bottom: 7px;
+}
+
 .profile {
   text-align: center;
 }
@@ -443,7 +449,8 @@ main {
   border: none;
 }
 
-.dropbtn:hover {
+.dropbtn:hover,
+.dropbtn:focus {
   background-image: url(../img/navbar2.svg);
 }
 
@@ -451,6 +458,7 @@ main {
 .dropdown {
   position: relative;
   display: inline-block;
+  background-image: url(../img/navbar.svg);
   height: 2.188rem;
   margin-top: 0.063rem;
   margin-right: 0.625rem;
@@ -517,6 +525,11 @@ main {
   display: none;
 }
 
+.border {
+  border: 1px solid var(--secondary-color) !important;
+  border-radius: 3px;
+}
+
 .form-label {
   text-align: center;
   display: block;
@@ -538,6 +551,14 @@ main {
 
 .display-block {
   display: block;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 /* start grid fallback */
@@ -588,7 +609,8 @@ main {
   margin: 5px auto;
 }
 
-.code:hover {
+.code:hover,
+.code:focus {
   color: white;
 }
 
@@ -622,7 +644,9 @@ main {
 }
 
 .chat-static:hover,
-.static:hover {
+.static:hover,
+.chat-static:focus,
+.static:focus {
   opacity: 0;
 }
 
@@ -665,6 +689,11 @@ main {
   border: 1px solid black
 }
 
+.btn-primary:hover {
+  background-color: #952e6b;
+  border-color: #772c64;
+}
+
 .btn-secondary {
   color: var(--light-blue);
   background-color: white;
@@ -676,6 +705,7 @@ main {
   flex-direction: column;
   right: -10px;
   top: 170px;
+  margin-left: 10px;
 }
 
 .links-btn {
@@ -704,9 +734,15 @@ main {
   width: 350px;
 }
 
+.reflection {
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+}
+
 .ref-text {
   text-align: left;
-  margin: 30px auto;
+  margin: 20px auto;
   text-indent: 40px;
   line-height: 1.7;
 }
