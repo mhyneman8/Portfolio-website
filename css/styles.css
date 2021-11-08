@@ -747,6 +747,11 @@ li {
   line-height: 1.7;
 }
 
+.trello {
+  width: 550px;
+  height: auto;
+}
+
 .loading-gif {
   width: 282px;
   height: 156px;
