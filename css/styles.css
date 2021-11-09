@@ -1,10 +1,3 @@
-/*
-  Color ratio checker https://contrast-ratio.com/#white-on-%23357b70
-
-?s
-*/
-
-/* adds to all html elements */
 * {
   box-sizing: border-box;
 }
@@ -104,11 +97,10 @@ body {
 .h1,
 h1 {
   color: var(--light-blue);
-  /* font-family: 'Playfair Display', serif; */
   font-size: 3.4375rem;
   font-weight: 700;
   text-align: center;
-  margin: 2.313rem auto;
+  margin: 0.313rem auto;
 }
 
 @media all and (max-width: 600px) {
@@ -127,16 +119,15 @@ h1 {
 
 #typedtext {
   min-height: 10rem;
-  /* border-bottom: 1px solid black; */
 }
 
 .typedtext::after {
   content: '';
   position: absolute;
-  width: 10px;
+  width: 0.625rem;
   height: 1%;
   border-bottom: 1px solid black;
-  top: 20px;
+  top: 1.25rem;
   animation: blink .65s infinite ease;
 }
 
@@ -167,9 +158,9 @@ a {
   color: var(--light-blue);
   text-decoration: none;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
-/* focus is for accessibility */
 a:hover,
 a:focus {
   text-decoration: none;
@@ -379,14 +370,14 @@ main {
 }
 
 li {
-  padding-left: 10px;
-  padding-bottom: 7px;
+  padding-left: 0.625rem;
+  padding-bottom: 0.4375rem;
 }
 
 .profile {
   text-align: center;
 }
-/* main */
+
 .profile_paragraph {
   display: block;
   line-height: 2.2;
@@ -485,7 +476,8 @@ li {
   display: flex;
   flex-direction:column;
   text-align: center;
-  border: 1px solid grey;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
   margin-top: 10%;
   width: 100%;
 }
@@ -493,7 +485,7 @@ li {
 .menu-item {
   font-size: 1.25rem;
   color: white;
-  margin: 20px auto;
+  margin: 1.25rem auto;
 }
 
 .menu-title {
@@ -582,31 +574,31 @@ li {
     background-color: var(--grey);
     width: auto;
     min-height: auto;
-    padding: 5px;
+    padding: 0.3125rem;
     text-align: center;
     border-radius: 3px;
   }
 }
 
 .code-btn {
-  width: 200px;
+  width: 12.5rem;
   text-align: center;
   margin: 0 auto;
-  height: 50px;
+  height: 3.125rem;
   position: relative;
 }
 
 .code {
   background-color: var(--light-blue);
   color: var(--black);
-  font-size: 14px;
-  height: 25px;
-  width: 95px;
-  padding: 1px;
+  font-size: 0.875rem;
+  height: 1.5625rem;
+  width: 5.9375rem;
+  padding: 0.0625rem;
   border-radius: 3px;
   border: 2px solid var(--secondary-color);
   display: inline-block;
-  margin: 5px auto;
+  margin: 0.3125rem auto;
 }
 
 .code:hover,
@@ -616,14 +608,14 @@ li {
 
 .project_img {
   position: relative;
-  height: 200px;
-  width: 250px;
+  height: 12.5rem;
+  width: 15.625rem;
 }
 
 @media all and (max-width: 800px) {
   .project_img {
     text-align: center;
-    margin: 10px auto;
+    margin: 0.625rem auto;
   }
 }
 
@@ -668,8 +660,21 @@ li {
   left: 0;
 }
 
+@media all and (max-width: 450px) {
+  .projects-active,
+  .chat-active {
+    display: none;
+  }
+
+  .chat-static:hover,
+  .static:hover,
+  .chat-static:focus,
+  .static:focus {
+    opacity: .8;
+  }
+}
+
 .modal-dialog {
-  /* margin-top: 20% !important; */
   z-index: 5;
 }
 
@@ -705,22 +710,28 @@ li {
   flex-direction: column;
   right: -10px;
   top: 170px;
-  margin-left: 10px;
+  margin-left: 0.625rem;
 }
 
 .links-btn {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   color: var(--light-blue);
   border: 1px solid var(--secondary-color);
-  padding: 7px;
-  width: 75px;
+  padding: 0.4375rem;
+  width: 4.6875rem;
   border-radius: 10px;
 }
 
 .carousel {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   text-align: center;
   margin: 10px auto;
+}
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item-active {
+  display: block !important;
 }
 
 .carousel-indicators {
@@ -729,9 +740,15 @@ li {
 
 .carousel-img {
   text-align: center !important;
-  margin: 50px auto !important;
+  margin: 3.125rem auto !important;
   height: 300px;
   width: 350px;
+}
+
+.chat-carousel {
+  text-align: center !important;
+  margin: 3.125rem auto !important;
+  height: 300px;
 }
 
 .reflection {
@@ -740,23 +757,28 @@ li {
   margin: 0 auto;
 }
 
+.ref-header {
+  font-size: 1.8rem
+}
+
 .ref-text {
   text-align: left;
-  margin: 20px auto;
-  text-indent: 40px;
+  margin: 1.25rem auto;
   line-height: 1.7;
+  font-size: 1.25rem;
+  letter-spacing: 0.0625rem;
 }
 
 .trello {
-  width: 550px;
+  width: 34.375rem;
   height: auto;
 }
 
 .loading-gif {
-  width: 282px;
-  height: 156px;
+  width: 17.625rem;
+  height: 9.75rem;
   object-fit: cover;
-  margin: 10px;
+  margin: 0.625rem;
   float: right;
   border: 1px solid var(--secondary-color);
   border-radius: 3px;
@@ -768,31 +790,31 @@ li {
   height: auto;
   border: 1px solid var(--secondary-color);
   border-radius: 3px;
-  margin: 10px 10px 10px 30px;
+  margin: 0.625rem 0.625rem 0.625rem 1.875rem;
 }
 
 .modal-code {
   width: 70%;
   height: auto;
-  margin: 20px auto;
+  margin: 1.25rem auto;
   border: 1px solid var(--secondary-color);
 }
 
 .power-gif {
-  width: 326px;
+  width: 20.375rem;
   height: 325;
   object-fit: cover;
   float: right;
-  margin: 10px 10px 20px 30px;
+  margin: 0.625rem 0.625rem 1.25rem 30px;
   border: 1px solid var(--secondary-color);
 }
 
 .loading-code {
-  width: 350px;
+  width: 21.875rem;
   height: auto;
   float: left;
-  margin: 10px 30px 10px 0;
-  border: 1px solid var(--secondary-color);
+  margin: 0.625rem 1.875rem 0.625rem 0;
+  border: 0.0625rem solid var(--secondary-color);
 }
 
 .chicago_image {

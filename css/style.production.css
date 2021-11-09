@@ -5,13 +5,6 @@
 * Browsers: last 4 version
 */
 
-/*
-  Color ratio checker https://contrast-ratio.com/#white-on-%23357b70
-
-?s
-*/
-
-/* adds to all html elements */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -107,20 +100,18 @@ body {
 
 .h1 {
   color: #db2b8e;
-  /* font-family: 'Playfair Display', serif; */
   font-size: 3.4375rem;
   font-weight: 700;
   text-align: center;
-  margin: 2.313rem auto;
+  margin: 0.313rem auto;
 }
 
 h1 {
   color: #db2b8e;
-  /* font-family: 'Playfair Display', serif; */
   font-size: 3.4375rem;
   font-weight: 700;
   text-align: center;
-  margin: 2.313rem auto;
+  margin: 0.313rem auto;
 }
 
 @media all and (max-width: 600px) {
@@ -139,16 +130,15 @@ h1 {
 
 #typedtext {
   min-height: 10rem;
-  /* border-bottom: 1px solid black; */
 }
 
 .typedtext::after {
   content: '';
   position: absolute;
-  width: 10px;
+  width: 0.625rem;
   height: 1%;
   border-bottom: 1px solid black;
-  top: 20px;
+  top: 1.25rem;
   -webkit-animation: blink .65s infinite ease;
           animation: blink .65s infinite ease;
 }
@@ -191,12 +181,12 @@ a {
   -webkit-transition-duration: 0.3s;
        -o-transition-duration: 0.3s;
           transition-duration: 0.3s;
+  cursor: pointer;
 }
 
-/* focus is for accessibility */
 a:hover,
 a:focus {
-  text-decoration: underline;
+  text-decoration: none;
   opacity: 0.5;
   color: white;
 }
@@ -228,6 +218,10 @@ button:focus,
 }
 
 .index_button:hover {
+  background-color: #952e6b;
+}
+
+.index_button:focus {
   background-color: #952e6b;
 }
 
@@ -392,8 +386,8 @@ button:focus,
 }
 
 .contact-title {
-  font-size: 40.96px !important;
-  margin-bottom: 2.5rem !important;
+  font-size: 2.56rem !important;
+  margin-bottom: 3.125rem !important;
 }
 
 .profile_picture {
@@ -427,10 +421,15 @@ main {
   text-align: center;
 }
 
+li {
+  padding-left: 0.625rem;
+  padding-bottom: 0.4375rem;
+}
+
 .profile {
   text-align: center;
 }
-/* main */
+
 .profile_paragraph {
   display: block;
   line-height: 2.2;
@@ -502,7 +501,8 @@ main {
   border: none;
 }
 
-.dropbtn:hover {
+.dropbtn:hover,
+.dropbtn:focus {
   background-image: url(../img/navbar2.svg);
 }
 
@@ -510,6 +510,7 @@ main {
 .dropdown {
   position: relative;
   display: inline-block;
+  background-image: url(../img/navbar.svg);
   height: 2.188rem;
   margin-top: 0.063rem;
   margin-right: 0.625rem;
@@ -542,7 +543,8 @@ main {
       -ms-flex-direction:column;
           flex-direction:column;
   text-align: center;
-  border: 1px solid grey;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
   margin-top: 10%;
   width: 100%;
 }
@@ -550,7 +552,7 @@ main {
 .menu-item {
   font-size: 1.25rem;
   color: white;
-  margin: 20px auto;
+  margin: 1.25rem auto;
 }
 
 .menu-title {
@@ -582,6 +584,11 @@ main {
   display: none;
 }
 
+.border {
+  border: 1px solid #952e6b !important;
+  border-radius: 3px;
+}
+
 .form-label {
   text-align: center;
   display: block;
@@ -603,6 +610,14 @@ main {
 
 .display-block {
   display: block;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 /* start grid fallback */
@@ -628,47 +643,48 @@ main {
     background-color: #c5c6c7;
     width: auto;
     min-height: auto;
-    padding: 5px;
+    padding: 0.3125rem;
     text-align: center;
     border-radius: 3px;
   }
 }
 
 .code-btn {
-  width: 200px;
+  width: 12.5rem;
   text-align: center;
   margin: 0 auto;
-  height: 50px;
+  height: 3.125rem;
   position: relative;
 }
 
 .code {
   background-color: #db2b8e;
   color: #0b0c10;
-  font-size: 14px;
-  height: 25px;
-  width: 95px;
-  padding: 1px;
+  font-size: 0.875rem;
+  height: 1.5625rem;
+  width: 5.9375rem;
+  padding: 0.0625rem;
   border-radius: 3px;
   border: 2px solid #952e6b;
   display: inline-block;
-  margin: 5px auto;
+  margin: 0.3125rem auto;
 }
 
-.code:hover {
+.code:hover,
+.code:focus {
   color: white;
 }
 
 .project_img {
   position: relative;
-  height: 200px;
-  width: 250px;
+  height: 12.5rem;
+  width: 15.625rem;
 }
 
 @media all and (max-width: 800px) {
   .project_img {
     text-align: center;
-    margin: 10px auto;
+    margin: 0.625rem auto;
   }
 }
 
@@ -689,7 +705,9 @@ main {
 }
 
 .chat-static:hover,
-.static:hover {
+.static:hover,
+.chat-static:focus,
+.static:focus {
   opacity: 0;
 }
 
@@ -720,8 +738,21 @@ main {
   left: 0;
 }
 
+@media all and (max-width: 450px) {
+  .projects-active,
+  .chat-active {
+    display: none;
+  }
+
+  .chat-static:hover,
+  .static:hover,
+  .chat-static:focus,
+  .static:focus {
+    opacity: .8;
+  }
+}
+
 .modal-dialog {
-  /* margin-top: 20% !important; */
   z-index: 5;
 }
 
@@ -741,6 +772,11 @@ main {
   border: 1px solid black
 }
 
+.btn-primary:hover {
+  background-color: #952e6b;
+  border-color: #772c64;
+}
+
 .btn-secondary {
   color: #db2b8e;
   background-color: white;
@@ -757,21 +793,28 @@ main {
           flex-direction: column;
   right: -10px;
   top: 170px;
+  margin-left: 0.625rem;
 }
 
 .links-btn {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   color: #db2b8e;
   border: 1px solid #952e6b;
-  padding: 7px;
-  width: 75px;
+  padding: 0.4375rem;
+  width: 4.6875rem;
   border-radius: 10px;
 }
 
 .carousel {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   text-align: center;
   margin: 10px auto;
+}
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item-active {
+  display: block !important;
 }
 
 .carousel-indicators {
@@ -780,24 +823,46 @@ main {
 
 .carousel-img {
   text-align: center !important;
-  margin: 50px auto !important;
+  margin: 3.125rem auto !important;
   height: 300px;
   width: 350px;
 }
 
+.chat-carousel {
+  text-align: center !important;
+  margin: 3.125rem auto !important;
+  height: 300px;
+}
+
+.reflection {
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.ref-header {
+  font-size: 1.8rem
+}
+
 .ref-text {
   text-align: left;
-  margin: 30px auto;
-  text-indent: 40px;
+  margin: 1.25rem auto;
   line-height: 1.7;
+  font-size: 1.25rem;
+  letter-spacing: 0.0625rem;
+}
+
+.trello {
+  width: 34.375rem;
+  height: auto;
 }
 
 .loading-gif {
-  width: 282px;
-  height: 156px;
+  width: 17.625rem;
+  height: 9.75rem;
   -o-object-fit: cover;
      object-fit: cover;
-  margin: 10px;
+  margin: 0.625rem;
   float: right;
   border: 1px solid #952e6b;
   border-radius: 3px;
@@ -809,32 +874,32 @@ main {
   height: auto;
   border: 1px solid #952e6b;
   border-radius: 3px;
-  margin: 10px 10px 10px 30px;
+  margin: 0.625rem 0.625rem 0.625rem 1.875rem;
 }
 
 .modal-code {
   width: 70%;
   height: auto;
-  margin: 20px auto;
+  margin: 1.25rem auto;
   border: 1px solid #952e6b;
 }
 
 .power-gif {
-  width: 326px;
+  width: 20.375rem;
   height: 325;
   -o-object-fit: cover;
      object-fit: cover;
   float: right;
-  margin: 10px 10px 20px 30px;
+  margin: 0.625rem 0.625rem 1.25rem 30px;
   border: 1px solid #952e6b;
 }
 
 .loading-code {
-  width: 350px;
+  width: 21.875rem;
   height: auto;
   float: left;
-  margin: 10px 30px 10px 0;
-  border: 1px solid #952e6b;
+  margin: 0.625rem 1.875rem 0.625rem 0;
+  border: 0.0625rem solid #952e6b;
 }
 
 .chicago_image {
