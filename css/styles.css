@@ -728,6 +728,14 @@ li {
   z-index: 2;
 }
 
+.carousel-control-next {
+  right: 48px !important;
+}
+
+.carousel-control-prev {
+  left: 48px !important;
+}
+
 .carousel-img {
   text-align: center !important;
   margin: 50px auto !important;
@@ -745,6 +753,10 @@ li {
   width: 75%;
   text-align: center;
   margin: 0 auto;
+}
+
+.ref-header {
+  font-size: 1.8rem
 }
 
 .ref-text {
