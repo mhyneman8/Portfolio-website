@@ -167,6 +167,7 @@ a {
   color: var(--light-blue);
   text-decoration: none;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 /* focus is for accessibility */
@@ -707,6 +708,7 @@ li {
   right: -10px;
   top: 170px;
   margin-left: 10px;
+  
 }
 
 .links-btn {
@@ -716,6 +718,7 @@ li {
   padding: 7px;
   width: 75px;
   border-radius: 10px;
+  /* cursor: pointer; */
 }
 
 .carousel {
