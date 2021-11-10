@@ -35,22 +35,21 @@ function typewriter()
         }
     }
 if (document.body.className === 'homePage'){ 
-    if (localStorage.getItem('pageloadcount') === null) {
+    if (sessionStorage.getItem('pageloadcount') === null) {
         setTimeout("typewriter()", 5100);
     } else {
         typewriter();
     }
 
     document.addEventListener("DOMContentLoaded", function() {
-        console.log(localStorage.getItem('pageloadcount'));
+        console.log(sessionStorage.getItem('pageloadcount'));
 
-        if (localStorage.getItem('pageloadcount') === null) {
+        if (sessionStorage.getItem('pageloadcount') === null) {
             console.log('null');
             document.querySelector('#opening').classList.add('show');
-            localStorage.setItem('pageloadcount', '1');
+            sessionStorage.setItem('pageloadcount', '1');
         }
     })
-
 }
 
 function dropdown() {
@@ -78,9 +77,8 @@ function close() {
 }
 close();
 
-window.onbeforeunload = function() {
-    localStorage.removeItem('pageloadcount');
-    return '';
-}
+// window.onbeforeunload = function() {
+//     localStorage.removeItem('pageloadcount');
+// }
 
 // localStorage.removeItem('pageloadcount');
