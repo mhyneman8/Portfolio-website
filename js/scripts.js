@@ -78,3 +78,4 @@ function close() {
 }
 close();
 
+localStorage.removeItem('pageloadcount');
