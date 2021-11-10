@@ -78,4 +78,9 @@ function close() {
 }
 close();
 
-localStorage.removeItem('pageloadcount');
+window.onbeforeunload = function() {
+    localStorage.removeItem('pageloadcount');
+    return '';
+}
+
+// localStorage.removeItem('pageloadcount');
