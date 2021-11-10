@@ -24,7 +24,8 @@ body {
 }
 
 .title {
-  display: block !important;
+  display: none;
+  /* display: block !important; */
   background-color: #1f2833;
   text-align: center;
   color: rgb(148, 143, 143);
@@ -980,12 +981,15 @@ li {
     grid-gap: 0.938rem;
     -ms-grid-columns: 1fr 0.938rem 1fr;
     grid-template-columns: 1fr 1fr;
+    margin: 0 1.25rem;
+    margin-bottom: 1.25rem;
   }
 
-  .grid__item:last-child {
+  /* .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
-  }
+    margin-bottom: 1.25rem;
+  } */
 
   .contact-me {
     border: 0.125rem solid #c5c6c7;
@@ -999,6 +1003,7 @@ li {
   .grid {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    margin: 0 1.25rem;
   }
 
   .contact-me {

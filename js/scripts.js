@@ -12,30 +12,46 @@ var aText = new Array(
     var sContents = ''; // initialise contents variable
     var iRow; // initialise current row
      
-    function typewriter()
+function typewriter()
     {
-     sContents =  ' ';
-     iRow = Math.max(0, iIndex-iScrollAt);
-     var destination = document.getElementById("typedtext");
-     
-     while ( iRow < iIndex ) {
-      sContents += aText[iRow++] + '<br />';
-     }
-     destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
-     
-     if ( iTextPos++ == iArrLength ) {
-      iTextPos = 0;
-      iIndex++;
-      if ( iIndex != aText.length ) {
-       iArrLength = aText[iIndex].length;
-       setTimeout("typewriter()", 500);
-      }
-     } else {
-      setTimeout("typewriter()", iSpeed);
-     }
+        sContents =  ' ';
+        iRow = Math.max(0, iIndex-iScrollAt);
+        var destination = document.getElementById("typedtext");
+        
+        while ( iRow < iIndex ) {
+        sContents += aText[iRow++] + '<br />';
+        }
+        destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+            
+        if ( iTextPos++ == iArrLength ) {
+        iTextPos = 0;
+        iIndex++;
+        if ( iIndex != aText.length ) {
+        iArrLength = aText[iIndex].length;
+        setTimeout("typewriter()", 500);
+        }
+        } else {
+        setTimeout("typewriter()", iSpeed);
+        }
     }
-    
-    setTimeout("typewriter()", 5100);
+if (document.body.className === 'homePage'){ 
+    if (localStorage.getItem('pageloadcount') === null) {
+        setTimeout("typewriter()", 5100);
+    } else {
+        typewriter();
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        console.log(localStorage.getItem('pageloadcount'));
+
+        if (localStorage.getItem('pageloadcount') === null) {
+            console.log('null');
+            document.querySelector('#opening').classList.add('show');
+            localStorage.setItem('pageloadcount', '1');
+        }
+    })
+
+}
 
 function dropdown() {
     const dropbtn = document.querySelector('.dropbtn');
@@ -61,3 +77,4 @@ function close() {
     }
 }
 close();
+
