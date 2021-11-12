@@ -76,9 +76,3 @@ function close() {
     }
 }
 close();
-
-// window.onbeforeunload = function() {
-//     localStorage.removeItem('pageloadcount');
-// }
-
-// localStorage.removeItem('pageloadcount');
