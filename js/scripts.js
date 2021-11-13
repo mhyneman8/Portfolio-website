@@ -34,6 +34,7 @@ function typewriter()
         setTimeout("typewriter()", iSpeed);
         }
     }
+    
 if (document.body.className === 'homePage'){ 
     if (sessionStorage.getItem('pageloadcount') === null) {
         setTimeout("typewriter()", 5100);
@@ -58,10 +59,10 @@ function dropdown() {
 
     function show() {
         const content = document.querySelector('.dropdown-content');
-
         content.classList.add('show');
     }
 }
+
 dropdown();
 
 function close() {
