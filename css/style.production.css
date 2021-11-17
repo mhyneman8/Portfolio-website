@@ -25,6 +25,7 @@ body {
 
 .title {
 	display: none;
+	/* opacity: 0; */
 	background-color: #1f2833;
 	text-align: center;
 	color: rgb(148, 143, 143);
@@ -42,6 +43,7 @@ body {
 	overflow-y: hidden;
 	white-space: nowrap;
 	margin: 0 auto;
+	/* transition: opacity 500ms ease-in; */
 	-webkit-animation: typing 3.5s steps(40, end), welcome 0s ease-in 5s forwards;
 	animation: typing 3.5s steps(40, end), welcome 0s ease-in 5s forwards;
 }
@@ -68,8 +70,7 @@ body {
 	to {
 		width: 0;
 		height: 0;
-
-		overflow-x: hidden;
+		/* overflow-x: hidden; */
 	}
 }
 @-webkit-keyframes welcome {
@@ -77,7 +78,7 @@ body {
 		width: 0;
 		height: 0;
 		visibility: hidden;
-		overflow: hidden;
+		/* overflow: hidden; */
 	}
 }
 
@@ -154,6 +155,12 @@ h1 {
 	}
 }
 
+@media all and (max-width: 360px) {
+	h1 {
+		font-size: 1.4rem;
+	}
+}
+
 #typedtext {
 	min-height: 10rem;
 }
@@ -216,6 +223,7 @@ a:focus {
 	color: white;
 	text-decoration: none;
 	width: 75%;
+	max-width: 18.75rem;
 	text-align: center;
 	margin: 3.75rem auto;
 	padding: 0.625rem;
@@ -342,6 +350,14 @@ button:focus,
 	margin: 20%;
 }
 
+@media all and (max-width: 560px) {
+	.mh-logo {
+		width: 3rem;
+		height: 3rem;
+		margin-top: 3%;
+	}
+}
+
 .about-me_paragraph {
 	display: block;
 	position: relative;
@@ -387,6 +403,12 @@ button:focus,
 	width: 65%;
 	max-width: 43.75rem;
 	text-align: center;
+}
+
+@media all and (max-width: 560px) {
+	.contact-form {
+		margin: 1.875rem auto;
+	}
 }
 
 .col-75 {
@@ -570,11 +592,25 @@ li {
 	margin: 1.25rem auto;
 }
 
+.menu-item:hover,
+.menu-item:focus {
+	-webkit-transform: scale(1.43);
+	-ms-transform: scale(1.43);
+	transform: scale(1.43);
+}
+
 .menu-title {
 	text-align: center;
 	margin: 2.5rem auto;
 	font-size: 2.625rem;
 	color: #db2b8e;
+}
+
+@media all and (max-width: 520px) {
+	.menu-title {
+		font-size: 2.2rem;
+		margin: 4.5rem auto 1.5rem auto;
+	}
 }
 
 .nav-close {
@@ -592,12 +628,15 @@ li {
 }
 
 .show {
+	display: block !important;
 	opacity: 1;
 	pointer-events: auto;
 }
 
 .hide {
 	display: none;
+	opacity: 0;
+	pointer-events: none;
 }
 
 .border {
@@ -664,7 +703,8 @@ li {
 		border-radius: 3px;
 	}
 
-	.grid__item:hover {
+	.grid__item:hover,
+	.grid__item:focus {
 		-webkit-transform: scale(1.03);
 		-ms-transform: scale(1.03);
 		transform: scale(1.03);
@@ -673,6 +713,29 @@ li {
 		-webkit-transition: all 0.2s ease-in-out;
 		-o-transition: all 0.2s ease-in-out;
 		transition: all 0.2s ease-in-out;
+	}
+}
+
+@media all and (max-width: 800px) {
+	.grid {
+		grid-gap: 0.938rem;
+		-ms-grid-columns: 1fr 0.938rem 1fr;
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 1.25rem;
+	}
+
+	.grid__item:last-child {
+		grid-column: auto / auto;
+		grid-row: auto / auto;
+	}
+}
+
+@media all and (max-width: 560px) {
+	.grid {
+		-ms-grid-columns: 1fr;
+		grid-template-columns: 1fr;
+		margin: 0 1.25rem;
+		margin-bottom: 1.25rem;
 	}
 }
 
@@ -799,7 +862,9 @@ li {
 	border: 1px solid black;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
 	background-color: #952e6b;
 	border-color: #772c64;
 }
@@ -826,6 +891,7 @@ li {
 .links-btn {
 	margin-bottom: 0.625rem;
 	color: #db2b8e;
+	background-color: #1f2833;
 	border: 1px solid #952e6b;
 	padding: 0.4375rem;
 	width: 4.6875rem;
@@ -848,6 +914,10 @@ li {
 	z-index: 2;
 }
 
+/* .carousel-indicators.li {
+	cursor: pointer;
+} */
+
 .carousel-img {
 	text-align: center !important;
 	margin: 3.125rem auto !important;
@@ -865,6 +935,13 @@ li {
 	width: 75%;
 	text-align: center;
 	margin: 0 auto;
+}
+
+@media all and (max-width: 500px) {
+	.reflection {
+		text-align: left;
+		margin-left: 35px;
+	}
 }
 
 .ref-header {
@@ -964,6 +1041,23 @@ li {
 	width: 80%;
 }
 
+@media all and (max-width: 800px) {
+	.contact-me {
+		border: 0.125rem solid #c5c6c7;
+		background-color: #0b0c10;
+		margin: 0.625rem auto;
+		padding: 1.25rem;
+	}
+}
+
+@media all and (max-width: 560px) {
+	.contact-me {
+		border: 0.063rem solid #c5c6c7;
+		padding: 0.5rem 0.625rem;
+		margin: 0.625rem auto;
+	}
+}
+
 .snowflake_left,
 .snowflake_right {
 	-webkit-animation: 5s snow-color-change infinite alternate linear;
@@ -1000,70 +1094,6 @@ li {
 #dot-right-right1 {
 	-webkit-animation: 8s dot-move infinite normal linear;
 	animation: 8s dot-move infinite normal linear;
-}
-
-@media all and (max-width: 800px) {
-	.grid {
-		grid-gap: 0.938rem;
-		-ms-grid-columns: 1fr 0.938rem 1fr;
-		grid-template-columns: 1fr 1fr;
-		margin-bottom: 1.25rem;
-	}
-
-	.grid__item:last-child {
-		grid-column: auto / auto;
-		grid-row: auto / auto;
-	}
-
-	.contact-me {
-		border: 0.125rem solid #c5c6c7;
-		background-color: #0b0c10;
-		margin: 0.625rem auto;
-		padding: 1.25rem;
-	}
-}
-
-@media all and (max-width: 560px) {
-	.grid {
-		-ms-grid-columns: 1fr;
-		grid-template-columns: 1fr;
-		margin: 0 1.25rem;
-		margin-bottom: 1.25rem;
-	}
-
-	.contact-me {
-		border: 0.063rem solid #c5c6c7;
-		padding: 0.5rem 0.625rem;
-		margin: 0.625rem auto;
-	}
-
-	.contact-form {
-		margin: 1.875rem auto;
-		text-align: center;
-	}
-
-	.navigation-list {
-		display: none;
-	}
-
-	.mh-logo {
-		width: 3rem;
-		height: 3rem;
-		margin-top: 3%;
-	}
-
-	.primary_button {
-		margin-right: 10% auto;
-		-webkit-box-pack: center;
-		-ms-flex-pack: center;
-		justify-content: center;
-	}
-}
-
-@media all and (max-width: 360px) {
-	h1 {
-		font-size: 1.4rem;
-	}
 }
 
 @-webkit-keyframes snow-color-change {
