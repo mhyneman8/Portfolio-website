@@ -1,16 +1,39 @@
-// set up text to print, each item in array is new line
-var aText = new Array(
-    "Mallory Hyneman", 
-    "Web Development"
+if (document.body.className === 'homePage') { 
+    var aText = new Array(
+        "Mallory Hyneman",
+        "Web Development"
     );
-    var iSpeed = 150; // time delay of print out
-    var iIndex = 0; // start printing array at this posision
-    var iArrLength = aText[0].length; // the length of the text array
-    var iScrollAt = 20; // start scrolling up at this many lines
-     
-    var iTextPos = 0; // initialise text position
-    var sContents = ''; // initialise contents variable
-    var iRow; // initialise current row
+} if (document.body.className === 'about') {
+    var aText = new Array(
+        "About Me"
+    )
+    console.log('about');
+} if (document.body.className === 'projects') {
+    var aText = new Array(
+        "Projects"
+    )
+    console.log('project');
+}
+if (document.body.className === 'contact') {
+    var aText = new Array(
+        "Contact"
+    )
+    console.log('contact');
+}
+
+// set up text to print, each item in array is new line
+// var aText = new Array(
+//     "Mallory Hyneman", 
+//     "Web Development"
+// );
+var iSpeed = 150; // time delay of print out
+var iIndex = 0; // start printing array at this posision
+var iArrLength = aText[0].length; // the length of the text array
+var iScrollAt = 20; // start scrolling up at this many lines
+    
+var iTextPos = 0; // initialise text position
+var sContents = ''; // initialise contents variable
+var iRow; // initialise current row
      
 function typewriter() {
     sContents =  ' ';
@@ -20,8 +43,7 @@ function typewriter() {
     while ( iRow < iIndex ) {
         sContents += aText[iRow++] + '<br />';
     }
-    destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos);
-    // + "_";
+    destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
         
     if ( iTextPos++ == iArrLength ) {
         iTextPos = 0;
