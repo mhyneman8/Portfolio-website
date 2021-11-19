@@ -857,6 +857,7 @@ svg:focus {
 	right: -10px;
 	top: 170px;
 	margin-left: 0.625rem;
+	z-index: 3;
 }
 
 .links-btn {
