@@ -1,79 +1,12 @@
-if (document.body.className === 'homePage') { 
-    var aText = new Array(
-        "Mallory Hyneman",
-        "Web Development"
-    );
-} if (document.body.className === 'about') {
-    var aText = new Array(
-        "About Me"
-    )
-    console.log('about');
-} if (document.body.className === 'projects') {
-    var aText = new Array(
-        "Projects"
-    )
-    console.log('project');
-}
-if (document.body.className === 'contact') {
-    var aText = new Array(
-        "Contact"
-    )
-    console.log('contact');
-}
+document.addEventListener("DOMContentLoaded", function() {
+    console.log(sessionStorage.getItem('pageloadcount'));
 
-// set up text to print, each item in array is new line
-// var aText = new Array(
-//     "Mallory Hyneman", 
-//     "Web Development"
-// );
-var iSpeed = 150; // time delay of print out
-var iIndex = 0; // start printing array at this posision
-var iArrLength = aText[0].length; // the length of the text array
-var iScrollAt = 20; // start scrolling up at this many lines
-    
-var iTextPos = 0; // initialise text position
-var sContents = ''; // initialise contents variable
-var iRow; // initialise current row
-     
-function typewriter() {
-    sContents =  ' ';
-    iRow = Math.max(0, iIndex-iScrollAt);
-    var destination = document.getElementById("typedtext");
-    
-    while ( iRow < iIndex ) {
-        sContents += aText[iRow++] + '<br />';
-    }
-    destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
-        
-    if ( iTextPos++ == iArrLength ) {
-        iTextPos = 0;
-        iIndex++;
-        if ( iIndex != aText.length ) {
-            iArrLength = aText[iIndex].length;
-            setTimeout("typewriter()", 500);
-        }
-    } else {
-        setTimeout("typewriter()", iSpeed);
-    }
-}
-
-if (document.body.className === 'homePage') { 
     if (sessionStorage.getItem('pageloadcount') === null) {
-        setTimeout("typewriter()", 5100);
-    } else {
-        typewriter();
+        console.log('null');
+        document.querySelector('#opening').classList.add('show');
+        sessionStorage.setItem('pageloadcount', '1');
     }
-
-    document.addEventListener("DOMContentLoaded", function() {
-        console.log(sessionStorage.getItem('pageloadcount'));
-
-        if (sessionStorage.getItem('pageloadcount') === null) {
-            console.log('null');
-            document.querySelector('#opening').classList.add('show');
-            sessionStorage.setItem('pageloadcount', '1');
-        }
-    })
-}
+})
 
 function dropdown() {
     const dropbtn = document.querySelector('.dropbtn');
@@ -99,3 +32,130 @@ function close() {
     }
 }
 close();
+
+const carouselText = [
+    {text: "Front-End"},
+    {text: "Back-End"},
+    {text: "Web Development"}
+]
+
+function typewriter() {
+  $( document ).ready(async function() {
+      await typeSentence("Mallory Hyneman", "#sentence");
+    carousel(carouselText, "#feature-text")
+  });
+}
+
+if (document.body.className === 'homePage') { 
+    if (sessionStorage.getItem('pageloadcount') === null) {
+        setTimeout("typewriter()", 5100);
+        setTimeout(function() {
+            $("#cursor1").addClass('hide');
+        }, 6800);
+        
+        setTimeout(function() {
+            $("#cursor2").removeClass('hide');
+        }, 6800);
+    } else {
+        typewriter();
+        setTimeout(function() {
+            $("#cursor1").addClass('hide');
+        }, 1700);
+        
+        setTimeout(function() {
+            $("#cursor2").removeClass('hide');
+        }, 1700);
+    }
+}
+
+
+
+async function typeSentence(sentence, eleRef, delay = 100) {
+    const letters = sentence.split("");
+    let i = 0;
+    while(i < letters.length) {
+        await waitForMs(delay);
+        $(eleRef).append(letters[i]);
+        i++
+    }
+return;
+}
+
+if (document.body.className === 'about') { 
+    typeSentence("About Me", "#about");
+}
+
+if (document.body.className === 'projects') {
+    typeSentence("Projects", "#projects")
+}
+
+if (document.body.className === 'contact') {
+    typeSentence("Contact Me", "#contact");
+}
+
+if (document.body.className === 'angular') {
+    typeSentence("myFlix Angular", "#angular");
+}
+
+if (document.body.className === 'changed') {
+    typeSentence("Changed by the Forkfull", "#changed");
+}
+
+if (document.body.className === 'mbg') {
+    typeSentence("Mother B Green Cleaning", "#mbg");
+}
+
+if (document.body.className === 'meet') {
+    typeSentence("Meet App", "#meet");
+}
+
+if (document.body.className === 'myflix') {
+    typeSentence("myFlix App", "#myflix");
+}
+
+if (document.body.className === 'pokedex') {
+    typeSentence("pokedex", "#pokedex");
+}
+
+if (document.body.className === 'todo') {
+    typeSentence("ToDo List App", "#todo");
+}
+
+if (document.body.className === 'chat') {
+    typeSentence("Chat App", "#chat");
+}
+
+if (document.body.className === 'movie') {
+    typeSentence("Move API", "#movie");
+}
+
+  async function deleteSentence(eleRef) {
+    const sentence = $(eleRef).html();
+    const letters = sentence.split("");
+    let i = 0;
+    while(letters.length > 0) {
+      await waitForMs(100);
+      letters.pop();
+      $(eleRef).html(letters.join(""));
+    }
+  }
+  
+  async function carousel(carouselList, eleRef) {
+      var i = 0;
+        await typeSentence(carouselList[i].text, eleRef);
+        await waitForMs(1500);
+        await deleteSentence(eleRef);
+        await waitForMs(500);
+        i++
+        await typeSentence(carouselList[i].text, eleRef);
+        await waitForMs(1500);
+        await deleteSentence(eleRef);
+        await waitForMs(500);
+        i++
+        await typeSentence(carouselList[i].text, eleRef);
+        await waitForMs(1500);
+  }
+  
+  function waitForMs(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+  }

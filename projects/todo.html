@@ -31,8 +31,7 @@
 
 </head>
 
-<body>
-
+<body class="todo">
 	<!-- nav bar -->
 	<header class="page-header">
 		<!-- logo -->
@@ -54,10 +53,10 @@
 					<h3 class="menu-title">Mallory Hyneman</h3>
 					<button class="nav-close">X</button>
 					<div class="menu">
-						<a class="menu-item" href="index.html">Home</a>
-						<a class="menu-item" href="about.html">About Me</a>
-						<a class="menu-item" href="projects.html">Projects</a>
-						<a class="menu-item" href="contact.html">Contact</a>
+						<a class="menu-item" href="../index.html">Home</a>
+						<a class="menu-item" href="../about.html">About Me</a>
+						<a class="menu-item" href="../projects.html">Projects</a>
+						<a class="menu-item" href="../contact.html">Contact</a>
 					</div> <!-- end of menu -->
 				</div> <!-- end of dropdown-content -->
 		  </div><!-- end of dropdown -->
@@ -77,7 +76,10 @@
             </a> 
         </div>
 
-        <h1>ToDo List App</h1>
+        <div class="typing-container">
+			<span id="todo" class="sentence"></span>
+			<span class="input-cursor"></span>
+		</div>
 
         <div class="carousel">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -172,7 +174,15 @@
 
 	</footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script
+		src="https://code.jquery.com/jquery-3.5.1.js"
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+		crossorigin="anonymous"></script>
+	<script
+		src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+		integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+		crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="../js/scripts.js"></script>
