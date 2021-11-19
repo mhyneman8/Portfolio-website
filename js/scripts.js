@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log(sessionStorage.getItem('pageloadcount'));
-
     if (sessionStorage.getItem('pageloadcount') === null) {
-        console.log('null');
         document.querySelector('#opening').classList.add('show');
         sessionStorage.setItem('pageloadcount', '1');
     }

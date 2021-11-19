@@ -117,7 +117,11 @@ h1 {
 	.h1,
 	h1,
 	.sentence {
-		font-size: 2.8125rem;
+		font-size: 2.8125rem !important;
+	}
+
+	.input-cursor {
+		height: 2.8125rem !important;
 	}
 }
 
@@ -125,14 +129,33 @@ h1 {
 	.h1,
 	h1,
 	.sentence {
-		font-size: 2.5rem;
+		font-size: 2.5rem !important;
+	}
+
+	.input-cursor {
+		height: 2.5rem !important;
 	}
 }
 
 @media all and (max-width: 360px) {
 	h1,
 	.sentence {
-		font-size: 1.4rem;
+		font-size: 2.275rem !important;
+	}
+
+	.input-cursor {
+		height: 2.275rem !important;
+	}
+}
+
+@media all and (max-width: 290px) {
+	h1,
+	.sentence {
+		font-size: 1.8rem !important;
+	}
+
+	.input-cursor {
+		height: 1.8rem !important;
 	}
 }
 
@@ -140,7 +163,7 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 65px;
+	height: 4.0625rem;
 }
 
 #feature-text {
@@ -149,7 +172,7 @@ h1 {
 
 .block {
 	display: inline-block;
-	height: 65px;
+	height: 4.0625rem;
 }
 
 .sentence {
@@ -161,11 +184,11 @@ h1 {
 
 .input-cursor {
 	display: inline;
-	width: 3px;
-	height: 50px;
+	width: 0.1875rem;
+	height: 3.125rem;
 	background-color: white;
-	margin-left: 8px;
-	margin-bottom: -1px;
+	margin-left: 0.5rem;
+	margin-bottom: -0.0625rem;
 	animation: blink 0.6s linear infinite alternate;
 }
 
@@ -403,12 +426,12 @@ button:focus,
 
 .col-75 {
 	width: 75%;
-	margin-top: 6px;
+	margin-top: 0.375rem;
 }
 
 .col-100 {
 	width: 100%;
-	margin-top: 6px;
+	margin-top: 0.375rem;
 }
 
 .contact-title {
@@ -594,8 +617,8 @@ svg:focus {
 	border-radius: 3px;
 	cursor: pointer;
 	position: absolute;
-	-webkit-box-shadow: 5px 9px 12px 0px rgba(0, 0, 0, 0.68);
-	box-shadow: 5px 9px 12px 0px rgba(0, 0, 0, 0.68);
+	-webkit-box-shadow: 0.3125rem 0.5625rem 0.75rem 0rem rgba(0, 0, 0, 0.68);
+	box-shadow: 0.3125rem 0.5625rem 0.75rem 0rem rgba(0, 0, 0, 0.68);
 }
 
 .show {
@@ -850,7 +873,7 @@ svg:focus {
 	width: 100%;
 	max-width: 600px;
 	text-align: center;
-	margin: 10px auto;
+	margin: 0.625rem auto;
 }
 .carousel-item-next,
 .carousel-item-prev,
@@ -865,14 +888,14 @@ svg:focus {
 .carousel-img {
 	text-align: center !important;
 	margin: 3.125rem auto !important;
-	height: 300px;
-	width: 350px;
+	height: 50vw;
+	width: 60vw;
 }
 
 .chat-carousel {
 	text-align: center !important;
 	margin: 3.125rem auto !important;
-	height: 300px;
+	height: 18.75rem;
 }
 
 .reflection {
@@ -884,7 +907,7 @@ svg:focus {
 @media all and (max-width: 500px) {
 	.reflection {
 		text-align: left;
-		margin-left: 35px;
+		margin-left: 2.1875rem;
 	}
 }
 
@@ -936,7 +959,7 @@ svg:focus {
 	height: 325;
 	object-fit: cover;
 	float: right;
-	margin: 0.625rem 0.625rem 1.25rem 30px;
+	margin: 0.625rem 0.625rem 1.25rem 1.875rem;
 	border: 1px solid var(--secondary-color);
 }
 
