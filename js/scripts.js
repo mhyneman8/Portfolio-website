@@ -2,8 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
     if (sessionStorage.getItem('pageloadcount') === null) {
         document.querySelector('#opening').classList.add('show');
         sessionStorage.setItem('pageloadcount', '1');
+        setTimeout(function() {
+            $("#opening").removeClass('hide');
+        }, 1000);
     }
-})
+}) 
 
 function dropdown() {
     const dropbtn = document.querySelector('.dropbtn');
@@ -43,25 +46,49 @@ function typewriter() {
   });
 }
 
-if (document.body.className === 'homePage') { 
-    if (sessionStorage.getItem('pageloadcount') === null) {
-        setTimeout("typewriter()", 5100);
-        setTimeout(function() {
-            $("#cursor1").addClass('hide');
-        }, 6800);
-        
-        setTimeout(function() {
-            $("#cursor2").removeClass('hide');
-        }, 6800);
-    } else {
-        typewriter();
-        setTimeout(function() {
-            $("#cursor1").addClass('hide');
-        }, 1700);
-        
-        setTimeout(function() {
-            $("#cursor2").removeClass('hide');
-        }, 1700);
+if($(window).width() >= 481) {
+    if (document.body.className === 'homePage') { 
+        if (sessionStorage.getItem('pageloadcount') === null) {
+            setTimeout("typewriter()", 5100);
+            setTimeout(function() {
+                $("#cursor1").addClass('hide');
+            }, 6800);
+            
+            setTimeout(function() {
+                $("#cursor2").removeClass('hide');
+            }, 6800);
+        } else {
+            typewriter();
+            setTimeout(function() {
+                $("#cursor1").addClass('hide');
+            }, 1700);
+            
+            setTimeout(function() {
+                $("#cursor2").removeClass('hide');
+            }, 1700);
+        }
+    }
+} else {
+    if (document.body.className === 'homePage') { 
+        if (sessionStorage.getItem('pageloadcount') === null) {
+            setTimeout("typewriter()", 9800);
+            setTimeout(function() {
+                $("#cursor1").addClass('hide');
+            }, 11600);
+            
+            setTimeout(function() {
+                $("#cursor2").removeClass('hide');
+            }, 11600);
+        } else {
+            typewriter();
+            setTimeout(function() {
+                $("#cursor1").addClass('hide');
+            }, 1700);
+            
+            setTimeout(function() {
+                $("#cursor2").removeClass('hide');
+            }, 1700);
+        }
     }
 }
 

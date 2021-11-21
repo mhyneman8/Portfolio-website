@@ -20,6 +20,7 @@
 
 html {
 	font-size: 16px;
+	overflow-x: hidden;
 }
 
 body {
@@ -100,7 +101,22 @@ body {
 
 @media all and (max-width: 480px) {
 	.opening {
-		font-size: 4.6875rem;
+		font-size: 6.6875rem !important;
+	}
+
+	.title {
+		width: 150vw;
+		transform: translateX(100%);
+		animation: slide 9s linear forwards, welcome 0s ease-in 9s forwards;
+	}
+}
+
+@keyframes slide {
+	from {
+		transform: translateX(60%);
+	}
+	to {
+		transform: translateX(-100%);
 	}
 }
 
@@ -727,8 +743,8 @@ svg:focus {
 .code-btn {
 	width: 12.5rem;
 	text-align: center;
-	margin: 0 auto;
-	height: 3.125rem;
+	margin: 5px auto 10px auto;
+	/* height: 3.125rem; */
 	position: relative;
 }
 
@@ -748,6 +764,10 @@ svg:focus {
 .code:hover,
 .code:focus {
 	color: white;
+}
+
+.project-header {
+	margin: 10px auto 0 auto;
 }
 
 .project_img {
