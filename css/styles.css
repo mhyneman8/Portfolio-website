@@ -723,7 +723,9 @@ svg:focus {
 	.grid {
 		grid-gap: 0.938rem;
 		grid-template-columns: 1fr 1fr;
-		margin-bottom: 1.25rem;
+		margin-bottom: 2.25rem;
+		margin-right: 1.25rem;
+		margin-left: 1.25rem;
 	}
 
 	.grid__item:last-child {
@@ -797,6 +799,8 @@ svg:focus {
 	border: 1px solid var(--secondary-color);
 	border-radius: 3px;
 	z-index: 2;
+	transition-property: opacity;
+	transition-delay: 0.8s;
 }
 
 .chat-static:hover,
