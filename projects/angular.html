@@ -7,7 +7,7 @@
 
 	<title>myFlix Angular</title>
 
-	<meta name="viewport" content="width=device-width,initial 1-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -109,7 +109,12 @@
                 It's built with Angular, with routing and several interface views. 
             </p>
 
-            <img class="float-right w-50 m-3 border" src="../img/angular/profile.jpg" alt="Profile View">
+            <div class="container">
+                <input type="checkbox" id="zoomCheck">
+                <label for="zoomCheck">
+                    <img class="float-right w-50 m-3 border" src="../img/angular/profile.jpg" alt="Profile View">
+                </label>
+            </div>
 
             <h4 class="ref-header">Purpose & Context</h4>
             <p class="ref-text">
@@ -124,7 +129,12 @@
                 As a user, I want to be able to create a profile so I can save data about my favorite movies.
             </p>
 
-            <img class="d-block w-75 text-center m-auto border" src="../img/angular/angularDemoCrop.gif" alt="MyFlix Demo">
+            <div class="container">
+                <input type="checkbox" id="zoomCheck3">
+                <label for="zoomCheck3">
+                    <img class="d-block w-75 text-center m-auto border" src="../img/angular/angularDemoCrop.gif" alt="MyFlix Demo">
+                </label>
+            </div>
 
             <h4 class="mt-4 ref-header">Objective</h4>
             <p class="ref-text">
@@ -150,14 +160,25 @@
                 <li>Hosted on GitHub Pages</li>
             </ul>
 
-            <img class="trello text-center m-auto border" src="../img/angular/trello.jpg" alt="Kanban Board">
+            <div class="container">
+                <input type="checkbox" id="zoomCheck1">
+                <label for="zoomCheck1">
+                    <img class="w-75 text-center m-auto border" src="../img/angular/trello.jpg" alt="Kanban Board">
+                </label>
+            </div>
 
             <h4 class="mt-4 ref-header">Challenges</h4>
             <p class="ref-text">
                 This was the first time I worked with Angular, so there was a little learning curve starting off. I thought Angular was similar to the React library, in the layout of the files, but in more detail. That helped me wrap my head around the new framework. 
                 Some challenges I had were mostly little mistakes due to learning the new framework. 
             </p>
-            <img class="border float-right w-50 ml-3" src="../img/angular/director.jpg" alt="Director View">
+
+            <div class="container">
+                <input type="checkbox" id="zoomCheck2">
+                <label for="zoomCheck2">
+                    <img class="border float-right w-50 ml-3" src="../img/angular/director.jpg" alt="Director View">
+                </label>
+            </div>
 
             <p class="ref-text">
                 I struggled to get the director's image to appear, but when looking back over the files, I had forgotten to add the imageUrl into the component.ts file. The other small issue 
@@ -193,7 +214,7 @@
 			</a>
 			<!-- Linkedin Icon -->
 			<a href="https://www.linkedin.com/in/mallory-hyneman-984431102/" target="_blank">
-				<img src="../img/linkedin.png" class="social-media" alt="LinkedIn">
+				<img src="../img/linkedin.svg" class="social-media" alt="LinkedIn">
 			</a>
 		</div> <!-- end of social-media -->
 

@@ -7,7 +7,7 @@
 
 	<title>Meet App</title>
 
-	<meta name="viewport" content="width=device-width,initial 1-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -108,7 +108,13 @@
             <p class="ref-text">
                 The Meet App is a progressive web application (PWA) that allows users to find coding events in a city near them. They can search a city, specify the number of events they want to see, and view more details about a chosen event.
             </p>
-            <img class="w-50 float-right m-3 border" src="../img/meet/eventCard.jpg" alt="Event Card"> 
+
+            <div class="container">
+                <input type="checkbox" id="zoomCheck17">
+                <label for="zoomCheck17">
+                    <img class="w-50 float-right m-3 border" src="../img/meet/eventCard.jpg" alt="Event Card"> 
+                </label>
+            </div>
 
             <h4 class="ref-header">Purpose & Context</h4>
             <p class="ref-text">
@@ -121,13 +127,25 @@
             <p class="text-left w-75 ml-4">
                 As a user, I want to be able to create a profile so I can save data about my favorite movies.
             </p>
-            <img class="d-block text-center w-75 m-auto border" src="../img/meet/eventsNumber.gif" alt="Number of Events">
+
+            <div class="container">
+                <input type="checkbox" id="zoomCheck18">
+                <label for="zoomCheck18">
+                    <img class="d-block text-center w-75 m-auto border" src="../img/meet/eventsNumber.gif" alt="Number of Events">
+                </label>
+            </div>
             
             <h4 class="mt-4 ref-header">Objective</h4>
             <p class="ref-text">
                 To build a serverless PWA with React using a test-driven development technique. The application uses the Google Calendar API to fetch upcoming events.
             </p>
-            <img class="w-50 border float-right m-3" src="../img/meet/details.gif" alt="Details of movie demo">
+            
+            <div class="container">
+                <input type="checkbox" id="zoomCheck19">
+                <label for="zoomCheck19">
+                    <img class="w-50 border float-right m-3" src="../img/meet/details.gif" alt="Details of movie demo">
+                </label>
+            </div>
             
             <h4 class="ref-header">Approach</h4>
             <p class="ref-text">
@@ -148,13 +166,25 @@
                 <li>Converted the app to a Progressive Web App, which allows some offline capabilites and alerts when user is offline</li>
                 <li>Added visual representations of meet events</li>
             </ul>
-            <img class="w-75 text-center m-auto border" src="../img/meet/graph.gif" alt="Meet Graph">
+
+            <div class="container">
+                <input type="checkbox" id="zoomCheck20">
+                <label for="zoomCheck20">
+                    <img class="w-75 text-center m-auto border" src="../img/meet/graph.gif" alt="Meet Graph">
+                </label>
+            </div>
             
             <h4 class="mt-4 ref-header">Challenges</h4>
             <p class="ref-text">
                 This was my first foray into test driven development. It took me a little time to get the structure of TDD down. Once I was able to do that, writing the tests flowed more freely. The other challenge I had was that a feature stopped working early in the development, and I didn't notice until I was about finished. I had to revert changes on GitHub until I could go back to the version that was working. I redid the corrupted change, then added the GitHub changes back one at a time to make sure all features were working. When I work on this project again, I would like to make a guest login, so users won't have to sign-in with Google.
             </p>
-            <img class="border float-right w-50 ml-3" src="../img/meet/search.gif" alt="Demo of search feature">
+
+            <div class="container">
+                <input type="checkbox" id="zoomCheck21">
+                <label for="zoomCheck21">
+                    <img class="border float-right w-50 ml-3" src="../img/meet/search.gif" alt="Demo of search feature">
+                </label>
+            </div>
 
             <h4 class="ref-header">Duration</h4>
             <p class="ref-text">
@@ -185,7 +215,7 @@
 			</a>
 			<!-- Linkedin Icon -->
 			<a href="https://www.linkedin.com/in/mallory-hyneman-984431102/" target="_blank">
-				<img src="../img/linkedin.png" class="social-media" alt="LinkedIn">
+				<img src="../img/linkedin.svg" class="social-media" alt="LinkedIn">
 			</a>
 		</div> <!-- end of social-media -->
 
