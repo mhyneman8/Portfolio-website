@@ -95,7 +95,7 @@ body {
 
 @media all and (max-width: 600px) {
 	.opening {
-		font-size: 6.25rem;
+		font-size: 6.38rem !important;
 	}
 }
 
@@ -694,7 +694,6 @@ svg:focus {
 	display: inline-block;
 	width: 100%;
 }
-
 /* end grid fallback */
 
 /* specify declarations that depend on browsers support */
@@ -750,7 +749,6 @@ svg:focus {
 	width: 12.5rem;
 	text-align: center;
 	margin: 5px auto 10px auto;
-	/* height: 3.125rem; */
 	position: relative;
 }
 
