@@ -802,7 +802,7 @@ svg:focus {
 	border-radius: 3px;
 	z-index: 2;
 	transition-property: opacity;
-	transition-delay: 0.8s;
+	transition-delay: 0.9s;
 }
 
 .chat-static:hover,
