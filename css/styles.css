@@ -846,6 +846,21 @@ svg:focus {
 	}
 }
 
+input[type='checkbox'] {
+	display: none;
+}
+
+.container img {
+	transition: transform 0.25s ease;
+	cursor: zoom-in;
+}
+
+input[type='checkbox']:checked ~ label > img {
+	transform: scale(2);
+	cursor: zoom-out;
+	/* margin: 100px; */
+}
+
 .modal-dialog {
 	z-index: 5;
 }
@@ -950,11 +965,6 @@ svg:focus {
 	line-height: 1.7;
 	font-size: 1.25rem;
 	letter-spacing: 0.0625rem;
-}
-
-.trello {
-	width: 60%;
-	height: auto;
 }
 
 .loading-gif {
