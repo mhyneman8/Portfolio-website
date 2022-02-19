@@ -314,7 +314,9 @@ button:focus,
 	border-bottom: 2px solid #772c64;
 	border-right: 2px solid #772c64;
 }
-
+.primary_button {
+	margin-bottom: 3.75rem;
+}
 @media all and (max-width: 560px) {
 	.primary_button,
 	.index_button {
@@ -930,8 +932,9 @@ input[type='checkbox']:checked ~ label > img {
 .carousel-img {
 	text-align: center !important;
 	margin: 3.125rem auto !important;
-	height: 50vw;
-	width: 60vw;
+	height: 50vh;
+	max-height: 500px;
+	width: 100%;
 }
 
 .chat-carousel {
