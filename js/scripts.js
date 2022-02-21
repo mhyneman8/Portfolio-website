@@ -138,7 +138,7 @@ if (document.body.className === 'myflix') {
 }
 
 if (document.body.className === 'pokedex') {
-    typeSentence("pokedex", "#pokedex");
+    typeSentence("Pokedex", "#pokedex");
 }
 
 if (document.body.className === 'todo') {
@@ -150,7 +150,7 @@ if (document.body.className === 'chat') {
 }
 
 if (document.body.className === 'movie') {
-    typeSentence("Move API", "#movie");
+    typeSentence("Movie API", "#movie");
 }
 
   async function deleteSentence(eleRef) {
