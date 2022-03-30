@@ -676,6 +676,12 @@ svg:focus {
 	transition-duration: 0.5s;
 	transition: all 0.3s ease-in-out;
 }
+@media all and (max-width: 500px) {
+	#menu {
+		width: 100%;
+		box-shadow: none;
+	}
+}
 
 #menu.move {
 	right: 0;
