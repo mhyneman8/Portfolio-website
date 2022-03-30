@@ -9,26 +9,19 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     // click to hide welcome screen
     document.querySelector('#opening').addEventListener('click', function() {
-        document.querySelector('#opening').classList.remove('show')
+        document.querySelector('#opening').classList.remove('show');
+        document.querySelector('#hamburger').classList.remove('hide');
+        document.querySelector('.menu-large').classList.remove('hide');
+        sessionStorage.setItem('skipOpening', '1');
+        typewriter();
     })
 }) 
 
 
-
-
-
-
-
-// colors = ['#FFDA6A', '#FF6D6C', '#41BEFF', '#C54BFF', '#4BFFA6', '#333', '#FFB5C0'];
-// story = ['This.', 'Is.', 'The Menu.', 'You Were Waiting For.', 'Made with Love. Gez', 'Share (:']
-// i = 1;
-// j = 0;
 a = document.querySelector('.row1');
 b = document.querySelector('.row2');
 c = document.querySelector('.row3'); 
 d = document.querySelector('#hamburger');
-// e = document.querySelector('.container');
-// f = document.querySelector('.riempi');
 menu = document.querySelector('#menu');
 let item = document.querySelectorAll('menu-item');
 
@@ -36,55 +29,13 @@ function toggleAnimation() {
     a.classList.toggle('rotateRight');
     b.classList.toggle('transparent');
     c.classList.toggle('rotateLeft');
-    
-    // e.classList.toggle('darken');
-    // document.querySelector('.homepage').classList.toggle('hidden');
     menu.classList.toggle('move'); 
     item.classList.toggle('slide')
 };
 
-/*
-function removeAnimation() {
-    a.classList.remove('rotateRight');
-    b.classList.remove('trasparent');
-    c.classList.remove('rotateLeft');
-    e.classList.remove('darken');
-    menu.classList.remove('move');
-}
-*/
-
-
 d.addEventListener('click', function() {
     toggleAnimation();
 });
-
-
-// drop down menu button
-// function dropdown() {
-//     const dropbtn = document.querySelector('.dropbtn');
-//     dropbtn.addEventListener('click', show);
-
-//     function show() {
-//         console.log('test')
-//         const content = document.querySelector('.dropdown-content');
-//         content.classList.add('show');
-//     }
-// } 
-// dropdown();
-
-// close menu options on click
-// function close() {
-//     const closeBtn = document.querySelector('.nav-close');
-//     closeBtn.addEventListener('click', closeMenu);
- 
-//     function closeMenu() {
-//         const content = document.querySelector('.dropdown-content');
-//         if (content.classList.contains('show')) {
-//             content.classList.remove('show');
-//         }
-//     }
-// }
-// close();
 
 // homepage typing content
 const carouselText = [
@@ -95,16 +46,18 @@ const carouselText = [
 
 // opening typewriter effect
 function typewriter() {
-  $(document).ready(async function() {
-      await typeSentence("Mallory Hyneman", "#sentence");
-    carousel(carouselText, "#feature-text")
-  });
+    document.querySelector('#hamburger').classList.remove('hide');
+    document.querySelector('.menu-large').classList.remove('hide');
+    $(document).ready(async function() {
+        await typeSentence("Mallory Hyneman", "#sentence");
+        carousel(carouselText, "#feature-text")
+    });
 }
 
 // homepage typewriter effect based on screensize
 if($(window).width() >= 481) {
-    if (document.body.className === 'homePage') { 
-        if (sessionStorage.getItem('pageloadcount') === null) {
+    if (document.body.className === 'homePage') {
+         if (sessionStorage.getItem('pageloadcount') === null) {
             setTimeout("typewriter()", 5100);
             setTimeout(function() {
                 $("#cursor1").addClass('hide');
@@ -113,7 +66,7 @@ if($(window).width() >= 481) {
             setTimeout(function() {
                 $("#cursor2").removeClass('hide');
             }, 6800);
-        } else {
+        } else if (sessionStorage.getItem('pageloadcount') !== null) {
             typewriter();
             setTimeout(function() {
                 $("#cursor1").addClass('hide');
@@ -122,7 +75,7 @@ if($(window).width() >= 481) {
             setTimeout(function() {
                 $("#cursor2").removeClass('hide');
             }, 1700);
-        }
+        } 
     }
 } else {
     if (document.body.className === 'homePage') { 
@@ -147,7 +100,6 @@ if($(window).width() >= 481) {
         }
     }
 }
-
 // typewriter effect for all pages
 async function typeSentence(sentence, eleRef, delay = 100) {
     const letters = sentence.split("");

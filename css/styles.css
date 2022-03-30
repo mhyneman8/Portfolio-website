@@ -93,6 +93,7 @@ body {
 	line-height: 6.5;
 	margin: 0.625rem 0;
 	width: 100%;
+	z-index: 50;
 }
 
 @media all and (max-width: 600px) {
@@ -105,7 +106,6 @@ body {
 	.opening {
 		font-size: 6.6875rem !important;
 	}
-
 	.title {
 		width: 150vw;
 		transform: translateX(100%);
@@ -676,6 +676,12 @@ svg:focus {
 	transition-duration: 0.5s;
 	transition: all 0.3s ease-in-out;
 }
+@media all and (max-width: 500px) {
+	#menu {
+		width: 100%;
+		box-shadow: none;
+	}
+}
 
 #menu.move {
 	right: 0;
@@ -759,7 +765,7 @@ svg:focus {
 .row2,
 .row3 {
 	background-color: white;
-	z-index: 999;
+	z-index: 1000;
 	margin-bottom: 10px;
 	border-radius: 3px;
 	transition-duration: 0.5s;
@@ -890,11 +896,11 @@ svg:focus {
 	box-shadow: 0.3125rem 0.5625rem 0.75rem 0rem rgba(0, 0, 0, 0.68);
 }
 
-/* .show {
+.show {
 	display: block !important;
 	opacity: 1;
 	pointer-events: auto;
-} */
+}
 
 .hide {
 	display: none;
