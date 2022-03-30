@@ -26,7 +26,7 @@
 
   <!-- styelesheet css (last link) -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/style.production.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
 
@@ -34,32 +34,56 @@
 
 	<!-- nav bar -->
 	<header class="page-header">
-		<!-- logo -->
-		<a href="index.html">
-			<img src="img/MH_Logo.png" alt="MH logo" class="mh-logo  page-header__item">
-		</a>
-
-		<nav class="main-navigation page-header__item">
-			<div class="dropdown">
-				<button class="dropbtn" alt="navigation">
-					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-						width="80" height="80"
-						viewBox="0 0 44 44"
-						style=" fill:#952e6b;"><path d="M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z"></path>
-					</svg>
-				</button>
-				<div class="dropdown-content">
-					<h3 class="menu-title">Mallory Hyneman</h3>
-					<button class="nav-close">X</button>
-					<div class="menu">
-						<a class="menu-item" href="index.html">Home</a>
-						<a class="menu-item" href="about.html">About Me</a>
-						<a class="menu-item" href="projects.html">Projects</a>
-						<a class="menu-item" href="contact.html">Contact</a>
-					</div> <!-- end of menu -->
-				</div> <!-- end of dropdown-content -->
-		  </div><!-- end of dropdown -->
-		</nav>
+		<div class="menu-large">
+			<a class="menu-l-item" href="index.html">
+				Home
+			</a>
+			<a class="menu-l-item" href="about.html">
+				About Me
+			</a>
+			<a class="menu-l-item" href="projects.html">
+				Projects
+			</a>
+			<a class="menu-l-item" href="contact.html">
+				Contact
+			</a>
+			<a class="menu-l-item" href="files/mhyneman-dev.pdf"  target="_blank">
+				Resume
+			</a>
+		</div>
+		<nav class="main-navigation">
+			<!-- logo -->
+			<a href="index.html">
+				<img src="img/MH_Logo.png" alt="MH logo" class="mh-logo  page-header__item">
+			</a>
+			<div class="page-header__item" id="menu">
+				<ul>
+					<a class="menu-item" href="index.html">
+						<li>Home</li>
+					</a>
+					<a class="menu-item" href="about.html">
+						<li>About Me</li>
+					</a>
+					<a class="menu-item" href="projects.html">
+						<li>Projects</li>
+					</a>
+					<a class="menu-item" href="contact.html">
+						<li>Contact</li>
+					</a>
+					<a class="menu-item" href="files/mhyneman-dev.pdf"  target="_blank">
+						<li>Resume</li>
+					</a>
+				</ul>
+			</div>
+	
+		<div class="container page-header__item">
+			<div id="hamburger">
+				<div class="row1"></div>
+				<div class="row2"></div>
+				<div class="row3"></div>
+			</div>
+		</div> 		
+		</nav> 
 	</header>
 
 	<main>
@@ -223,20 +247,24 @@
 
 	</main>
 
-<!-- footer -->
-<footer class="page-footer">
-	<h2>Find me on</h2>
-
-  <div class="social-media">
-    <!-- Github Icon -->
-    <a href="https://github.com/mhyneman8" target="_blank">
-    	<img src="img/github.svg" class="social-media" alt="Github">
-    </a>
-    <!-- Linkedin Icon -->
-    <a href="https://www.linkedin.com/in/mallory-hyneman-984431102/" target="_blank">
-    	<img src="img/linkedin.svg" class="social-media" alt="LinkedIn">
-    </a>
-  </div> <!-- end of social-media -->
+	<!-- footer -->
+	<footer>
+		<div class="social-media">
+			<!--Github Icon -->
+			<a href="https://github.com/mhyneman8" target="_blank">
+				<img src="img/github.svg" class="social-media-icon" alt="Github">
+			</a>
+			<!-- Linkedin Icon -->
+			<a href="https://www.linkedin.com/in/mallory-hyneman-984431102/" target="_blank">
+				<img src="img/linkedin.svg" class="social-media-icon" alt="LinkedIn">
+			</a>
+		</div> <!-- end of social-media -->
+		<div class="credit">
+			<p>
+				Designed & Built by Mallory Hyneman
+			</p>
+		</div>
+	</footer>
 
   <!-- Modals -->
 
@@ -562,7 +590,6 @@
 	</div> <!-- end of modal-dialog -->
   </div> <!-- end of myflix angular-modal -->
 
-</footer>
 <script
   src="https://code.jquery.com/jquery-3.5.1.js"
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
