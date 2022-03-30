@@ -561,7 +561,7 @@ li {
 .social-media {
 	display: flex;
 	flex-direction: column;
-	position: absolute;
+	position: fixed;
 	right: 20px;
 	bottom: 0px;
 }
@@ -573,7 +573,7 @@ li {
 }
 
 .social-media-icon {
-	width: 3.125rem;
+	width: 2.125rem;
 }
 
 path {
