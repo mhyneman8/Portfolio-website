@@ -34,7 +34,7 @@ let item = document.querySelectorAll('menu-item');
 
 function toggleAnimation() {
     a.classList.toggle('rotateRight');
-    b.classList.toggle('trasparent');
+    b.classList.toggle('transparent');
     c.classList.toggle('rotateLeft');
     
     // e.classList.toggle('darken');
