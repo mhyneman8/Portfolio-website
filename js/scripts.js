@@ -121,7 +121,7 @@ if (document.body.className === 'projects') {
 }
 
 if (document.body.className === 'contact') {
-    typeSentence("Contact Me", "#contact");
+    typeSentence("Let's Chat!", "#contact");
 }
 
 if (document.body.className === 'angular') {
