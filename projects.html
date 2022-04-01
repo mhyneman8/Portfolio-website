@@ -93,27 +93,54 @@
 				<span class="input-cursor"></span>
 			</div>
 
+			<div id="filter-btns">
+				<button class="btn-filter btn-secondary" onclick="filterObjects('all')" >Show All</button>
+				<button class="btn-filter btn-secondary" onclick="filterObjects('javascript')" >JavaScript</button>
+				<button class="btn-filter btn-secondary" onclick="filterObjects('html')"  >HTML/CSS</button>
+				<button class="btn-filter btn-secondary" onclick="filterObjects('react')" >React</button>
+				<button class="btn-filter btn-secondary" onclick="filterObjects('native')" >React Native</button>
+				<button class="btn-filter btn-secondary" onclick="filterObjects('gherkin')" >Gherkin</button>
+				<button class="btn-filter btn-secondary" onclick="filterObjects('node')" >Node</button>
+				<button class="btn-filter btn-secondary" onclick="filterObjects('angular')" >Angular</button>
+				<button class="btn-filter btn-secondary" onclick="filterObjects('redux')" >Redux</button>
+				<button class="btn-filter btn-secondary" onclick="filterObjects('nosql')" >noSQL</button>
+				<button class="btn-filter btn-secondary" onclick="filterObjects('mongodb')" >MongoDB</button>
+				<button class="btn-filter btn-secondary" onclick="filterObjects('http')" >HTTP Authentication</button>
+				<button class="btn-filter btn-secondary" onclick="filterObjects('jwt')" >JWT Authentication</button>
+				<button class="btn-filter btn-secondary" onclick="filterObjects('squarespace')" >SquareSpace</button>
+				<button class="btn-filter btn-secondary" onclick="filterObjects('expo')" >Expo</button>
+			</div>
+
+			<!-- <div class="objects">
+				<div class="box javascript">Toyota</div>
+				<div class="box  react">Honda</div>
+				<div class="box native">Orange</div>
+				<div class="box javascript">Pear</div>
+				<div class="box react">Bear</div>
+			</div> -->
+
+
 			<article class="grid">
 
 				<!-- Meet App -->
-				<div class="grid__item">
+				<div class=" box grid__item javascript html gherkin react tdd">
 					<div class="project_img">
 						<img class="static " src="img/meet/meetApp.jpg" alt="Meet Homescreen">
 						<img class="projects-active" src="img/meet/meetDemo.gif" alt="Meet GIF">
 					</div> <!-- end of project_img -->
 					<h2 class="project-header">Meet App</h2>
 					<div class="code-btn">
-						<button type="button" class="code" data-toggle="modal" data-target="#meet-modal">
+						<button type="button" class="btn-projects" data-toggle="modal" data-target="#meet-modal">
 							Quick-view
 						</button>
-						<a href="projects/meet.html" role="button" class="code">
+						<a href="projects/meet.html" role="button" class="btn-projects">
 							More Details
 						</a>
 					</div> <!-- end of code-btn -->
 				</div> <!-- end of grid__item-->
 
 				<!-- Angular myFlix -->
-				<div class="grid__item">
+				<div class="box grid__item node angular">
 					<a href="https://mhyneman8.github.io/myFlix-Angular-client/welcome" target="_blank">
 						<div class="project_img">
 							<img class="static" src="img/angular/angular.jpg" alt="Angular myFlix">
@@ -122,17 +149,17 @@
 					</a>
 					<h2 class="project-header">MyFlix Angular</h2>
 					<div class="code-btn">
-						<button type="button" class="code" data-toggle="modal" data-target="#angular-modal">
+						<button type="button" class="btn-projects" data-toggle="modal" data-target="#angular-modal">
 							Quick-view
 						</button>
-						<a href="projects/angular.html" role="button" class="code">
+						<a href="projects/angular.html" role="button" class="btn-projects">
 							More Details
 						</a>
 					</div> <!-- end of code-btn -->
 				</div> <!-- end of grid__item-->
 
 				<!-- myFlix -->
-				<div class="grid__item">
+				<div class="box grid__item react redux bootstrap parcel node">
 					<a href="https://myflix-mh.netlify.app" target="_blank">
 						<div class="project_img">
 							<img class="static" src="./img/myFlix/myFlix.jpg" alt="MyFLix Home page">
@@ -141,17 +168,17 @@
 					</a>
 					<h2 class="project-header">MyFlix</h2>
 					<div class="code-btn">
-						<button type="button" class="code" data-toggle="modal" data-target="#myflix-modal">
+						<button type="button" class="btn-projects" data-toggle="modal" data-target="#myflix-modal">
 							Quick-view
 						</button>
-						<a href="projects/myflix.html" role="button" class="code">
+						<a href="projects/myflix.html" role="button" class="btn-projects">
 							More Details
 						</a>
 					</div> <!-- end of code-btn -->
 				</div> <!-- end of grid__item-->
 
 				<!-- movie API -->
-				<div class="grid__item">
+				<div class="box grid__item node express nosql mongodb mongoose http jwt">
 					<a href="https://myflix788.herokuapp.com/documentation" target="_blank" >
 						<div class="project_img">
 							<img class="movie_img" src="img/movie/movieAPi.jpg" alt="movie Api">
@@ -159,34 +186,34 @@
 					</a>
 					<h2 class="project-header">Movie API</h2>
 					<div class="code-btn">
-						<button type="button" class="code" data-toggle="modal" data-target="#movie-modal">
+						<button type="button" class="btn-projects" data-toggle="modal" data-target="#movie-modal">
 							Quick-view
 						</button>
-						<a href="projects/movie.html" role="button" class="code">
+						<a href="projects/movie.html" role="button" class="btn-projects">
 							More Details
 						</a>
 					</div> <!-- end of code-btn -->
 				</div> <!-- end of grid__item -->
 
 				<!-- Chat App -->
-				<div class="grid__item">
+				<div class="box grid__item native expo firestore firebase">
 						<div class="project_img">
 							<img class="chat-static" src="img/chat/HomeScreen.jpg" alt="myFlix" target="_blank">
 							<img class="chat-active " src="img/chat/chatApp.gif" alt="Chat App Gif">
 						</div> <!-- end of project_img -->
 					<h2 class="project-header">Chat App</h2>
 					<div class="code-btn">
-						<button type="button" class="code" data-toggle="modal" data-target="#chat-modal">
+						<button type="button" class="btn-projects" data-toggle="modal" data-target="#chat-modal">
 							Quick-view
 						</button>
-						<a href="projects/chat.html" role="button" class="code">
+						<a href="projects/chat.html" role="button" class="btn-projects">
 							More Details
 						</a>
 					</div> <!-- end of code-btn -->
 				</div> <!-- end of grid__item-->
 
 				<!-- Pokedex -->
-				<div class="grid__item">
+				<div class="box grid__item javascript html api">
 					<a href="https://mhyneman8.github.io/simple-js-app/" target="_blank" >
 						<div class="project_img">
 							<img class="static" src="img/pokedex/pokedex.png" alt="pokedex">
@@ -195,17 +222,17 @@
 					</a>
 					<h2 class="project-header">Pokedex</h2>
 					<div class="code-btn">
-						<button type="button" class="code" data-toggle="modal" data-target="#pokedex-modal">
+						<button type="button" class="btn-projects" data-toggle="modal" data-target="#pokedex-modal">
 							Quick-view
 						</button>
-						<a href="projects/pokedex.html" role="button" class="code">
+						<a href="projects/pokedex.html" role="button" class="btn-projects">
 							More Details
 						</a>
 					</div> <!-- end of code-btn -->
 				</div> <!-- end of grid__item -->
 
 				<!-- Changed by Forkfull -->
-				<div class="grid__item">
+				<div class="box grid__item html javascript">
 					<a href="https://mhyneman8.github.io/changed/" target="_blank" >
 						<div class="project_img">
 							<img class="static" src="img/changed/changed.jpg" alt="Changed by the Forkfull">
@@ -214,17 +241,17 @@
 					</a>
 					<h2 class="project-header">Changed by the Forkfull</h2>
 					<div class="code-btn">
-						<button type="button" class="code" data-toggle="modal" data-target="#changed-modal">
+						<button type="button" class="btn-projects" data-toggle="modal" data-target="#changed-modal">
 							Quick-view
 						</button>
-						<a href="projects/changed.html" role="button" class="code">
+						<a href="projects/changed.html" role="button" class="btn-projects">
 							More Details
 						</a>
 					</div> <!-- end of code-btn -->
 				</div> <!-- end of grid__item -->
 
 				<!-- MBG Website -->
-				<div class="grid__item">
+				<div class="box grid__item html squarespace">
 					<a href="https://www.motherbgreen.com/" target="_blank" >
 						<div class="project_img">
 							<img class="static" src="img/mbg/mbg-website.png" alt="MBG Home Page">
@@ -233,10 +260,10 @@
 					</a>
 					<h2 class="project-header">MBG Website</h2>
 					<div class="code-btn">
-						<button type="button" class="code" data-toggle="modal" data-target="#mbg-modal">
+						<button type="button" class="btn-projects" data-toggle="modal" data-target="#mbg-modal">
 							Quick-view
 						</button>
-						<a href="projects/mbg.html" role="button" class="code">
+						<a href="projects/mbg.html" role="button" class="btn-projects">
 							More Details
 						</a>
 					</div> <!-- end of code-btn -->
@@ -261,7 +288,9 @@
 		</div> <!-- end of social-media -->
 		<div class="credit">
 			<p>
-				Designed & Built by Mallory Hyneman
+				<a href="https://github.com/mhyneman8/Portfolio-website" target="_blank">
+					Designed & Built by Mallory Hyneman
+				</a>
 			</p>
 		</div>
 	</footer>
