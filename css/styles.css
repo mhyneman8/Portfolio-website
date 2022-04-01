@@ -1215,6 +1215,10 @@ input[type='checkbox']:checked ~ label > img {
 	border-color: var(--primary-color);
 }
 
+.btn-filter {
+	margin-bottom: 5px;
+}
+
 .btn-projects {
 	color: white;
 	background-color: var(--light-blue);
@@ -1238,8 +1242,31 @@ input[type='checkbox']:checked ~ label > img {
 }
 
 #filter-btns {
-	/* padding: 50px; */
-	margin: 40px;
+	margin: 40px auto 3px auto;
+}
+
+@media all and (min-width: 1100px) {
+	#filter-btns {
+		display: flex;
+		flex-direction: column;
+		width: 150px;
+		position: fixed;
+		/* top: 108px; */
+		top: 15%;
+		left: -14px;
+	}
+	.btn-filter {
+		margin-bottom: 29px;
+		height: 48px;
+	}
+	.more-projects {
+		display: inline-block;
+		margin-top: 20px;
+		width: 70%;
+	}
+	.more-skills {
+		margin-bottom: 5px;
+	}
 }
 
 .links {
