@@ -937,6 +937,11 @@ svg:focus {
 	box-shadow: 0.3125rem 0.5625rem 0.75rem 0rem rgba(0, 0, 0, 0.68);
 }
 
+.box {
+	margin: 10px;
+	display: none !important;
+}
+
 .show {
 	display: block !important;
 	opacity: 1;
@@ -1201,6 +1206,7 @@ input[type='checkbox']:checked ~ label > img {
 	color: white;
 	background-color: var(--primary-color);
 	border-color: var(--light-blue);
+	border-radius: 3px;
 }
 
 .btn-secondary:hover,
@@ -1229,6 +1235,11 @@ input[type='checkbox']:checked ~ label > img {
 	color: white !important;
 	background-color: var(--primary-color);
 	border-color: var(--light-blue);
+}
+
+#filter-btns {
+	/* padding: 50px; */
+	margin: 40px;
 }
 
 .links {
@@ -1398,9 +1409,16 @@ input[type='checkbox']:checked ~ label > img {
 }
 
 .credit {
+	text-align: center;
+}
+
+.credit a {
 	font-size: 12px;
 	color: var(--grey);
 	text-align: center;
+}
+.credit a:hover {
+	color: var(--light-blue);
 }
 
 .snowflake_left,

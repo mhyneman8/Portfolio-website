@@ -1,41 +1,45 @@
 // Opening welcome screen on first load
 document.addEventListener("DOMContentLoaded", function() {
-    if (sessionStorage.getItem('pageloadcount') === null) {
-        document.querySelector('#opening').classList.add('show');
-        sessionStorage.setItem('pageloadcount', '1');
-        setTimeout(function() {
-            $("#opening").removeClass('hide');
-        }, 1000);
+    if (document.body.className === 'homePage') {
+        if (sessionStorage.getItem('pageloadcount') === null) {
+            document.querySelector('#opening').classList.add('show');
+            sessionStorage.setItem('pageloadcount', '1');
+            setTimeout(function() {
+                $("#opening").removeClass('hide');
+            }, 1000);
+        }
+        // click to hide welcome screen
+        document.querySelector('#opening').addEventListener('click', function() {
+            document.querySelector('#opening').classList.remove('show');
+            document.querySelector('#hamburger').classList.remove('hide');
+            document.querySelector('.menu-large').classList.remove('hide');
+            sessionStorage.setItem('skipOpening', '1');
+            typewriter();
+        })
     }
-    // click to hide welcome screen
-    document.querySelector('#opening').addEventListener('click', function() {
-        document.querySelector('#opening').classList.remove('show');
-        document.querySelector('#hamburger').classList.remove('hide');
-        document.querySelector('.menu-large').classList.remove('hide');
-        sessionStorage.setItem('skipOpening', '1');
-        typewriter();
-    })
 }) 
 
+function closeAnimation() {
+    a = document.querySelector('.row1');
+    b = document.querySelector('.row2');
+    c = document.querySelector('.row3'); 
+    d = document.querySelector('#hamburger');
+    menu = document.querySelector('#menu');
+    let item = document.querySelectorAll('menu-item');
 
-a = document.querySelector('.row1');
-b = document.querySelector('.row2');
-c = document.querySelector('.row3'); 
-d = document.querySelector('#hamburger');
-menu = document.querySelector('#menu');
-let item = document.querySelectorAll('menu-item');
+    function toggleAnimation() {
+        a.classList.toggle('rotateRight');
+        b.classList.toggle('transparent');
+        c.classList.toggle('rotateLeft');
+        menu.classList.toggle('move'); 
+        // item.classList.toggle('slide')
+    };
 
-function toggleAnimation() {
-    a.classList.toggle('rotateRight');
-    b.classList.toggle('transparent');
-    c.classList.toggle('rotateLeft');
-    menu.classList.toggle('move'); 
-    item.classList.toggle('slide')
-};
+    d.addEventListener('click', function() {
+        toggleAnimation();
+    });
+} closeAnimation();
 
-d.addEventListener('click', function() {
-    toggleAnimation();
-});
 
 // homepage typing content
 const carouselText = [
@@ -100,6 +104,7 @@ if($(window).width() >= 481) {
         }
     }
 }
+
 // typewriter effect for all pages
 async function typeSentence(sentence, eleRef, delay = 100) {
     const letters = sentence.split("");
@@ -109,7 +114,7 @@ async function typeSentence(sentence, eleRef, delay = 100) {
         $(eleRef).append(letters[i]);
         i++
     }
-return;
+    return;
 }
 
 if (document.body.className === 'about') { 
@@ -160,33 +165,73 @@ if (document.body.className === 'movie') {
     typeSentence("Movie API", "#movie");
 }
 
-  async function deleteSentence(eleRef) {
+async function deleteSentence(eleRef) {
     const sentence = $(eleRef).html();
     const letters = sentence.split("");
     let i = 0;
     while(letters.length > 0) {
-      await waitForMs(100);
-      letters.pop();
-      $(eleRef).html(letters.join(""));
+        await waitForMs(100);
+        letters.pop();
+        $(eleRef).html(letters.join(""));
     }
-  }
+}
   
-  async function carousel(carouselList, eleRef) {
-      var i = 0;
-        await typeSentence(carouselList[i].text, eleRef);
-        await waitForMs(1500);
-        await deleteSentence(eleRef);
-        await waitForMs(500);
-        i++
-        await typeSentence(carouselList[i].text, eleRef);
-        await waitForMs(1500);
-        await deleteSentence(eleRef);
-        await waitForMs(500);
-        i++
-        await typeSentence(carouselList[i].text, eleRef);
-        await waitForMs(1500);
-  }
+async function carousel(carouselList, eleRef) {
+    var i = 0;
+    await typeSentence(carouselList[i].text, eleRef);
+    await waitForMs(1500);
+    await deleteSentence(eleRef);
+    await waitForMs(500);
+    i++
+    await typeSentence(carouselList[i].text, eleRef);
+    await waitForMs(1500);
+    await deleteSentence(eleRef);
+    await waitForMs(500);
+    i++
+    await typeSentence(carouselList[i].text, eleRef);
+    await waitForMs(1500);
+}
   
-  function waitForMs(ms) {
+function waitForMs(ms) {
     return new Promise(resolve => setTimeout(resolve, ms))
-  }
+}
+
+// project filter
+
+// default filter to show all 
+filterObjects("all");
+
+function filterObjects(c) {
+    var x, i;
+    x = document.getElementsByClassName("box");
+
+    if (c == "all") c="";
+    for (i = 0; i < x.length; i++) {
+        removeClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+    }
+}
+
+function addClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2= name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {
+            element.className += " " + arr2[i];
+        }
+    }
+}
+
+function removeClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+    }
+    element.className = arr1.join(" ");
+}
+  
