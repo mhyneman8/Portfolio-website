@@ -234,4 +234,11 @@ function removeClass(element, name) {
     }
     element.className = arr1.join(" ");
 }
+
+// show more skills for filter options
+function moreSkills() {
+    console.log('more');
+    $(".more-projects").toggle();
+    // removeClass(".more-projects", "hide");
+}
   
