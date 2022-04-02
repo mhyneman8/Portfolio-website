@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.querySelector('#hamburger').classList.remove('hide');
             document.querySelector('.menu-large').classList.remove('hide');
             sessionStorage.setItem('skipOpening', '1');
-            typewriter();
+            // typewriter();
         })
     }
 }) 
