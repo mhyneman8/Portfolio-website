@@ -132,15 +132,15 @@ h1 {
 	margin: 0.313rem auto;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 550px) {
 	.h1,
 	h1,
 	.sentence {
-		font-size: 2.8125rem !important;
+		font-size: 2.5125rem !important;
 	}
 
 	.input-cursor {
-		height: 2.8125rem !important;
+		height: 2.5125rem !important;
 	}
 }
 
@@ -148,22 +148,22 @@ h1 {
 	.h1,
 	h1,
 	.sentence {
-		font-size: 2.5rem !important;
+		font-size: 2.3rem !important;
 	}
 
 	.input-cursor {
-		height: 2.5rem !important;
+		height: 2.3rem !important;
 	}
 }
 
 @media all and (max-width: 360px) {
 	h1,
 	.sentence {
-		font-size: 2.275rem !important;
+		font-size: 2.175rem !important;
 	}
 
 	.input-cursor {
-		height: 2.275rem !important;
+		height: 2.175rem !important;
 	}
 }
 
@@ -200,6 +200,8 @@ h1 {
 	color: var(--light-blue);
 	font-size: 3.4375rem;
 	font-weight: 700;
+	/* margin-top: 75px; */
+	/* padding: 20px; */
 }
 
 .input-cursor {
@@ -1585,6 +1587,31 @@ input[type='checkbox']:checked ~ label > img {
 	line-height: 1.7;
 	font-size: 1.25rem;
 	letter-spacing: 0.0625rem;
+}
+
+.caption-right {
+	position: absolute;
+	bottom: 0px;
+	right: 52px;
+	font-size: 16px;
+}
+
+@media all and (max-width: 520px) {
+	.caption-right {
+		right: 0px;
+	}
+}
+
+.caption-left {
+	position: absolute;
+	bottom: 0px;
+	left: 52px;
+	font-size: 16px;
+}
+@media all and (max-width: 520px) {
+	.caption-left {
+		left: 0px;
+	}
 }
 
 .loading-gif {

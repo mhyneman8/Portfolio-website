@@ -140,6 +140,9 @@ if (document.body.className === 'changed') {
 if (document.body.className === 'mbg') {
     typeSentence("Mother B Green Cleaning", "#mbg");
 }
+if (document.body.className === 'ccl') {
+    typeSentence("CCL", "#ccl");
+}
 
 if (document.body.className === 'meet') {
     typeSentence("Meet App", "#meet");
