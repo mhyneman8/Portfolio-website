@@ -167,6 +167,9 @@ if (document.body.className === 'chat') {
 if (document.body.className === 'movie') {
     typeSentence("Movie API", "#movie");
 }
+if (document.body.className === 'clearviction') {
+    typeSentence("Clearviction", "#clearviction");
+}
 
 async function deleteSentence(eleRef) {
     const sentence = $(eleRef).html();
