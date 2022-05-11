@@ -102,6 +102,7 @@
 				<button class="btn-filter btn-secondary" onclick="moreSkills()" >...</button>
 			</div>
 			<div class="more-projects" style="display: none">
+				<button class="btn-filter btn-secondary more-skills" onclick="filterObjects('typescript')" >Typescript</button>
 				<button class="btn-filter btn-secondary more-skills" onclick="filterObjects('gherkin')" >Gherkin</button>
 				<button class="btn-filter btn-secondary more-skills" onclick="filterObjects('node')" >Node</button>
 				<button class="btn-filter btn-secondary more-skills" onclick="filterObjects('angular')" >Angular</button>
@@ -116,12 +117,33 @@
 
 			<article class="grid">
 
+				<!-- Clearviction -->
+				<div class=" box grid__item javascript html typescript react">
+					<a href="https://www.clearviction.org/" target="_blank">
+						<div class="project_img">
+							<img class="static " src="img/clearviction/cvhome.jpg" alt="Clearviction Homescreen">
+							<img class="projects-active" src="img/clearviction/cv-demo.gif" alt="Clearviction Demo GIF">
+						</div> <!-- end of project_img -->
+					</a>
+					<h2 class="project-header">Clearviction</h2>
+					<div class="code-btn">
+						<button type="button" class="btn-projects" data-toggle="modal" data-target="#clearviction-modal">
+							Quick-view
+						</button>
+						<a href="projects/clearviction.html" role="button" class="btn-projects">
+							More Details
+						</a>
+					</div> <!-- end of code-btn -->
+				</div> <!-- end of grid__item-->
+				
 				<!-- Meet App -->
 				<div class=" box grid__item javascript html gherkin react tdd">
-					<div class="project_img">
-						<img class="static " src="img/meet/meetApp.jpg" alt="Meet Homescreen">
-						<img class="projects-active" src="img/meet/meetDemo.gif" alt="Meet GIF">
-					</div> <!-- end of project_img -->
+					<a href="" target="_blank">
+						<div class="project_img">
+							<img class="static " src="img/meet/meetApp.jpg" alt="Meet Homescreen">
+							<img class="projects-active" src="img/meet/meetDemo.gif" alt="Meet GIF">
+						</div> <!-- end of project_img -->
+					</a>
 					<h2 class="project-header">Meet App</h2>
 					<div class="code-btn">
 						<button type="button" class="btn-projects" data-toggle="modal" data-target="#meet-modal">
