@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Budget Planner</title>
+
+	<meta name="viewport" content="width=device-width,initial 1-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  	<!-- reset browser default style (first link) -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+  	<!-- favicon, icon on tab -->
+	<link rel="shortcut icon" href="../img/favicon_io/favicon-16x16.png" type="image/x-icon"/>
+
+	<!-- google font Roboto -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+	<!-- google font Lato and Playfair Display -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  	<!-- styelesheet css -->
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+
+</head>
+
+<body class="budget">
+
+	<!-- nav bar -->
+	<header class="page-header">
+		<div class="menu-large">
+			<a class="menu-l-item" href="../index.html">
+				Home
+			</a>
+			<a class="menu-l-item" href="../about.html">
+				About Me
+			</a>
+			<a class="menu-l-item" href="../projects.html">
+				Projects
+			</a>
+			<a class="menu-l-item" href="../contact.html">
+				Contact
+			</a>
+			<a class="menu-l-item" href="../files/MH-Dev.pdf"  target="_blank">
+				Resume
+			</a>
+		</div>
+		<nav class="main-navigation">
+			<!-- logo -->
+			<a href="index.html">
+				<img src="../img/MH_Logo.png" alt="MH logo" class="mh-logo  page-header__item">
+			</a>
+			<div class="page-header__item" id="menu">
+				<ul>
+					<a class="menu-item" href="../index.html">
+						<li>Home</li>
+					</a>
+					<a class="menu-item" href="../about.html">
+						<li>About Me</li>
+					</a>
+					<a class="menu-item" href="../projects.html">
+						<li>Projects</li>
+					</a>
+					<a class="menu-item" href="../contact.html">
+						<li>Contact</li>
+					</a>
+					<a class="menu-item" href="../files/MH-Dev.pdf"  target="_blank">
+						<li>Resume</li>
+					</a>
+				</ul>
+			</div>
+	
+		<div class="container page-header__item">
+			<div id="hamburger">
+				<div class="row1"></div>
+				<div class="row2"></div>
+				<div class="row3"></div>
+			</div>
+		</div> 		
+		</nav> 
+	</header>
+
+	<main>
+        <div class="links">
+            <a href="https://mhyneman8.github.io/budget-planner/" role="button" target="_blank" class="links-btn">
+                Site
+            </a>
+            <a href="https://github.com/mhyneman8/budget-planner" role="button" class="links-btn" target="_blank">
+                Code
+            </a>  
+            <a href="../projects.html" role="button" class="links-btn">
+                Back
+            </a> 
+        </div>
+
+        <div class="typing-container">
+			<span id="budget" class="sentence"></span>
+			<span class="input-cursor"></span>
+		</div>
+
+        <div class="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block carousel-img" src="../img/budget/screenshotTop.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block carousel-img" src="../img/budget/addExpense.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block carousel-img" src="../img/budget/editExpense.jpg" alt="Third slide">
+                    </div>
+                </div> <!-- carousel-inner -->
+            </div> <!-- end of carousel example indicators -->
+        </div> <!-- end of crouself -->
+
+        <div class="reflection">
+            <h4 class="ref-header">Overview</h4>
+            <p class="ref-text">
+                A fintech company is adding a new financial planning feature to 
+                their existing web app. It allows users to track their income 
+                and expenditures, and manage their budget.
+            </p>
+
+            <div>
+                <input type="checkbox" id="zoomCheck26">
+                <label for="zoomCheck26">
+                    <img class="float-right w-50 m-3 border" src="../img/budget/demo.gif" alt="Site demo">
+                </label>
+            </div>
+
+            <h4 class="ref-header">Purpose & Context</h4>
+            <p class="ref-text">
+                This feature was built in accordance with CareerFoundry curriculum to learn and practice working as a developer/designer team. 
+            </p>
+            <span class="bold text-left mb-1">User Stories:</span>
+            <p class="text-left w-75 ml-4">
+                As a user, I want to be able to add, edit, adn delete a budget amount.
+            </p>
+            <p class="text-left w-75 ml-4">
+                As a user, I want to be able to add, edit, and delete expenses from the budget.
+            </p>
+            <p class="text-left w-75 ml-4">
+                As a user, I want to be able to see my total balance after expenses have been extracted from my budgeted amount.
+            </p>
+
+            <div>
+                <input type="checkbox" id="zoomCheck27">
+                <label for="zoomCheck27">
+                    <img class="d-block w-75 text-center m-auto border" src="../img/budget/expenseSubmit.jpg" alt="User Profile">
+                </label>
+            </div>
+
+            <h4 class="mt-4 ref-header">Objective</h4>
+            <p class="ref-text">
+                Using React, build a new feature that the user can edit to fit their needs.
+            </p>
+
+            <div>
+                <input type="checkbox" id="zoomCheck28">
+                <label for="zoomCheck28">
+                    <img class="w-75 border float-right m-3" src="../img/budget/addExpense.jpg" alt="Users favorite movies">
+                </label>
+            </div>
+
+            <h4 class="ref-header">Approach</h4>
+            <p class="ref-text">
+                <span class="bold">Technologies:</span> 
+                React, Bootstrap, JavaScript, LocalStorage, Figma
+            </p>
+
+            <ul class="text-left">
+                <li>We started by meeting as a team and discussing the needs of this new feature</li>
+                <li>After the designer did their research, they put together a first draft.</li>
+                <li>We met as a team to discuss the design and go over and development constraints and discuss any confusion with the design</li>
+                <li>The designer went back to fix a few things and I started to develop the pages and layout</li>
+                <li>The routing was laid out, the functionality of saving the information to local storage was next</li>
+                <li>With functionality working we met as a team again to go over design changes</li>
+                <li>Last step was to implement the design</li>
+
+            </ul>
+
+            <div>
+                <input type="checkbox" id="zoomCheck28">
+                <label for="zoomCheck28">
+                    <img class="w-75 text-center m-auto border" src="../img/budget/addExpense.gif" alt="Demo of adding expense">
+                </label>
+            </div>
+
+            <h4 class="mt-4 ref-header">Challenges</h4>
+            <p class="ref-text">
+                As a team, my partner and I worked together wonderfully. The challenges came in where we each lived. We were in two different time zones, seven hours apart. So finding a meeting time was difficult for us. With living in two different countries, there was also a language barrier, sometimes we had to say things multiple ways before the other person was able to understand. Even with these barriers, we were able to put out a product we were both happy with.
+            </p>
+            <p class="ref-text">
+                Another challenge we faced was time contraints. This was a 2-week sprint, but both us had our partners dropout of the project which lead us to not getting started until a week into the sprint. We then only had a week to put together a product. There are things we wished we had more time to implement, but overall were happy with the product we made.
+            </p>
+
+            <div>
+                <input type="checkbox" id="zoomCheck29">
+                <label for="zoomCheck29">
+                    <img class="border float-right w-50 ml-3" src="../img/budget/deleteExpense.gif" alt="search demo">
+                </label>
+            </div>
+
+            <h4 class="ref-header">Duration</h4>
+            <p class="ref-text">
+                This project was completed using Agile project management method, and was completed in a week.
+            </p>
+            
+            <h4 class="text-left mt-5 ref-header">Credits</h4>
+            <p class="m-auto text-left pb-4">
+                <span class="bold display-inline-block">Role:</span> Lead developer
+                <br>
+                <span class="bold display-inline-block">UX Designer:</span> Karla Victoria Olteanu
+                <br>
+            </p>
+           
+        </div> <!-- end of reflection -->
+ 	</main>
+
+     <footer>
+		<div class="social-media">
+			<!--Github Icon -->
+			<a href="https://github.com/mhyneman8" target="_blank">
+				<img src="../img/github.svg" class="social-media-icon" alt="Github">
+			</a>
+			<!-- Linkedin Icon -->
+			<a href="https://www.linkedin.com/in/mallory-hyneman-984431102/" target="_blank">
+				<img src="../img/linkedin.svg" class="social-media-icon" alt="LinkedIn">
+			</a>
+		</div> <!-- end of social-media -->
+		<div class="credit">
+			<p>
+				<a href="https://github.com/mhyneman8/Portfolio-website" target="_blank">
+					Designed & Built by Mallory Hyneman
+				</a>
+			</p>
+		</div>
+	</footer>
+
+    <script
+		src="https://code.jquery.com/jquery-3.5.1.js"
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+		crossorigin="anonymous"></script>
+	<script
+		src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+		integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+		crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="../js/scripts.js"></script>
+</body>
+
+</html>

@@ -170,6 +170,9 @@ if (document.body.className === 'movie') {
 if (document.body.className === 'clearviction') {
     typeSentence("Clearviction", "#clearviction");
 }
+if (document.body.className === 'budget') {
+    typeSentence("Budget Planner", "#budget");
+}
 
 async function deleteSentence(eleRef) {
     const sentence = $(eleRef).html();

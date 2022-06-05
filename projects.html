@@ -193,6 +193,25 @@
 					</div> <!-- end of code-btn -->
 				</div> <!-- end of grid__item-->
 
+				<!-- budget-planning -->
+				<div class="box grid__item react bootstrap javascript parcel node">
+					<a href="https://mhyneman8.github.io/budget-planner/" target="_blank">
+						<div class="project_img">
+							<img class="static" src="./img/budget/screenshotTop.jpg" alt="MyFLix Home page">
+							<img class="projects-active" src="./img/myFlix/myflixDemo.gif" alt="myFlix GIF">
+						</div> <!-- end of project_img -->
+					</a>
+					<h2 class="project-header">Budget Planning Feature</h2>
+					<div class="code-btn">
+						<button type="button" class="btn-projects" data-toggle="modal" data-target="#budget-modal">
+							Quick-view
+						</button>
+						<a href="projects/budget.html" role="button" class="btn-projects">
+							More Details
+						</a>
+					</div> <!-- end of code-btn -->
+				</div> <!-- end of grid__item-->
+
 				<!-- movie API -->
 				<div class="box grid__item node express nosql mongodb mongoose http jwt">
 					<a href="https://myflix788.herokuapp.com/documentation" target="_blank" >
@@ -331,6 +350,37 @@
 
   <!-- Modals -->
 
+  <!-- Budget Planner modal -->
+	<div class="modal fade" id="budget-modal" tabindex="-1" role="dialog" aria-labelledby="BudgetModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="budget-modal-label">Budget Planner</h3>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+				</div> <!-- end of modal-header -->
+				<div class="modal-body">
+					<img class="w-75 mb-2 float-right border" src="img/budget/screenshotTop.jpg" alt="Budget Planner screenshot">
+					
+					<h4 class="modal-title">Technologies</h4>
+					<p class="modal-text">React, Bootstrap, LocalStorage, JavaSript, Figma</p>
+			
+					<h4 class="modal-title">Key Features</h4>
+					<ul class="modal-text">
+						<li>Add/delete/edit budgets</li>
+						<li>Add/delete/edit expenses/assets</li>
+						<li>Get total expenses</li>
+					</ul>
+				</div> <!-- end of modal-body -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<a href="projects/budget.html" type="button" class="btn btn-primary">More Details</a>
+				</div> <!-- end of modal-footer -->
+			</div> <!-- end of modal-content -->
+		</div> <!-- end of modal-dialog -->
+	</div> <!-- end of budget-modal -->
+
 	<!-- clearviction modal -->
 	<div class="modal fade" id="clearviction-modal" tabindex="-1" role="dialog" aria-labelledby="ClearvictionModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
@@ -361,7 +411,7 @@
 		</div> <!-- end of modal-footer -->
 		</div> <!-- end of modal-content -->
 	</div> <!-- end of modal-dialog -->
-	</div> <!-- end of pokedex-modal -->
+	</div> <!-- end of clearviction-modal -->
 
 
   <!-- pokedex modal -->
