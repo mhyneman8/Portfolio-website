@@ -28,87 +28,112 @@
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 	</head>
-
+	
 	<body class="homePage">
-		<!-- welcome screen -->
-		<div class="title" id="opening">
-			<h1 class="opening" >Welcome</h1>
-		</div>
 
-		<!-- nav bar -->
-		<header class="page-header">
-			<div class="menu-large hide">
-				<a class="menu-l-item" href="index.html">
-					Home
-				</a>
-				<a class="menu-l-item" href="about.html">
-					About Me
-				</a>
-				<a class="menu-l-item" href="projects.html">
-					Projects
-				</a>
-				<a class="menu-l-item" href="contact.html">
-					Contact
-				</a>
-				<a class="menu-l-item" href="files/MH-Dev.pdf"  target="_blank">
-					Resume
-				</a>
+		<!-- welcome screen -->
+		<!-- ! stop scrolling when welcome screen showing -->
+		<!-- <div class="welcome">
+				
+				<div class="maze-wrapper">
+				<div class="gameContainer"></div>
+				<div class="img-wrapper">
+					<div class="end">&#9734;</div>
+					<img src="img/MH_Logo.png" alt="">
+				</div>
+				<div class="welcome-ball"></div>
 			</div>
-			<nav class="main-navigation">
-				<!-- logo -->
+		</div> -->
+		<!-- <div class="welcome-title" id="opening">
+			<h1 class="opening" >Welcome</h1>
+		</div> -->
+		<div class="hero">
+			<!-- nav bar -->
+			<div class="hero-wrapper">
 				<a href="index.html">
 					<img src="img/MH_Logo.png" alt="MH logo" class="mh-logo  page-header__item">
 				</a>
-				<div class="page-header__item" id="menu">
-					<ul>
-						<a class="menu-item" href="index.html">
-							<li>Home</li>
-						</a>
-						<a class="menu-item" href="about.html">
-							<li>About Me</li>
-						</a>
-						<a class="menu-item" href="projects.html">
-							<li>Projects</li>
-						</a>
-						<a class="menu-item" href="contact.html">
-							<li>Contact</li>
-						</a>
-						<a class="menu-item" href="files/MH-Dev.pdf"  target="_blank">
-							<li>Resume</li>
-						</a>
-					</ul>
-				</div>
-		
-				<div class="container page-header__item">
-					<div class="hide" id="hamburger">
-						<div class="row1"></div>
-						<div class="row2"></div>
-						<div class="row3"></div>
+				<nav class="nav-desktop">
+					<a class="menu-l-item active" href="index.html">
+						Home
+					</a>
+					<a class="menu-l-item" href="about.html">
+						About Me
+					</a>
+					<a class="menu-l-item" href="projects.html">
+						Projects
+					</a>
+					<a class="menu-l-item" href="contact.html">
+						Contact
+					</a>
+					<a class="menu-l-item" href="files/MH-Dev.pdf"  target="_blank">
+						Resume
+					</a>
+				</nav>
+				<nav class="nav-mobile">
+					<!-- logo -->
+					<!-- <a href="index.html">
+						<img src="img/MH_Logo.png" alt="MH logo" class="mh-logo  page-header__item">
+					</a> -->
+					<div class="page-header__item" id="menu">
+						<ul>
+							<a class="menu-item active" href="index.html">
+								<li>Home</li>
+							</a>
+							<a class="menu-item" href="about.html">
+								<li>About Me</li>
+							</a>
+							<a class="menu-item" href="projects.html">
+								<li>Projects</li>
+							</a>
+							<a class="menu-item" href="contact.html">
+								<li>Contact</li>
+							</a>
+							<a class="menu-item" href="files/MH-Dev.pdf"  target="_blank">
+								<li>Resume</li>
+							</a>
+						</ul>
 					</div>
-				</div> 		
-			</nav> 
-		</header>
+			
+					<div class="container page-header__item">
+						<div id="hamburger">
+							<div class="row1"></div>
+							<div class="row2"></div>
+							<div class="row3"></div>
+						</div>
+					</div> 		
+				</nav> 
 
-		<main >
-			<div class="header-text">
-				<div class="typing-container">
-					<span id="sentence" class="sentence"></span>
-					<span id="cursor1" class="input-cursor"></span>
+			</div>
+
+			<div class="title-wrapper">
+				<h1 class="title">Mallory Hyneman</h1>
+				<div class="position-wrapper">
+					<h2 class="subtitle frontend">Frontend Engineer</h2>
+					<h2 class="subtitle experiment">Experiment Engineer</h2>
 				</div>
-				<div class="typing-container">
-					<span id="feature-text" class="sentence"></span>
-					<span id="cursor2" class="input-cursor hide"></span>
-				</div>
-			</div> <!-- end of header-text-->
+			</div>
+
+		</div>
 
 			<div class="profile">
-				<p class="profile_paragraph">
-					I am a developer with experience leading teams 
-					of diverse thinkers working on multiple objectives. 
-					I am proficient with MERN full-stack applications, communicate 
-					effectively, maintain project organization, 
-					while being person-centered
-				</p>
+				<div class="background"></div>
+				<div class="profile_paragraph_wrapper">
+					<p class="profile_paragraph">
+						Step into the digital realm where creativity collides with code! I'm a 
+						Frontend Engineer on a mission to blend dynamic designs with seamless user 
+						experiences. With a knack for impactful leadership and a toolbox filled with 
+						JavaScript, React, and a sprinkle of Typescript magic.
+					</p>
+					<p class="profile_paragraph">
+						I've spearheaded initiatives 
+						like mentorship programs and professional learning communities. From driving 
+						the successful launch of new features to optimizing website navigation for 
+						clarity, I thrive on transforming ideas into digital realities. So, buckle up 
+						and let's embark on a journey where innovation meets imagination!
+					</p>
+
+				</div>
 				
 				<div class="button_out">
 					<!-- <p>
@@ -118,8 +143,8 @@
 					Mallory has excellent communication skills, is gifted at building websites and relationships 
 					and understands the full picture.
 				</p> -->
-					<a href="projects.html" class="index_button button">
-						Check out my code
+					<a href="projects.html" class="primary_button">
+						View My Projects
 					</a>
 					<!-- <a href="files/mhyneman-dev.pdf" class="primary_button button" target="_blank">
 						View My Resume
@@ -130,7 +155,7 @@
 			<div class="right">
 				
 			</div>
-		</main>
+
 
 	<!-- footer -->
 	<footer>
