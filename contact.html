@@ -31,88 +31,89 @@
 <body class="contact">
 
 	<!-- nav bar -->
-	<header class="page-header">
-		<div class="menu-large">
-			<a class="menu-l-item" href="index.html">
-				Home
-			</a>
-			<a class="menu-l-item" href="about.html">
-				About Me
-			</a>
-			<a class="menu-l-item" href="projects.html">
-				Projects
-			</a>
-			<a class="menu-l-item" href="contact.html">
-				Contact
-			</a>
-			<a class="menu-l-item" href="files/MH-Dev.pdf"  target="_blank">
-				Resume
-			</a>
-		</div>
-		<nav class="main-navigation">
-			<!-- logo -->
-			<a href="index.html">
-				<img src="img/MH_Logo.png" alt="MH logo" class="mh-logo  page-header__item">
-			</a>
-			<div class="page-header__item" id="menu">
-				<ul>
-					<a class="menu-item" href="index.html">
-						<li>Home</li>
-					</a>
-					<a class="menu-item" href="about.html">
-						<li>About Me</li>
-					</a>
-					<a class="menu-item" href="projects.html">
-						<li>Projects</li>
-					</a>
-					<a class="menu-item" href="contact.html">
-						<li>Contact</li>
-					</a>
-					<a class="menu-item" href="files/MH-Dev.pdf"  target="_blank">
-						<li>Resume</li>
-					</a>
-				</ul>
-			</div>
-	
-		<div class="container page-header__item">
+	<div class="hero-wrapper">
+		<a href="index.html">
+		  <img src="img/MH_Logo.png" alt="MH logo" class="mh-logo  page-header__item">
+		</a>
+		<nav class="nav-desktop">
+		  <a class="menu-l-item" href="index.html">
+			Home
+		  </a>
+		  <a class="menu-l-item" href="about.html">
+			About Me
+		  </a>
+		  <a class="menu-l-item" href="projects.html">
+			Projects
+		  </a>
+		  <a class="menu-l-item active" href="contact.html">
+			Contact
+		  </a>
+		  <a class="menu-l-item" href="files/MH-Dev.pdf"  target="_blank">
+			Resume
+		  </a>
+		</nav>
+		<nav class="nav-mobile">
+		  <div class="page-header__item" id="menu">
+			<ul>
+			  <a class="menu-item" href="index.html">
+				<li>Home</li>
+			  </a>
+			  <a class="menu-item" href="about.html">
+				<li>About Me</li>
+			  </a>
+			  <a class="menu-item" href="projects.html">
+				<li>Projects</li>
+			  </a>
+			  <a class="menu-item active" href="contact.html">
+				<li>Contact</li>
+			  </a>
+			  <a class="menu-item" href="files/MH-Dev.pdf"  target="_blank">
+				<li>Resume</li>
+			  </a>
+			</ul>
+		  </div>
+	  
+		  <div class="container page-header__item">
 			<div id="hamburger">
-				<div class="row1"></div>
-				<div class="row2"></div>
-				<div class="row3"></div>
+			  <div class="row1"></div>
+			  <div class="row2"></div>
+			  <div class="row3"></div>
 			</div>
-		</div> 		
+		  </div> 		
 		</nav> 
-	</header>
+	
+	</div>
 
-	<main>
-		<div class="typing-container">
+	<div>
+		<!-- <div class="typing-container">
 			<span id="contact" class="sentence"></span>
 			<span class="input-cursor"></span>
-		</div>
-
+		</div> -->
+		<div class="top-background"></div>
+		<div class="bottom-background"></div>
+		<div class="leftover-background"></div>
 		<div class="contact-me">
 			<!--contact form -->
 			<form action="https://formspree.io/f/mrgrwled" method="POST" id="contact-form" class="contact-form">
-
+				<h2>Let's Chat!</h2>
 				<p class="contact-para">
-					Want to build something together? I'm currently available for collaborations, or hire, in the Chicagoland area or remotely. 
+					Want to build something together?
 					Feel free to fill out the contact form, or
 					<a href="mailto: mallory.hyneman@gmail.com">Email Me</a> directly. I will respond within 72 hours.
 				</p>
 
-				<label class="form-label" for="name" >Full Name:* </label>
+				<label class="form-label" for="name" >Full Name:</label>
 				<input name="name" type="text" class="col-75" id="contact-name" required>
 
-				<label class="form-label" for="email">E-mail:* </label>
+				<label class="form-label" for="email">E-mail:</label>
 				<input name="email" type="email" class="col-75" id="contact-email" required>
 
-				<label class="form-label" for="contact-message">Message:* </label>
+				<label class="form-label" for="contact-message">Message:</label>
 				<textarea name="message" required rows="6" class="col-100" id="contact-message"></textarea>
 
-				<input type="submit" value="Send Message" class="primary_button button">
+				<input type="submit" value="Send Message" class="primary_button">
 			</form>
 		</div> <!-- end of contact-me -->
-
 	</main>
 
 	<!-- footer -->
