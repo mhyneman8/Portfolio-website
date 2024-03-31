@@ -42,8 +42,12 @@ const content = {
 		challenges: [
 			"This was my first foray into test driven development. It took me a little time to get the structure of TDD down. Once I was able to do that, writing the tests flowed more freely. The other challenge I had was that a feature stopped working early in the development, and I didn't notice until I was about finished. I had to revert changes on GitHub until I could go back to the version that was working. I redid the corrupted change, then added the GitHub changes back one at a time to make sure all features were working. When I work on this project again, I would like to make a guest login, so users won't have to sign-in with Google.",
 		],
-		credits: ['Tutor: Andrew Muscara', 'Mentor: Alexis Gormley'],
-		github: 'https://github.com/mhyneman8/',
+		credits: [
+			'Lead Developer',
+			'Tutor: Andrew Muscara',
+			'Mentor: Alexis Gormley',
+		],
+		github: 'https://github.com/mhyneman8/meet',
 	},
 	cv: {
 		id: 'cv',
@@ -74,8 +78,7 @@ const content = {
 			'I enjoyed being a part of a large team and working on this project. Being a part of a team also leads to some challenges. The team was spread out across the world, so most of our work was asynchronous. This meant we had to communicate clearly and be flexible about working on particular pieces of the site together.',
 			'Another challenge was to jump into a project that already had a staging website launched. I had to be able to look through code written by other developers to see what to change or what to fix. Sometimes that leads to a longer time needed to make changes. I had to follow the files to each piece I needed to change.',
 		],
-		credits: [''],
-		github: 'https://github.com/mhyneman8/',
+		credits: ['Sr. Developer'],
 	},
 	angular: {
 		id: 'angular',
@@ -120,8 +123,12 @@ const content = {
 			'This was the first time I worked with Angular, so there was a little learning curve starting off. I thought Angular was similar to the React library, in the layout of the files, but in more detail. That helped me wrap my head around the new framework. Some challenges I had were mostly little mistakes due to learning the new framework.',
 			"I struggled to get the director's image to appear, but when looking back over the files, I had forgotten to add the imageUrl into the component.ts file. The other small issue was getting the user's birthday to appear in the profile view. Again looking at the files and using the rubber ducky method to go back over what is happening, I found I mistyped the birthday to import. This project also scrolls horizontally instead of vertically. This was my first time using this feature and it took a little playing around with the CSS on the NavBar to get it to stay in the place I wanted. A feature I still want to implement, would be adding a search bar.",
 		],
-		credits: ['Tutor: Andrew Muscara', 'Mentor: Alexis Gormley'],
-		github: 'https://github.com/mhyneman8/',
+		credits: [
+			'Lead Developer',
+			'Tutor: Andrew Muscara',
+			'Mentor: Alexis Gormley',
+		],
+		github: 'https://github.com/mhyneman8/myFlix-Angular-client',
 	},
 	myflix: {
 		id: 'myflix',
@@ -169,8 +176,12 @@ const content = {
 		challenges: [
 			'This project was by far the most challenging project I have done so far. This was my first time using React, and it took a little bit for me to understand it. To help understand it, I would reread the lesson information, along with supplementing it with videos. Once I understood how it worked, I really appreciated the way it is broken out into components. Another challenge I had was with the Profile View. It took a lot of google searches and help from the tech community to figure out how to get the users favorite movies to display. Once I got through everything I wanted I felt so accomplished. If I was to go back to this project I would add a few more features, like being able to search for actors and see all their movies. And letting users add new movies to the database.',
 		],
-		credits: ['Tutor: Andrew Muscara', 'Mentor: Alexis Gormley'],
-		github: 'https://github.com/mhyneman8/',
+		credits: [
+			'Lead Developer',
+			'Tutor: Andrew Muscara',
+			'Mentor: Alexis Gormley',
+		],
+		github: 'https://github.com/mhyneman8/myFlix-client',
 	},
 	budget: {
 		id: 'budget',
@@ -213,8 +224,8 @@ const content = {
 			'As a team, my partner and I worked together wonderfully. The challenges came in where we each lived. We were in two different time zones, seven hours apart. So finding a meeting time was difficult for us. With living in two different countries, there was also a language barrier, sometimes we had to say things multiple ways before the other person was able to understand. Even with these barriers, we were able to put out a product we were both happy with.',
 			'Another challenge we faced was time contraints. This was a 2-week sprint, but both us had our partners dropout of the project which lead us to not getting started until a week into the sprint. We then only had a week to put together a product. There are things we wished we had more time to implement, but overall were happy with the product we made.',
 		],
-		credits: ['UX Designer: Karla Victoria Olteanu'],
-		github: 'https://github.com/mhyneman8/',
+		credits: ['Lead Developer', 'UX Designer: Karla Victoria Olteanu'],
+		github: 'https://github.com/mhyneman8/budget-planner',
 	},
 	movie: {
 		id: 'movie',
@@ -264,8 +275,12 @@ const content = {
 			'This project was my first look into the backend of an application. It gave me lots of practice using the terminal, and how picky it is. I learned the hard way using the terminal to build a SQL database. Using MongoDB to build the NoSQL was a sanity saver.',
 			'If I were to go back to this project some of the changes I would make would be to make the URLs not case sensitive and to add more information about the movies. For example, add more than just the top 3 actors, or list all the genres the movies fit under.',
 		],
-		credits: ['Tutor: Andrew Muscara', 'Mentor: Alexis Gormley'],
-		github: 'https://github.com/mhyneman8/',
+		credits: [
+			'Lead Developer',
+			'Tutor: Andrew Muscara',
+			'Mentor: Alexis Gormley',
+		],
+		github: 'https://github.com/mhyneman8/movie_api',
 	},
 	ccl: {
 		id: 'ccl',
@@ -309,8 +324,6 @@ const content = {
 			'Another challenge was redesigning a site that was already made. Multiple people have been working on this site before I started. So there were a lot of pages that needed to be updated and just about every part of the page was done a different way. I had to do a little extra work to make sure all the pages were uniform.',
 			'The other challenge I had to overcome, was to make two separate sites, using only one site on SquareSpace. Javascript had to be embedded so a filter was used if they clicked Spanish, then the navigation bar would change to the spanish versions.',
 		],
-		credits: [''],
-		github: '',
 	},
 	chat: {
 		id: 'chat',
@@ -358,8 +371,12 @@ const content = {
 		challenges: [
 			'This project came with some challenges that really tested me. Getting the Firebase to import correctly took lots of troubleshooting. The CareerFoundry curriculum had us install a depreciated version. This led to many errors. I had to check the documentation of various versions, uninstall and install several times, trying different combinations to it to import, and searched the internet for a solution. In the end I finally got the right combination to import. Some things I would like to add to this project at a later date, is to let users sign in and have multiple chat rooms from which to choose.',
 		],
-		credits: ['Tutor: Andrew Muscara', 'Mentor: Alexis Gormley'],
-		github: 'https://github.com/mhyneman8/',
+		credits: [
+			'Lead Developer',
+			'Tutor: Andrew Muscara',
+			'Mentor: Alexis Gormley',
+		],
+		github: 'https://github.com/mhyneman8/chat-app',
 	},
 	poke: {
 		id: 'poke',
@@ -403,8 +420,12 @@ const content = {
 			'A challenging part of this project was to stay consistent with the theme of a handheld device. Making sure every new feature that was added works on the handheld screen. Everything had to fit in the screen and make the container look as close to the show’s pokedex as possible.',
 			'There are a couple items I would change and add in the next iteration. I want to change the power off button from a window alert into a modal dialog that stays in the pokedex screen. I want to change the background into an image that looks like someone is holding the pokedex in the air, so the background would look like it is outside. It would also be nice for the user to be able to filter the results, like only see 1st evolution or specific type of pokemon.',
 		],
-		credits: ['Tutorial: Andrew Muscara', 'Mentor: Alexis Gormley'],
-		github: 'https://github.com/mhyneman8/',
+		credits: [
+			'Lead Developer',
+			'Tutorial: Andrew Muscara',
+			'Mentor: Alexis Gormley',
+		],
+		github: 'https://github.com/mhyneman8/simple-js-app',
 	},
 	forkfull: {
 		id: 'forkfull',
@@ -444,8 +465,8 @@ const content = {
 		challenges: [
 			'This was my first website to build for a client that was made completely with HTML, CSS, and JavaScript. There were many things I learned during this process. Having a vision of what I wanted to happen, and then having to figure out how to make that vision become reality. Which made the styling the most challenging part for me. To finish this project, I need to finish writing the copy and put in the rest of the pictures and link those pictures with the corresponding webpages.',
 		],
-		credits: [''],
-		github: 'https://github.com/mhyneman8/',
+		credits: ['Lead Developer & Designer'],
+		github: 'https://github.com/mhyneman8/changed',
 	},
 	heart: {
 		id: 'heart',
@@ -485,7 +506,7 @@ const content = {
 			'Creating the trauma risk factor calculator took extra work to get it correct. We needed the appropriate response to come out, depending on the answers the user gave. If the user had multiple trauma risk factors we need to break them up with positive affirmations.',
 			'Another challenge was the quick turnaround. We needed to get this up and running by the research paper cut off. Juggling the needs of the site, with other obligations was tricky.',
 		],
-		credits: ['Role: Lead Engineer', 'Consulting PA: Daniel Mungul'],
+		credits: ['Lead Engineer & Designer', 'Consulting PA: Daniel Mungul'],
 		github: 'https://github.com/mhyneman8/heart-connected',
 	},
 };
