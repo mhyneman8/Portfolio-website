@@ -1,26 +1,24 @@
 import { Modal as modal } from './projectModal.js';
-
 import { projectCardContent } from '../content/projectCardContent.js';
 
 const log = console.log;
 
 const closeAnimation = () => {
-	const a = document.querySelector('.row1');
-	const b = document.querySelector('.row2');
-	const c = document.querySelector('.row3');
-	const d = document.querySelector('#hamburger');
+	const row1 = document.querySelector('.row1');
+	const row2 = document.querySelector('.row2');
+	const row3 = document.querySelector('.row3');
+	const hamburgerEl = document.querySelector('#hamburger');
 	const menu = document.querySelector('#menu');
 	let item = document.querySelectorAll('menu-item');
 
 	function toggleAnimation() {
-		a.classList.toggle('rotateRight');
-		b.classList.toggle('transparent');
-		c.classList.toggle('rotateLeft');
+		row1.classList.toggle('rotateRight');
+		row2.classList.toggle('transparent');
+		row3.classList.toggle('rotateLeft');
 		menu.classList.toggle('move');
-		// item.classList.toggle('slide')
 	}
 
-	d.addEventListener('click', function () {
+	hamburgerEl.addEventListener('click', function () {
 		toggleAnimation();
 	});
 };
@@ -336,7 +334,6 @@ const aboutMePage = () => {
 	// upst viewBox based on screen size
 	const roomSvg = document.querySelector('.room_img svg');
 	if (window.innerWidth < 1023) {
-		console.log('small');
 		const y =
 			window.innerWidth > 546
 				? window.innerWidth * 0.14
@@ -344,8 +341,6 @@ const aboutMePage = () => {
 
 		roomSvg.setAttribute('viewBox', `200 ${y} 600 600`);
 	} else {
-		log('big');
-		log(roomSvg);
 		roomSvg.removeAttribute('viewBox');
 	}
 
@@ -360,7 +355,6 @@ const aboutMePage = () => {
 					type: 'Feature',
 					properties: {
 						message: 'Bar',
-						iconSize: [40, 40],
 						className: 'arequipa',
 					},
 					geometry: {
@@ -371,8 +365,6 @@ const aboutMePage = () => {
 				{
 					type: 'Feature',
 					properties: {
-						message: 'Baz',
-						iconSize: [40, 40],
 						className: 'lima',
 					},
 					geometry: {
@@ -383,8 +375,6 @@ const aboutMePage = () => {
 				{
 					type: 'Feature',
 					properties: {
-						message: 'Baz',
-						iconSize: [40, 40],
 						className: 'machu',
 					},
 					geometry: {
@@ -395,8 +385,6 @@ const aboutMePage = () => {
 				{
 					type: 'Feature',
 					properties: {
-						message: 'Baz',
-						iconSize: [40, 40],
 						className: 'painted',
 					},
 					geometry: {
@@ -407,8 +395,6 @@ const aboutMePage = () => {
 				{
 					type: 'Feature',
 					properties: {
-						message: 'Baz',
-						iconSize: [40, 40],
 						className: 'guatemala',
 					},
 					geometry: {
@@ -419,8 +405,6 @@ const aboutMePage = () => {
 				{
 					type: 'Feature',
 					properties: {
-						message: 'Baz',
-						iconSize: [40, 40],
 						className: 'cr',
 					},
 					geometry: {
@@ -431,8 +415,6 @@ const aboutMePage = () => {
 				{
 					type: 'Feature',
 					properties: {
-						message: 'Baz',
-						iconSize: [40, 40],
 						className: 'kc',
 					},
 					geometry: {
@@ -443,8 +425,6 @@ const aboutMePage = () => {
 				{
 					type: 'Feature',
 					properties: {
-						message: 'Baz',
-						iconSize: [40, 40],
 						className: 'philly',
 					},
 					geometry: {
@@ -455,8 +435,6 @@ const aboutMePage = () => {
 				{
 					type: 'Feature',
 					properties: {
-						message: 'Baz',
-						iconSize: [40, 40],
 						className: 'up',
 					},
 					geometry: {
@@ -467,8 +445,6 @@ const aboutMePage = () => {
 				{
 					type: 'Feature',
 					properties: {
-						message: 'Baz',
-						iconSize: [40, 40],
 						className: 'badlands',
 					},
 					geometry: {
@@ -479,8 +455,6 @@ const aboutMePage = () => {
 				{
 					type: 'Feature',
 					properties: {
-						message: 'Baz',
-						iconSize: [40, 40],
 						className: 'illinois',
 					},
 					geometry: {
@@ -491,8 +465,6 @@ const aboutMePage = () => {
 				{
 					type: 'Feature',
 					properties: {
-						message: 'Baz',
-						iconSize: [40, 40],
 						className: 'sf',
 					},
 					geometry: {
@@ -503,8 +475,6 @@ const aboutMePage = () => {
 				{
 					type: 'Feature',
 					properties: {
-						message: 'Baz',
-						iconSize: [40, 40],
 						className: 'venice',
 					},
 					geometry: {
@@ -515,8 +485,6 @@ const aboutMePage = () => {
 				{
 					type: 'Feature',
 					properties: {
-						message: 'Baz',
-						iconSize: [40, 40],
 						className: 'rome',
 					},
 					geometry: {
@@ -527,8 +495,6 @@ const aboutMePage = () => {
 				{
 					type: 'Feature',
 					properties: {
-						message: 'Baz',
-						iconSize: [40, 40],
 						className: 'iceland',
 					},
 					geometry: {
@@ -539,8 +505,6 @@ const aboutMePage = () => {
 				{
 					type: 'Feature',
 					properties: {
-						message: 'Baz',
-						iconSize: [40, 40],
 						className: 'dr',
 					},
 					geometry: {
@@ -551,13 +515,21 @@ const aboutMePage = () => {
 				{
 					type: 'Feature',
 					properties: {
-						message: 'Baz',
-						iconSize: [40, 40],
 						className: 'germany',
 					},
 					geometry: {
 						type: 'Point',
 						coordinates: [8.714547, 48.489622],
+					},
+				},
+				{
+					type: 'Feature',
+					properties: {
+						className: 'mx',
+					},
+					geometry: {
+						type: 'Point',
+						coordinates: [-88.91812, 20.701892],
 					},
 				},
 			],
@@ -576,59 +548,31 @@ const aboutMePage = () => {
 		});
 
 		map.on('load', () => {
-			// Load an image from an external URL.
-			map.loadImage(
-				'https://docs.mapbox.com/mapbox-gl-js/assets/cat.png',
-				(error, image) => {
-					if (error) throw error;
+			for (const place of geojson.features) {
+				// Create a DOM element for each marker.
+				const el = document.createElement('div');
+				el.className = 'marker';
+				el.style.backgroundSize = '100%';
 
-					// Add markers to the map.
-					for (const marker of geojson.features) {
-						// Create a DOM element for each marker.
-						const el = document.createElement('div');
-						el.setAttribute('id', 'marker');
-						const width = marker.properties.iconSize[0];
-						const height = marker.properties.iconSize[1];
-						el.className = 'marker';
-						el.style.backgroundImage = `url(https://placekitten.com/g/${width}/${height}/)`;
-						el.style.width = `${width}px`;
-						el.style.height = `${height}px`;
-						el.style.backgroundSize = '100%';
+				el.addEventListener('click', () => {
+					document
+						.querySelector(`.map_picture_container`)
+						.classList.toggle('hide');
+					if (document.querySelector('.img-wrapper.active'))
+						document
+							.querySelector('.img-wrapper.active')
+							.classList.remove('active');
+					document
+						.querySelector(`.${place.properties.className}`)
+						.classList.toggle('active');
+					document.querySelector('.overlay').classList.toggle('active');
+				});
 
-						el.addEventListener('click', () => {
-							document
-								.querySelector(`.map_picture_container`)
-								.classList.toggle('hide');
-							if (document.querySelector('.img-wrapper.active'))
-								document
-									.querySelector('.img-wrapper.active')
-									.classList.remove('active');
-							document
-								.querySelector(`.${marker.properties.className}`)
-								.classList.toggle('active');
-							document.getElementById('btn-spin').click();
-							document.querySelector('.overlay').classList.toggle('active');
-						});
-
-						// Add markers to the map.
-						new mapboxgl.Marker(el)
-							.setLngLat(marker.geometry.coordinates)
-							.addTo(map);
-					}
-
-					// Add a layer to use the image to represent the data.
-					// map.addLayer({
-					//     'id': 'points',
-					//     'type': 'circle',
-					//     'source': 'single-point', // reference the data source
-					//     'layout': {
-
-					//         'icon-image': 'cat', // reference the image
-					//         'icon-size': 0.25
-					//     }
-					// });
-				}
-			);
+				// Add markers to the map.
+				new mapboxgl.Marker(el)
+					.setLngLat(place.geometry.coordinates)
+					.addTo(map);
+			}
 		});
 
 		// The following values can be changed to control rotation speed:
@@ -702,6 +646,7 @@ const aboutMePage = () => {
 			}
 		});
 
+		// glowing on clickable items
 		document.querySelector('.about .globe').addEventListener('click', () => {
 			document.querySelector('.map').classList.toggle('hide');
 			document.querySelector('.globe').classList.remove('wait');
@@ -725,6 +670,7 @@ const aboutMePage = () => {
 				});
 		}
 
+		// close about modals
 		const closeBtns = document.querySelectorAll('.about_wrapper .close');
 		closeBtns.forEach((btn) => {
 			btn.addEventListener('click', () => {
@@ -840,11 +786,10 @@ const projectPage = () => {
 		let currentIndex = 0;
 
 		// TODO:
-		// hearts connected images and description
 		// drag to scroll projects
 		// add captions to images
-		// automatic carousel change
-		// heart images
+		// automatic carousel change projects
+		// close mobile menu when click outside of menu
 
 		function scrollProjects(direction) {
 			const itemCount = items.length;
@@ -914,49 +859,6 @@ const projectPage = () => {
 		const gradientHexCodes = generateGradientHexCodes('#952e6b', '#1f2833', 11);
 	};
 };
-// project filter
-
-// const filterObjects = (c) => {
-//     var x, i;
-//     x = document.getElementsByClassName("box");
-
-//     if (c == "all") c="";
-//     for (i = 0; i < x.length; i++) {
-//         removeClass(x[i], "show");
-//         if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
-//     }
-// }
-
-// const addClass = (element, name) => {
-//     var i, arr1, arr2;
-//     arr1 = element.className.split(" ");
-//     arr2= name.split(" ");
-//     for (i = 0; i < arr2.length; i++) {
-//         if (arr1.indexOf(arr2[i]) == -1) {
-//             element.className += " " + arr2[i];
-//         }
-//     }
-// }
-
-// const removeClass = (element, name) => {
-//     var i, arr1, arr2;
-//     arr1 = element.className.split(" ");
-//     arr2 = name.split(" ");
-//     for (i = 0; i < arr2.length; i++) {
-//         while (arr1.indexOf(arr2[i]) > -1) {
-//             arr1.splice(arr1.indexOf(arr2[i]), 1);
-//         }
-//     }
-//     element.className = arr1.join(" ");
-// }
-// // show more skills for filter options
-// const moreSkills = () => {
-//     $(".more-projects").toggle();
-//     // removeClass(".more-projects", "hide");
-// }
-
-// // default filter to show all
-// filterObjects("all");
 
 if (window.location.pathname === '/projects.html') {
 	projectPage();
@@ -964,8 +866,4 @@ if (window.location.pathname === '/projects.html') {
 
 if (window.location.pathname === '/about.html') {
 	aboutMePage();
-}
-
-if (window.location.pathname == '/projects.html') {
-	projectPage();
 }
