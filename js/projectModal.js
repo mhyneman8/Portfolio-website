@@ -530,12 +530,6 @@ export function Modal(project) {
                     Code
                 </a> 
             </div>
-        
-            <div class="typing-container">
-                <span id="angular" class="sentence"></span>
-                <span class="input-cursor"></span>
-            </div>
-
             <div class="carousel">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -570,33 +564,23 @@ export function Modal(project) {
                 </p>
         
                 <div>
-                    <input type="checkbox" id="zoomCheck">
-                    <label for="zoomCheck">
-                        <img class="float-right w-50 m-3 border" src=${
-													img[0]
-												} alt="Profile View">
-                    </label>
+                        <img src=${img[0]} alt="">
                 </div>
         
                 <h4 class="ref-header">Purpose & Context</h4>
                 <p class="ref-text">
                     ${purpose}
                 </p>
-                <span class="bold text-left mb-1">User Stories:</span>
+                <span>User Stories:</span>
                 ${userStories
 									.map((story) => `<p class="text-left w-75 ml-4">${story}</p>`)
 									.join('')}
         
                 <div>
-                    <input type="checkbox" id="zoomCheck3">
-                    <label for="zoomCheck3">
-                        <img class="d-block w-75 text-center m-auto border" src=${
-													img[1]
-												} alt="MyFlix Demo">
-                    </label>
+                    <img src=${img[1]} alt="">
                 </div>
         
-                <h4 class="mt-4 ref-header">Objective</h4>
+                <h4 class="ref-header">Objective</h4>
                 <p class="ref-text">
                     ${objective}
                 </p>
@@ -611,27 +595,17 @@ export function Modal(project) {
                 </ul>
         
                 <div>
-                    <input type="checkbox" id="zoomCheck1">
-                    <label for="zoomCheck1">
-                        <img class="w-75 text-center m-auto border" src=${
-													img[2]
-												} alt="Kanban Board">
-                    </label>
+                    <img src=${img[2]} alt="Kanban Board">
                 </div>
         
-                <h4 class="mt-4 ref-header">Challenges</h4>
+                <h4 class="ref-header">Challenges</h4>
                 ${challenges
 									.map((challenge) => `<p class="ref-text">${challenge}</p>`)
 									.join('')}
             
         
                 <div>
-                    <input type="checkbox" id="zoomCheck2">
-                    <label for="zoomCheck2">
-                        <img class="border float-right w-50 ml-3" src=${
-													img[3]
-												} alt="Director View">
-                    </label>
+                    <img src=${img[3]} alt="Director View">
                 </div>
         
                 <h4 class="ref-header">Duration</h4>
@@ -639,8 +613,8 @@ export function Modal(project) {
                     ${duration}
                 </p>
                 
-                <h4 class="text-left mt-5 ref-header">Credits</h4>
-                <p class="m-auto text-left pb-4">
+                <h4 class="ref-header">Credits</h4>
+                <p>
                     ${credits
 											.map(
 												(credit) => `
