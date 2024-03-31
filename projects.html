@@ -7,7 +7,7 @@
 
 	<title>MH's Projects</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- resets browser default styles (first link) -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -27,301 +27,101 @@
   <!-- styelesheet css (last link) -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/projectModal.css">
 
 </head>
 
 <body class="projects">
-
 	<!-- nav bar -->
-	<header class="page-header">
-		<div class="menu-large">
-			<a class="menu-l-item" href="index.html">
-				Home
-			</a>
-			<a class="menu-l-item" href="about.html">
-				About Me
-			</a>
-			<a class="menu-l-item" href="projects.html">
-				Projects
-			</a>
-			<a class="menu-l-item" href="contact.html">
-				Contact
-			</a>
-			<a class="menu-l-item" href="files/MH-Dev.pdf"  target="_blank">
-				Resume
-			</a>
-		</div>
-		<nav class="main-navigation">
-			<!-- logo -->
+	<div class="hero">
+		<div class="hero-wrapper">
 			<a href="index.html">
-				<img src="img/MH_Logo.png" alt="MH logo" class="mh-logo  page-header__item">
+			  <img src="img/MH_Logo.png" alt="MH logo" class="mh-logo  page-header__item">
 			</a>
-			<div class="page-header__item" id="menu">
+			<nav class="nav-desktop">
+			  <a class="menu-l-item" href="index.html">
+				Home
+			  </a>
+			  <a class="menu-l-item" href="about.html">
+				About Me
+			  </a>
+			  <a class="menu-l-item active" href="projects.html">
+				Projects
+			  </a>
+			  <a class="menu-l-item" href="contact.html">
+				Contact
+			  </a>
+			  <a class="menu-l-item" href="files/MH-Dev.pdf"  target="_blank">
+				Resume
+			  </a>
+			</nav>
+			<nav class="nav-mobile">
+			  <div class="page-header__item" id="menu">
 				<ul>
-					<a class="menu-item" href="index.html">
-						<li>Home</li>
-					</a>
-					<a class="menu-item" href="about.html">
-						<li>About Me</li>
-					</a>
-					<a class="menu-item" href="projects.html">
-						<li>Projects</li>
-					</a>
-					<a class="menu-item" href="contact.html">
-						<li>Contact</li>
-					</a>
-					<a class="menu-item" href="files/MH-Dev.pdf"  target="_blank">
-						<li>Resume</li>
-					</a>
+				  <a class="menu-item" href="index.html">
+					<li>Home</li>
+				  </a>
+				  <a class="menu-item" href="about.html">
+					<li>About Me</li>
+				  </a>
+				  <a class="menu-item active" href="projects.html">
+					<li>Projects</li>
+				  </a>
+				  <a class="menu-item" href="contact.html">
+					<li>Contact</li>
+				  </a>
+				  <a class="menu-item" href="files/MH-Dev.pdf"  target="_blank">
+					<li>Resume</li>
+				  </a>
 				</ul>
-			</div>
-	
-		<div class="container page-header__item">
-			<div id="hamburger">
-				<div class="row1"></div>
-				<div class="row2"></div>
-				<div class="row3"></div>
-			</div>
-		</div> 		
-		</nav> 
-	</header>
+			  </div>
+		  
+			  <div class="container page-header__item">
+				<div id="hamburger">
+				  <div class="row1"></div>
+				  <div class="row2"></div>
+				  <div class="row3"></div>
+				</div>
+			  </div> 		
+			</nav> 
+		</div>
+	</div>
 
 	<main>
 		<section>
-			<div class="typing-container">
-				<span id="projects" class="sentence"></span>
-				<span class="input-cursor"></span>
+			<h1>Projects</h1>
+			<div class="toggleTab">
+				<button class="active">Web Dev</button>
+				<button>Experimentation</button>
 			</div>
 
-			<div id="filter-btns">
-				<button class="btn-filter btn-secondary" onclick="filterObjects('all')" >Show All</button>
-				<button class="btn-filter btn-secondary" onclick="filterObjects('javascript')" >JavaScript</button>
-				<button class="btn-filter btn-secondary" onclick="filterObjects('html')"  >HTML/CSS</button>
-				<button class="btn-filter btn-secondary" onclick="filterObjects('react')" >React</button>
-				<button class="btn-filter btn-secondary" onclick="filterObjects('native')" >React Native</button>
-				<button class="btn-filter btn-secondary" onclick="moreSkills()" >...</button>
-			</div>
-			<div class="more-projects" style="display: none">
-				<button class="btn-filter btn-secondary more-skills" onclick="filterObjects('typescript')" >Typescript</button>
-				<button class="btn-filter btn-secondary more-skills" onclick="filterObjects('gherkin')" >Gherkin</button>
-				<button class="btn-filter btn-secondary more-skills" onclick="filterObjects('node')" >Node</button>
-				<button class="btn-filter btn-secondary more-skills" onclick="filterObjects('angular')" >Angular</button>
-				<button class="btn-filter btn-secondary more-skills" onclick="filterObjects('redux')" >Redux</button>
-				<button class="btn-filter btn-secondary more-skills" onclick="filterObjects('nosql')" >noSQL</button>
-				<button class="btn-filter btn-secondary more-skills" onclick="filterObjects('mongodb')" >MongoDB</button>
-				<button class="btn-filter btn-secondary more-skills" onclick="filterObjects('http')" >HTTP Authentication</button>
-				<button class="btn-filter btn-secondary more-skills" onclick="filterObjects('jwt')" >JWT Authentication</button>
-				<button class="btn-filter btn-secondary more-skills" onclick="filterObjects('squarespace')" >SquareSpace</button>
-				<button class="btn-filter btn-secondary more-skills" onclick="filterObjects('expo')" >Expo</button>
-			</div>
-
-			<article class="grid">
-
-				<!-- Clearviction -->
-				<div class=" box grid__item javascript html typescript react">
-					<a href="https://www.clearviction.org/" target="_blank">
-						<div class="project_img">
-							<img class="static " src="img/clearviction/cvhome.jpg" alt="Clearviction Homescreen">
-							<img class="projects-active" src="img/clearviction/cv-demo.gif" alt="Clearviction Demo GIF">
-						</div> <!-- end of project_img -->
-					</a>
-					<h2 class="project-header">Clearviction</h2>
-					<div class="code-btn">
-						<button type="button" class="btn-projects" data-toggle="modal" data-target="#clearviction-modal">
-							Quick-view
-						</button>
-						<a href="projects/clearviction.html" role="button" class="btn-projects">
-							More Details
-						</a>
-					</div> <!-- end of code-btn -->
-				</div> <!-- end of grid__item-->
+			<article class="projects-wrapper">
+				<div class="btnSection">
+					<button id="prev">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1" viewBox="0 0 330 330" xml:space="preserve">
+							<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394  l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393  C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+						</svg>
+					</button>
+					<button id="next">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1" viewBox="0 0 330 330" xml:space="preserve">
+							<path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393  c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393  s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/>
+						</svg>
+					</button>
+				</div>
+				<div class="projects-rolodex">
+					<ul class="projectsList">
+						<div class="web active">
+						</div>
+						<div class="experiment-projects">
+							<li>
+								<img src="" alt="">
+								<div class="title"></div>
+							</li>
+						</div>
+					</ul>
+				</div>
 				
-				<!-- Meet App -->
-				<div class=" box grid__item javascript html gherkin react tdd">
-					<a href="" target="_blank">
-						<div class="project_img">
-							<img class="static " src="img/meet/meetApp.jpg" alt="Meet Homescreen">
-							<img class="projects-active" src="img/meet/meetDemo.gif" alt="Meet GIF">
-						</div> <!-- end of project_img -->
-					</a>
-					<h2 class="project-header">Meet App</h2>
-					<div class="code-btn">
-						<button type="button" class="btn-projects" data-toggle="modal" data-target="#meet-modal">
-							Quick-view
-						</button>
-						<a href="projects/meet.html" role="button" class="btn-projects">
-							More Details
-						</a>
-					</div> <!-- end of code-btn -->
-				</div> <!-- end of grid__item-->
-
-				<!-- Angular myFlix -->
-				<div class="box grid__item node angular">
-					<a href="https://mhyneman8.github.io/myFlix-Angular-client/welcome" target="_blank">
-						<div class="project_img">
-							<img class="static" src="img/angular/angular.jpg" alt="Angular myFlix">
-							<img class="projects-active" src="img/angular/angularDemoCrop.gif" alt="Angular myFlix GIF">
-						</div>
-					</a>
-					<h2 class="project-header">MyFlix Angular</h2>
-					<div class="code-btn">
-						<button type="button" class="btn-projects" data-toggle="modal" data-target="#angular-modal">
-							Quick-view
-						</button>
-						<a href="projects/angular.html" role="button" class="btn-projects">
-							More Details
-						</a>
-					</div> <!-- end of code-btn -->
-				</div> <!-- end of grid__item-->
-
-				<!-- myFlix -->
-				<div class="box grid__item react redux bootstrap parcel node">
-					<a href="https://myflix-mh.netlify.app" target="_blank">
-						<div class="project_img">
-							<img class="static" src="./img/myFlix/myFlix.jpg" alt="MyFLix Home page">
-							<img class="projects-active" src="./img/myFlix/myflixDemo.gif" alt="myFlix GIF">
-						</div> <!-- end of project_img -->
-					</a>
-					<h2 class="project-header">MyFlix</h2>
-					<div class="code-btn">
-						<button type="button" class="btn-projects" data-toggle="modal" data-target="#myflix-modal">
-							Quick-view
-						</button>
-						<a href="projects/myflix.html" role="button" class="btn-projects">
-							More Details
-						</a>
-					</div> <!-- end of code-btn -->
-				</div> <!-- end of grid__item-->
-
-				<!-- budget-planning -->
-				<div class="box grid__item react bootstrap javascript parcel node">
-					<a href="https://mhyneman8.github.io/budget-planner/" target="_blank">
-						<div class="project_img">
-							<img class="static" src="./img/budget/screenshotTop.jpg" alt="Budget Planner Home page">
-							<img class="projects-active" src="./img/budget/demo.gif" alt="Budget Planner GIF">
-						</div> <!-- end of project_img -->
-					</a>
-					<h2 class="project-header">Budget Planning Feature</h2>
-					<div class="code-btn">
-						<button type="button" class="btn-projects" data-toggle="modal" data-target="#budget-modal">
-							Quick-view
-						</button>
-						<a href="projects/budget.html" role="button" class="btn-projects">
-							More Details
-						</a>
-					</div> <!-- end of code-btn -->
-				</div> <!-- end of grid__item-->
-
-				<!-- movie API -->
-				<div class="box grid__item node express nosql mongodb mongoose http jwt">
-					<a href="https://myflix788.herokuapp.com/documentation" target="_blank" >
-						<div class="project_img">
-							<img class="movie_img" src="img/movie/movieAPi.jpg" alt="movie Api">
-						</div>
-					</a>
-					<h2 class="project-header">Movie API</h2>
-					<div class="code-btn">
-						<button type="button" class="btn-projects" data-toggle="modal" data-target="#movie-modal">
-							Quick-view
-						</button>
-						<a href="projects/movie.html" role="button" class="btn-projects">
-							More Details
-						</a>
-					</div> <!-- end of code-btn -->
-				</div> <!-- end of grid__item -->
-
-				<!-- CCL Website -->
-				<div class="box grid__item html squarespace javascript">
-					<a href="https://www.cclconnect.org/" target="_blank" >
-						<div class="project_img">
-							<img class="static" src="img/ccl/homepage.jpg" alt="CCL Home Page">
-							<img class="projects-active" src="img/ccl/ccl-demo.gif" alt="CCL GIF">
-						</div>
-					</a>
-					<h2 class="project-header">CCL Website</h2>
-					<div class="code-btn">
-						<button type="button" class="btn-projects" data-toggle="modal" data-target="#ccl-modal">
-							Quick-view
-						</button>
-						<a href="projects/ccl.html" role="button" class="btn-projects">
-							More Details
-						</a>
-					</div> <!-- end of code-btn -->
-				</div> <!-- end of grid__item -->
-
-				<!-- Chat App -->
-				<div class="box grid__item native expo firestore firebase">
-						<div class="project_img">
-							<img class="chat-static" src="img/chat/HomeScreen.jpg" alt="myFlix" target="_blank">
-							<img class="chat-active " src="img/chat/chatApp.gif" alt="Chat App Gif">
-						</div> <!-- end of project_img -->
-					<h2 class="project-header">Chat App</h2>
-					<div class="code-btn">
-						<button type="button" class="btn-projects" data-toggle="modal" data-target="#chat-modal">
-							Quick-view
-						</button>
-						<a href="projects/chat.html" role="button" class="btn-projects">
-							More Details
-						</a>
-					</div> <!-- end of code-btn -->
-				</div> <!-- end of grid__item-->
-
-				<!-- Pokedex -->
-				<div class="box grid__item javascript html api">
-					<a href="https://mhyneman8.github.io/simple-js-app/" target="_blank" >
-						<div class="project_img">
-							<img class="static" src="img/pokedex/pokedex.png" alt="pokedex">
-							<img class="projects-active" src="img/pokedex/pokedexDemo.gif" alt="Pokedex GIF">
-						</div>
-					</a>
-					<h2 class="project-header">Pokedex</h2>
-					<div class="code-btn">
-						<button type="button" class="btn-projects" data-toggle="modal" data-target="#pokedex-modal">
-							Quick-view
-						</button>
-						<a href="projects/pokedex.html" role="button" class="btn-projects">
-							More Details
-						</a>
-					</div> <!-- end of code-btn -->
-				</div> <!-- end of grid__item -->
-
-				<!-- Changed by Forkfull -->
-				<div class="box grid__item html javascript">
-					<a href="https://mhyneman8.github.io/changed/" target="_blank" >
-						<div class="project_img">
-							<img class="static" src="img/changed/changed.jpg" alt="Changed by the Forkfull">
-							<img class="projects-active" src="img/changed/changedDemo.gif" alt="Changed GIF">
-						</div>
-					</a>
-					<h2 class="project-header">Changed by the Forkfull</h2>
-					<div class="code-btn">
-						<button type="button" class="btn-projects" data-toggle="modal" data-target="#changed-modal">
-							Quick-view
-						</button>
-						<a href="projects/changed.html" role="button" class="btn-projects">
-							More Details
-						</a>
-					</div> <!-- end of code-btn -->
-				</div> <!-- end of grid__item -->
-
-				<!-- MBG Website -->
-				<div class="box grid__item html squarespace">
-					<a href="https://www.motherbgreen.com/" target="_blank" >
-						<div class="project_img">
-							<img class="static" src="img/mbg/mbg-website.png" alt="MBG Home Page">
-							<img class="projects-active" src="img/mbg/mbgDemo.gif" alt="MBG GIF">
-						</div>
-					</a>
-					<h2 class="project-header">MBG Website</h2>
-					<div class="code-btn">
-						<button type="button" class="btn-projects" data-toggle="modal" data-target="#mbg-modal">
-							Quick-view
-						</button>
-						<a href="projects/mbg.html" role="button" class="btn-projects">
-							More Details
-						</a>
-					</div> <!-- end of code-btn -->
-				</div> <!-- end of grid__item -->
+				  
 			</article>
 		</section>
 
@@ -348,443 +148,12 @@
 		</div>
 	</footer>
 
-  <!-- Modals -->
-
-  <!-- Budget Planner modal -->
-	<div class="modal fade" id="budget-modal" tabindex="-1" role="dialog" aria-labelledby="BudgetModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title" id="budget-modal-label">Budget Planner</h3>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-					</button>
-				</div> <!-- end of modal-header -->
-				<div class="modal-body">
-					<img class="w-75 mb-2 float-right border" src="img/budget/screenshotTop.jpg" alt="Budget Planner screenshot">
-					
-					<h4 class="modal-title">Technologies</h4>
-					<p class="modal-text">React, Bootstrap, LocalStorage, JavaSript, Figma</p>
-			
-					<h4 class="modal-title">Key Features</h4>
-					<ul class="modal-text">
-						<li>Add/delete/edit budgets</li>
-						<li>Add/delete/edit expenses/assets</li>
-						<li>Get total expenses</li>
-					</ul>
-				</div> <!-- end of modal-body -->
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<a href="projects/budget.html" type="button" class="btn btn-primary">More Details</a>
-				</div> <!-- end of modal-footer -->
-			</div> <!-- end of modal-content -->
-		</div> <!-- end of modal-dialog -->
-	</div> <!-- end of budget-modal -->
-
-	<!-- clearviction modal -->
-	<div class="modal fade" id="clearviction-modal" tabindex="-1" role="dialog" aria-labelledby="ClearvictionModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-		<div class="modal-header">
-			<h3 class="modal-title" id="clearviction-modal-label">Clearviction</h3>
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-			</button>
-		</div> <!-- end of modal-header -->
-		<div class="modal-body">
-			<img class="w-50 mb-2 float-right border" src="img/clearviction/cvhome.jpg" alt="Clearviction screenshot">
-			
-			<h4 class="modal-title">Technologies</h4>
-			<p class="modal-text">React, Typescript, AWS, JavaSript, Material UI</p>
-	
-			<h4 class="modal-title">Key Features</h4>
-			<ul class="modal-text">
-				<li>Logic tree to view eligibility</li>
-				<li>Material UI accordions</li>
-				<li>Send contact form</li>
-				<li>Embeded Airtable section to keep volunteers up to date</li>
-			</ul>
-		</div> <!-- end of modal-body -->
-		<div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			<a href="projects/clearviction.html" type="button" class="btn btn-primary">More Details</a>
-		</div> <!-- end of modal-footer -->
-		</div> <!-- end of modal-content -->
-	</div> <!-- end of modal-dialog -->
-	</div> <!-- end of clearviction-modal -->
-
-
-  <!-- pokedex modal -->
-  <div class="modal fade" id="pokedex-modal" tabindex="-1" role="dialog" aria-labelledby="PokedexModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h3 class="modal-title" id="pokedex-modal-label">Pokedex</h3>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		</div> <!-- end of modal-header -->
-		<div class="modal-body">
-			<img class="w-50 mb-2 float-right border" src="img/pokedex/homepage.jpg" alt="Pokedex screenshot">
-			<h4 class="modal-title">User Goals</h4>
-			<p class="modal-text">
-				Users will be able to view a list of pokemon and see more details for a given pokemon item on demand.
-			</p>
-			<h4 class="modal-title">Technologies</h4>
-			<p class="modal-text">JavaSript, CSS, HTML</p>
-
-			<h4 class="modal-title">Key Features</h4>
-			<ul class="modal-text">
-				<li>Load data from an external source (API)</li>
-				<li>View a list of items</li>
-				<li>On user action, view details for that item</li>
-			</ul>
-		</div> <!-- end of modal-body -->
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		  <a href="projects/pokedex.html" type="button" class="btn btn-primary">More Details</a>
-		</div> <!-- end of modal-footer -->
-	  </div> <!-- end of modal-content -->
-	</div> <!-- end of modal-dialog -->
-  </div> <!-- end of pokedex-modal -->
-
-  <!-- ToDo modal -->
-  <div class="modal fade" id="todo-modal" tabindex="-1" role="dialog" aria-labelledby="ToDoModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h3 class="modal-title" id="pokedex-modal-label">ToDo List</h3>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		</div> <!-- end of modal-header -->
-		<div class="modal-body">
-			<img class="w-50 mb-2 float-right border" src="img/todo/todo.png" alt="todo app screenshot">
-			<h4 class="modal-title">User Goals</h4>
-			<p class="modal-text">
-				Users are able to add, crossout, delete, and rearrange todo list items.
-			</p>
-			<h4 class="modal-title">Technologies</h4>
-			<p class="modal-text">JQuery, CSS, React Redux</p>
-			<h4 class="modal-title">Key Features</h4>
-			<ul class="modal-text">
-				<li>Add, crossout, and delete list item</li>
-				<li>Move list around</li>
-				<li>Rearrange list items</li>
-			</ul>
-		</div> <!-- end of modal-body -->
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		  <a href="projects/todo.html" type="button" class="btn btn-primary">More Details</a>
-		</div> <!-- end of modal-footer -->
-	  </div> <!-- end of modal-content -->
-	</div> <!-- end of modal-dialog -->
-  </div> <!-- end of todo-modal -->
-
-  <!-- Meet modal -->
-  <div class="modal fade" id="meet-modal" tabindex="-1" role="dialog" aria-labelledby="MeetModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h3 class="modal-title" id="pokedex-modal-label">Meet App</h3>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		</div> <!-- end of modal-header -->
-		<div class="modal-body">
-			<img class="w-50 mb-2 float-right border" src="img/meet/meetApp.jpg" alt="Meet app screenshot">
-			<h4 class="modal-title">User Goals</h4>
-			<p class="modal-text">
-				Users will be able to find coding events near them, by filtering city and number of events.
-			</p>
-			<h4 class="modal-title">Technologies</h4>
-			<p class="modal-text">JavaSript, HTML, CSS, Gherkin, React, TDD</p>
-			<h4 class="modal-title">Key Features</h4>
-			<ul class="modal-text">
-				<li>Filter events by city</li>
-				<li>Show/hide event details</li>
-				<li>Specify number of events</li>
-				<li>Use the app when offline</li>
-				<li>Add an app shortcut to the home screen</li>
-				<li>View a chart sowing the number of upcoming events by city</li>
-			</ul>
-		</div> <!-- end of modal-body -->
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		  <a href="projects/meet.html" type="button" class="btn btn-primary">More Details</a>
-		</div> <!-- end of modal-footer -->
-	  </div> <!-- end of modal-content -->
-	</div> <!-- end of modal-dialog -->
-  </div> <!-- end of meet-modal -->
-
-  <!-- myFlix modal -->
-  <div class="modal fade" id="myflix-modal" tabindex="-1" role="dialog" aria-labelledby="myflixModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h3 class="modal-title" id="pokedex-modal-label">MyFlix</h3>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		</div> <!-- end of modal-header -->
-		<div class="modal-body">
-			<img class="w-50 mb-2 float-right border" src="img/myFlix/myFlix.jpg" alt="MyFlix screenshot">
-			<h4 class="modal-title">User Goals</h4>
-			<p class="modal-text">
-				Users will be able to get information on a movie and add/remove them from a favorites list.
-			</p>
-			<h4 class="modal-title">Technologies</h4>
-			<p class="modal-text">React, React Redux, Bootstrap, Parcel, Node</p>
-			<h4 class="modal-title">Key Features</h4>
-			<ul class="modal-text">
-				<li>Return list of movies, each with image, title, and description</li>
-				<li>Select movie for more details, genre, cast, director, description</li>
-				<li>Users can login with username and password</li>
-				<li>New users can register</li>
-				<li>Users can update their information, and deregister account</li>
-			</ul>
-		</div> <!-- end of modal-body -->
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		  <a href="projects/myflix.html" type="button" class="btn btn-primary">More Details</a>
-		</div> <!-- end of modal-footer -->
-	  </div> <!-- end of modal-content -->
-	</div> <!-- end of modal-dialog -->
-  </div> <!-- end of myflix-modal -->
-
-  <!-- Chat modal -->
-  <div class="modal fade" id="chat-modal" tabindex="-1" role="dialog" aria-labelledby="ChatModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h3 class="modal-title" id="pokedex-modal-label">Chat App</h3>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		</div> <!-- end of modal-header -->
-		<div class="modal-body">
-			<img class="w-50 mb-2 float-right border" src="img/chat/HomeScreen.jpg" alt="chat app screenshot">
-			<h4 class="modal-title">User Goals</h4>
-			<p class="modal-text">
-				Users will be able enter chat rooms with their friends. They can send messages,
-				geolocation, and pictures from their phones, along with taking pictures.
-			</p>
-			<h4 class="modal-title">Technologies</h4>
-			<p class="modal-text">React-Native, Expo, Google Firestore Database, Firebase Cloud Storage, Gifted Chat</p>
-			<h4 class="modal-title">Key Features</h4>
-			<ul class="modal-text">
-				<li>Welcome page where users pick their background color and input their name</li>
-				<li>A page displaying the conversation, as well as an input field and submit button</li>
-				<li>Chat allows users to send location data and images</li>
-				<li>Data gets stored online and offline</li>
-			</ul>
-		</div> <!-- end of modal-body -->
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		  <a href="projects/chat.html" type="button" class="btn btn-primary">More Details</a>
-		</div> <!-- end of modal-footer -->
-	  </div> <!-- end of modal-content -->
-	</div> <!-- end of modal-dialog -->
-  </div> <!-- end of chat-modal -->
-
-  <!-- mbg modal -->
-  <div class="modal fade" id="mbg-modal" tabindex="-1" role="dialog" aria-labelledby="MBGModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h3 class="modal-title" id="mbg-modal-label">Mother B Green Cleaning</h3>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		</div> <!-- end of modal-header -->
-		<div class="modal-body">
-			<img class="w-50 mb-2 float-right border" src="img/mbg/mbg-website.png" alt="Mother B Green screenshot">
-			<h4 class="modal-title">User Goals</h4>
-			<p class="modal-text">
-				Revitalize company website using SquareSpace.
-			</p>
-			<h4 class="modal-title">Technologies</h4>
-			<p class="modal-text">CSS and SquareSpace Design Tools</p>
-			<h4 class="modal-title">Key Features</h4>
-			<ul class="modal-text">
-				<li>Reviews easy to find</li>
-				<li>Form to inquire about service</li>
-				<li>Form to apply for employment</li>
-				<li>Pop up to collect emails and give Covid Cleaning Guide </li>
-				<li>FAQ collapsible</li>
-				<li>Showcase client homes</li>
-			</ul>
-		</div> <!-- end of modal-body -->
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		  <a href="projects/mbg.html" type="button" class="btn btn-primary">More Details</a>
-		</div> <!-- end of modal-footer -->
-	  </div> <!-- end of modal-content -->
-	</div> <!-- end of modal-dialog -->
-  </div> <!-- end of mbg-modal -->
-
-  <!-- CCL Modal -->
-  <div class="modal fade" id="ccl-modal" tabindex="-1" role="dialog" aria-labelledby="CCLModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h3 class="modal-title" id="ccl-modal-label">Center for Changing Lives</h3>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		</div> <!-- end of modal-header -->
-		<div class="modal-body">
-			<img class="w-50 mb-2 float-right border" src="img/ccl/mission.jpg" alt="CCL screenshot">
-			<h4 class="modal-title">User Goals</h4>
-			<p class="modal-text">
-				To make website easy to navigate and find programs users need
-			</p>
-			<h4 class="modal-title">Technologies</h4>
-			<p class="modal-text">CSS, Javascript, and SquareSpace Design Tools</p>
-			<h4 class="modal-title">Key Features</h4>
-			<ul class="modal-text">
-				<li>Programs easy to find</li>
-				<li>Instragram embedded</li>
-				<li>Form to sign up for services</li>
-				<li>English and Spanish site</li>
-				<li>Carousel highlighting programs and partnered small businesses</li>
-			</ul>
-		</div> <!-- end of modal-body -->
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		  <a href="projects/ccl.html" type="button" class="btn btn-primary">More Details</a>
-		</div> <!-- end of modal-footer -->
-	  </div> <!-- end of modal-content -->
-	</div> <!-- end of modal-dialog -->
-  </div> <!-- end of ccl-modal -->
-
-  <!-- changed modal -->
-  <div class="modal fade" id="changed-modal" tabindex="-1" role="dialog" aria-labelledby="ChangedModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h3 class="modal-title" id="pokedex-modal-label">Changed by the Forkfull</h3>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		</div> <!-- end of modal-header -->
-		<div class="modal-body">
-			<img class="w-50 mb-2 float-right border" src="img/changed/changed.jpg" alt="Changed screenshot">
-			<h4 class="modal-title">User Goals</h4>
-			<p class="modal-text">
-				User can get information about local food forest. They can find a list of what is currently growing, how to take
-				care of the plants, and recipes to make with the current plants.
-			</p>
-			<h4 class="modal-title">Technologies</h4>
-			<p class="modal-text">CSS, HTML, JavaScript</p>
-			<h4 class="modal-title">Key Features</h4>
-			<ul class="modal-text">
-				<li>Carousel of favorite recipes</li>
-				<li>A form to request volunteer information</li>
-				<li>A button to donate</li>
-				<li>List of plants grown along with how to care for them</li>
-				<li>Information about Changed by the Forkfull</li>
-			</ul>
-		</div> <!-- end of modal-body -->
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		  <a href="projects/changed.html" type="button" class="btn btn-primary">More Details</a>
-		</div> <!-- end of modal-footer -->
-	  </div> <!-- end of modal-content -->
-	</div> <!-- end of modal-dialog -->
-  </div> <!-- end of changed-modal -->
-
-  <!-- movie api modal -->
-  <div class="modal fade" id="movie-modal" tabindex="-1" role="dialog" aria-labelledby="MovieApiModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h5 class="modal-title" id="pokedex-modal-label">Movie API</h5>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		</div> <!-- end of modal-header -->
-		<div class="modal-body">
-			<img class="w-50 mb-2 float-right border" src="img/movie/movieAPi.jpg" alt="Movie API screenshot">
-			<h4 class="modal-title">User Goals</h4>
-			<p class="modal-text">
-				A web application to provide users with the server-side component of a movies app, which will give access
-					to information about different movies, directors, and genres. Users will be able to sign up, update 
-					their personal information, and 
-				create a list of their favorite movies
-			</p>
-
-			<h4 class="modal-title">Technologies</h4>
-			<p class="modal-text">Node.js, Express, NoSQL, MongoDB, Mongoose, HTTP authentication, JWT authentication</p>
-
-			<h4 class="modal-title">Key Features</h4>
-			<ul class="modal-text">
-				<li>Return a list of all movies</li>
-				<li>Return data about a single movie by title</li>
-				<li>Return data about a genre</li>
-				<li>Return data about a director</li>
-				<li>Allow new users to register</li>
-				<li>Allow users to update their user info</li>
-				<li>Allow users to add a movie to their list of favorites</li>
-				<li>Allow users to remove a movie from their list of favorites</li>
-				<li>Allow existing users to deregister</li>
-			</ul>
-		</div> <!-- end of modal-body -->
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		  <a href="projects/movie.html" type="button" class="btn btn-primary">More Details</a>
-		</div> <!-- end of modal-footer -->
-	  </div> <!-- end of modal-content -->
-	</div> <!-- end of modal-dialog -->
-  </div> <!-- end of movie api-modal -->
-
-  <!-- myFlix angular modal -->
-  <div class="modal fade" id="angular-modal" tabindex="-1" role="dialog" aria-labelledby="MyFlixAngularModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h3 class="modal-title" id="pokedex-modal-label">MyFlix Angular</h3>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		</div> <!-- end of modal-header -->
-		<div class="modal-body">
-			<img class="w-50 mb-2 float-right border" src="img/angular/angular.jpg" alt="myFlix Angular screenshot">
-			<h4 class="modal-title">User Goals</h4>
-			<p class="modal-text">
-				Build a client-side for a movie app based on REST API and database
-			</p>
-			<h4 class="modal-title">Technologies</h4>
-			<p class="modal-text">Node, Angular, Angular Material, Compodoc</p>
-			<h4 class="modal-title">Key Features</h4>
-			<ul class="modal-text">
-				<li>Welcome page to login or register an account</li>
-				<li>Once authenticated, user should see all movies</li>
-				<li>Click to get more information on genre and director</li>
-			</ul>
-		</div> <!-- end of modal-body -->
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		  <a href="projects/angular.html" type="button" class="btn btn-primary">More Details</a>
-		</div> <!-- end of modal-footer -->
-	  </div> <!-- end of modal-content -->
-	</div> <!-- end of modal-dialog -->
-  </div> <!-- end of myflix angular-modal -->
-
-<script
-  src="https://code.jquery.com/jquery-3.5.1.js"
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
-<script
-  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
-  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
-  crossorigin="anonymous"></script>
-<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<!-- <script src="js/tota11y.min.js"></script> -->
-<script src="js/scripts.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+	<!-- <script src="js/tota11y.min.js"></script> -->
+	<script type="module" src="js/scripts.js"></script>
 </body>
 
 </html>
