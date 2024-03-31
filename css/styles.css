@@ -297,7 +297,7 @@ nav a.active {
 	position: relative;
 }
 .wall {
-	/* background-color: #fff; */
+	background-color: #fff;
 }
 
 .end {
@@ -377,6 +377,7 @@ nav a.active {
 	color: transparent;
 	background-size: cover;
 	color: transparent;
+	background-clip: test;
 	-moz-background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-stroke: 0.2px #fff;
@@ -495,14 +496,21 @@ nav a.active {
 	border-radius: 20px;
 	margin: calc(100vh * 0.05) auto;
 	width: 100%;
-	max-width: 90%;
+	max-width: 95%;
 	height: 100vh;
 	max-height: 800px;
 	box-shadow: 6px 6px 17px 1px #626870;
-	padding: 60px;
+	padding: 10px;
 	text-indent: 40px;
 	line-height: 150%;
 	z-index: 9;
+}
+
+@media all and (min-width: 786px) {
+	.about_wrapper .container .map {
+		padding: 60px;
+		width: 90%;
+	}
 }
 
 #map {
@@ -512,11 +520,11 @@ nav a.active {
 	width: 100%;
 }
 
-#marker {
-	background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/washington-monument.jpg');
+.marker {
+	background-image: url('../img/about/travel/marker-editor.svg');
 	background-size: cover;
-	width: 50px;
-	height: 50px;
+	width: 20px;
+	height: 20px;
 	border-radius: 50%;
 	cursor: pointer;
 }
@@ -603,14 +611,27 @@ nav a.active {
 	background-color: #efedea;
 	border-radius: 20px;
 	margin: calc(100vh * 0.05) auto;
-	width: 90%;
+	width: 95%;
 	max-width: 900px;
 	min-height: 350px;
 	box-shadow: 6px 6px 17px 1px #626870;
-	padding: 60px;
+	padding: 10px;
 	text-indent: 40px;
 	line-height: 150%;
 	z-index: 9;
+}
+
+.about_wrapper .container .frame {
+	max-width: 355px;
+}
+
+@media all and (min-width: 786px) {
+	.about_wrapper .container .note,
+	.about_wrapper .container .frame {
+		padding: 60px;
+		width: 90%;
+		max-width: unset;
+	}
 }
 
 .note h2 {
@@ -619,12 +640,23 @@ nav a.active {
 
 .note ul {
 	list-style-type: none;
-	-moz-column-count: 4;
-	-moz-column-gap: 20px;
-	-webkit-column-count: 4;
-	-webkit-column-gap: 20px;
-	column-count: 4;
-	column-gap: 20px;
+	width: auto;
+	max-width: 500px;
+	margin: auto;
+	padding-left: 0;
+	column-count: 2;
+	-moz-column-count: 2;
+}
+
+@media all and (min-width: 786px) {
+	.note ul {
+		-moz-column-count: 4;
+		-moz-column-gap: 20px;
+		-webkit-column-count: 4;
+		-webkit-column-gap: 20px;
+		column-count: 4;
+		column-gap: 20px;
+	}
 }
 
 @media all and (min-width: 786px) {
@@ -638,10 +670,16 @@ nav a.active {
 	width: 100%;
 	height: 100%;
 	max-width: 650px;
-	display: flex;
+	display: none;
 	justify-content: center;
 	align-items: center;
 }
+@media all and (min-width: 840px) {
+	.about_wrapper .carousel-frame {
+		display: flex;
+	}
+}
+
 .about_wrapper .carousel-frame img {
 	width: 800px;
 	z-index: 3;
@@ -664,8 +702,8 @@ nav a.active {
 	-webkit-transition-duration: 0.5s;
 	transition-duration: 0.5s;
 	position: absolute;
-	right: 40px;
-	top: 40px;
+	right: 20px;
+	top: 20px;
 	overflow: hidden;
 	background: #ccc;
 	border-radius: 2px;
@@ -675,6 +713,27 @@ nav a.active {
 	width: 20px;
 	height: 20px;
 	z-index: 2;
+}
+
+.about_wrapper .frame .close {
+	border: solid 2px var(--primary-color);
+}
+@media all and (min-width: 786px) {
+	.about_wrapper .frame .close {
+		border: solid 2px #efedea;
+	}
+}
+
+.about_wrapper .frame .close {
+	right: 20px;
+	top: 37px;
+}
+
+@media all and (min-width: 768px) {
+	.about_wrapper .close {
+		right: 40px;
+		top: 40px;
+	}
 }
 
 .about_wrapper .close:hover {
@@ -709,6 +768,37 @@ nav a.active {
 	right: -2px;
 }
 
+.about_wrapper .frame .close b:nth-child(1) {
+	border-top-color: var(--primary-color);
+	top: -2px;
+}
+.about_wrapper .frame .close b:nth-child(2) {
+	border-left-color: var(--primary-color);
+	left: -2px;
+}
+.about_wrapper .frame .close b:nth-child(3) {
+	border-bottom-color: var(--primary-color);
+	bottom: -2px;
+}
+.about_wrapper .frame .close b:nth-child(4) {
+	border-right-color: var(--primary-color);
+	right: -2px;
+}
+@media all and (min-width: 786px) {
+	.about_wrapper .close b:nth-child(1) {
+		border-top-color: #efedea;
+	}
+	.about_wrapper .close b:nth-child(2) {
+		border-left-color: #efedea;
+	}
+	.about_wrapper .close b:nth-child(3) {
+		border-bottom-color: #efedea;
+	}
+	.about_wrapper .close b:nth-child(4) {
+		border-right-color: #efedea;
+	}
+}
+
 .about_wrapper .room_img {
 	margin: auto;
 	width: 100%;
@@ -719,10 +809,6 @@ nav a.active {
 	justify-content: center;
 }
 
-@media all and (max-width: 1024px) {
-	.about_wrapper .room_img {
-	}
-}
 .about_wrapper .room_img svg {
 	width: 100%;
 	margin: auto;
@@ -824,6 +910,16 @@ nav a.active {
 	}
 }
 
+@keyframes glow {
+	from {
+		/* filter: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073; */
+		filter: drop-shadow(16px -9px 33px #fff);
+	}
+	to {
+		filter: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6,
+			0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+	}
+}
 @-webkit-keyframes glow {
 	from {
 		/* filter: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073; */
@@ -944,9 +1040,6 @@ body.projects {
 	transition: transform 0.5s ease;
 }
 
-.projectsList ul > div {
-	/* display: none; */
-}
 .projectsList ul > div {
 	display: flex;
 }
@@ -1462,75 +1555,6 @@ li {
 	width: 2.625rem;
 }
 
-/* dropdown button */
-.dropbtn {
-	/* background-color: var(--primary-color);
-	height: 3rem;
-	width: 3rem;
-	margin-right: -4rem;
-	border: none; */
-
-	/* position: relative;
-	font-size: 1.2rem;
-	line-height: 150%;
-	float: right;
-	margin-top: 5px; */
-}
-
-path:hover,
-path:focus {
-	/* fill: var(--light-blue); */
-}
-/* svg:hover,
-svg:focus {
-	cursor: pointer;
-} */
-
-/* container div needed to position the dropdown content */
-.dropdown {
-	/* position: relative;
-	display: none;
-	height: 2.188rem;
-	margin-top: 0.063rem;
-	margin-right: 0.625rem;
-	border: none; */
-}
-@media all and (max-width: 800px) {
-	/* .dropdown {
-		display: inline-block;
-	} */
-}
-
-/* dropdown content (hidden by default) */
-/* .dropdown-content {
-	opacity: 0;
-	position: fixed;
-	right: 0;
-	
-	bottom: 0;
-	top: 0;
-	border-radius: 3px;
-	background-color: var(--black);
-	width: 50%;
-	height: 100vh;
-	box-shadow: 45px 40px 40px white;
-	z-index: 4;
-	overflow: hidden;
-	pointer-events: none; */
-/* transition: opacity 100ms ease-in, transform 100ms ease-in; */
-/* animation-duration: 3s;
-	animation-name: slidein; */
-/* } */
-
-/* start of slide menu */
-.menu a {
-	/* text-decoration: none; */
-	/* color: purple; */
-	/* transition: 1s; */
-	/* transform: translate3d(-150px, 0, 0);
-	transition: transform 0.15s ease-in; */
-}
-
 .container {
 	height: 50px;
 	width: 50px;
@@ -1538,7 +1562,6 @@ svg:focus {
 	top: 0;
 	right: 0;
 	background-color: transparent;
-	/* text-align: center; */
 	-webkit-transition: background 0.3s;
 	-moz-transition: background 0.3s;
 	-o-transition: background 0.3s;
@@ -1706,12 +1729,32 @@ svg:focus {
 	z-index: 2;
 }
 
-.carousel-img {
-	text-align: center !important;
-	margin: 3.125rem auto !important;
-
+.about_wrapper .carousel-img {
+	text-align: center;
 	max-height: 500px;
 	width: auto;
+	margin-left: -50%;
+	transform: scale(0.7);
+}
+
+.about_wrapper .carousel-img.long {
+	text-align: center;
+	max-height: 500px;
+	width: auto;
+	margin-left: -18%;
+	transform: scale(0.8);
+}
+
+@media all and (min-width: 840px) {
+	.about_wrapper .carousel-img.long {
+		margin-left: -7%;
+	}
+	.about_wrapper .carousel-img {
+		margin-left: -12%;
+		carousel-img {
+			transform: scale(1);
+		}
+	}
 }
 
 .chat-carousel {
