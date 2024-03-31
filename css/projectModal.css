@@ -89,7 +89,7 @@
 
 /* A simple close icon */
 .modal-project__close-icon {
-	position: fixed;
+	position: absolute;
 	width: 40px;
 	display: block;
 	top: 10px;
@@ -161,7 +161,7 @@
 }
 
 .reflection .ref-header {
-	margin-top: 20px;
+	margin-top: 40px;
 }
 
 @media all and (min-width: 768px) {
@@ -177,4 +177,8 @@
 
 .modal-project__content {
 	margin: 0 0 20px 0;
+}
+
+.projects .carousel-indicators {
+	bottom: -40px;
 }
