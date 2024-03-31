@@ -436,7 +436,7 @@ nav a.active {
 
 @media all and (min-width: 786px) {
 	.profile_paragraph_wrapper {
-		margin: 140px auto 60px;
+		margin: 100px auto 60px;
 		width: 80%;
 		padding: 40px;
 	}
