@@ -646,17 +646,30 @@ const aboutMePage = () => {
 			}
 		});
 
+		const hideAllModals = () => {
+			const modalSelectors = ['.frame', '.note', '.map'];
+
+			modalSelectors.forEach((selector) => {
+				const element = document.querySelector(selector);
+				if (!element.classList.contains('hide')) element.classList.add('hide');
+			});
+		};
+
 		// glowing on clickable items
 		document.querySelector('.about .globe').addEventListener('click', () => {
+			hideAllModals();
 			document.querySelector('.map').classList.toggle('hide');
 			document.querySelector('.globe').classList.remove('wait');
 		});
 
 		document.querySelector('.about .computer').addEventListener('click', () => {
+			hideAllModals();
 			document.querySelector('.note').classList.toggle('hide');
 			document.querySelector('.computer').classList.remove('wait');
 		});
+
 		document.querySelector('.about .picture').addEventListener('click', () => {
+			hideAllModals();
 			document.querySelector('.frame').classList.toggle('hide');
 			document.querySelector('.picture').classList.remove('wait');
 		});
