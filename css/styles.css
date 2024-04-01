@@ -431,7 +431,6 @@ nav a.active {
 	background: #fff;
 	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
 	line-height: 170%;
-	text-indent: 50px;
 }
 
 @media all and (min-width: 786px) {
@@ -501,7 +500,6 @@ nav a.active {
 	max-height: 800px;
 	box-shadow: 6px 6px 17px 1px #626870;
 	padding: 10px;
-	text-indent: 40px;
 	line-height: 150%;
 	z-index: 9;
 }
@@ -559,15 +557,28 @@ nav a.active {
 	background-color: var(--primary-color);
 	width: 80%;
 	position: relative;
+	margin-top: -150px;
+}
+
+@media all and (min-width: 786px) {
+	.map_picture_container .travel-wrapper {
+		margin-top: -50px;
+	}
 }
 
 .map_picture_container .img-wrapper {
 	display: none;
 	width: 100%;
-	padding: 20px;
+	padding: 10px;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+}
+
+@media all and (min-width: 786px) {
+	.map_picture_container .img-wrapper {
+		padding: 20px;
+	}
 }
 
 .map_picture_container .img-wrapper.active {
@@ -616,7 +627,6 @@ nav a.active {
 	min-height: 350px;
 	box-shadow: 6px 6px 17px 1px #626870;
 	padding: 10px;
-	text-indent: 40px;
 	line-height: 150%;
 	z-index: 9;
 }
@@ -785,16 +795,16 @@ nav a.active {
 	right: -2px;
 }
 @media all and (min-width: 786px) {
-	.about_wrapper .close b:nth-child(1) {
+	.about_wrapper .frame .close b:nth-child(1) {
 		border-top-color: #efedea;
 	}
-	.about_wrapper .close b:nth-child(2) {
+	.about_wrapper .frame .close b:nth-child(2) {
 		border-left-color: #efedea;
 	}
-	.about_wrapper .close b:nth-child(3) {
+	.about_wrapper .frame .close b:nth-child(3) {
 		border-bottom-color: #efedea;
 	}
-	.about_wrapper .close b:nth-child(4) {
+	.about_wrapper .frame .close b:nth-child(4) {
 		border-right-color: #efedea;
 	}
 }
@@ -829,8 +839,8 @@ nav a.active {
 	-webkit-transition-duration: 0.5s;
 	transition-duration: 0.5s;
 	position: absolute;
-	right: 40px;
-	top: 40px;
+	right: 11px;
+	top: 11px;
 	overflow: hidden;
 	background: #ccc;
 	border-radius: 2px;
@@ -840,6 +850,13 @@ nav a.active {
 	width: 20px;
 	height: 20px;
 	z-index: 2;
+}
+
+@media all and (min-width: 786px) {
+	.about_wrapper .travel-wrapper .close {
+		right: 40px;
+		top: 40px;
+	}
 }
 
 .about_wrapper .travel-wrapper .close:hover {
@@ -1747,10 +1764,10 @@ li {
 
 @media all and (min-width: 840px) {
 	.about_wrapper .carousel-img.long {
-		margin-left: -7%;
+		margin-left: 0;
 	}
 	.about_wrapper .carousel-img {
-		margin-left: -12%;
+		margin-left: -6%;
 		carousel-img {
 			transform: scale(1);
 		}
