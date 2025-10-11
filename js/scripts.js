@@ -3,6 +3,28 @@ import { projectCardContent } from '../content/projectCardContent.js';
 
 const log = console.log;
 
+// Shared navigation animation function
+const animateNavItems = () => {
+	// Only animate on desktop (nav-desktop is hidden on mobile)
+	const navItems = document.querySelectorAll('.nav-desktop .menu-l-item');
+	// Check if we're on desktop by checking window width (matches CSS media query)
+	if (window.innerWidth < 786) {
+		return; // Don't animate on mobile
+	}
+
+	navItems.forEach((item, index) => {
+		// Reset animation
+		item.style.animation = 'none';
+		item.style.opacity = '0';
+		item.style.transform = 'translateX(-100px)';
+
+		// Trigger animation with delay
+		setTimeout(() => {
+			item.style.animation = `slideInFromLeft 0.6s ease-out forwards`;
+		}, index * 150); // 150ms delay between each item
+	});
+};
+
 const closeAnimation = () => {
 	const row1 = document.querySelector('.row1');
 	const row2 = document.querySelector('.row2');
@@ -44,293 +66,268 @@ function waitForMs(ms) {
 	return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-// ------------------ welcome ------------------
-// const welcomePage = () => {
-// 	// const canvas = document.getElementById('mazeCanvas');
-// 	// const ctx = canvas.getContext('2d');
-// 	// let angle = 0;
-// 	// const marble = { x: 50, y: 50, radius: 10 };
+// ------------------ home page ------------------
+const homePage = () => {
+	// Run navigation animation when page loads
+	animateNavItems();
 
-// 	// game.js
-// 	const gameContainer = document.querySelector('.gameContainer');
+	// Re-run navigation animation on window resize
+	window.addEventListener('resize', () => {
+		animateNavItems();
+	});
+	const path = document.getElementById('wavePath');
+	const container = document.querySelector('.wave-container');
 
-// 	// Define the maze as a 2D array (1 represents walls, 0 represents paths)
-// 	const maze = [
-// 		[
-// 			1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1,
-// 			1, 1,
-// 		],
-// 		[
-// 			1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1,
-// 			1, 1,
-// 		],
-// 		[
-// 			1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1,
-// 			1, 1,
-// 		],
-// 		[
-// 			1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1,
-// 			1, 1,
-// 		],
-// 		[
-// 			1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1,
-// 			1, 1,
-// 		],
-// 		[
-// 			1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1,
-// 			1, 1,
-// 		],
-// 		[
-// 			1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0,
-// 			1, 1,
-// 		],
-// 		[
-// 			1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0,
-// 			0, 1,
-// 		],
-// 		[
-// 			1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0,
-// 			0, 1,
-// 		],
-// 		[
-// 			1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0,
-// 			0, 1,
-// 		],
-// 		[
-// 			0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0,
-// 			0, 1,
-// 		],
-// 		[
-// 			0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0,
-// 			0, 1,
-// 		],
-// 		[
-// 			0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0,
-// 			0, 1,
-// 		],
-// 		[
-// 			0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0,
-// 			0, 1,
-// 		],
-// 		[
-// 			0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0,
-// 			0, 1,
-// 		],
-// 		[
-// 			0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0,
-// 			0, 1,
-// 		],
-// 		[
-// 			0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0,
-// 			0, 1,
-// 		],
-// 		[
-// 			0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0,
-// 			0, 1,
-// 		],
-// 		[
-// 			1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0,
-// 			0, 1,
-// 		],
-// 		[
-// 			1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0,
-// 			0, 1,
-// 		],
-// 		[
-// 			1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0,
-// 			1, 1,
-// 		],
-// 		[
-// 			1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
-// 			1, 1,
-// 		],
-// 		[
-// 			1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1,
-// 			1, 1,
-// 		],
-// 		[
-// 			1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1,
-// 			1, 1,
-// 		],
-// 		[
-// 			1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1,
-// 			1, 1,
-// 		],
-// 		[
-// 			1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1,
-// 			1, 1,
-// 		],
-// 		[
-// 			1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-// 			1, 1,
-// 		],
-// 		[
-// 			1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-// 			1, 1,
-// 		],
-// 	];
+	const defaultPoints = {
+		x1: 360,
+		y1: 150,
+		x2: 1080,
+		y2: -60,
+	};
 
-// 	// Initial player position
-// 	let ballPosition = { x: 16, y: 1 };
+	let currentPoints = { ...defaultPoints };
+	let animationId;
 
-// 	// Function to draw the maze and player
-// 	function drawMaze() {
-// 		gameContainer.innerHTML = ''; // Clear the game container
-// 		maze.forEach((row, y) => {
-// 			row.forEach((cell, x) => {
-// 				const cellElement = document.createElement('div');
-// 				cellElement.style.width = '8px';
-// 				cellElement.style.height = '8px';
-// 				cellElement.style.position = 'absolute';
-// 				cellElement.style.left = `${x * 8}px`;
-// 				cellElement.style.top = `${y * 8}px`;
-// 				cellElement.className = cell === 1 ? 'wall' : 'path';
-// 				gameContainer.appendChild(cellElement);
-// 			});
-// 		});
+	container.addEventListener('mousemove', (e) => {
+		cancelAnimationFrame(animationId);
 
-// 		const playerElement = document.createElement('div');
-// 		playerElement.className = 'ball';
-// 		playerElement.style.left = `${ballPosition.x * 8}px`;
-// 		playerElement.style.top = `${ballPosition.y * 8}px`;
-// 		gameContainer.appendChild(playerElement);
-// 	}
+		const rect = container.getBoundingClientRect();
+		const mouseX = e.clientX - rect.left;
+		const centerX = rect.width / 2;
+		const offset = (mouseX - centerX) / centerX;
 
-// 	// Function to move the player
-// 	function moveBall(dx, dy) {
-// 		const newX = ballPosition.x + dx;
-// 		const newY = ballPosition.y + dy;
-// 		if (maze[newY][newX] === 0) {
-// 			// Check if the new position is a path
-// 			ballPosition = { x: newX, y: newY };
-// 			log(ballPosition);
-// 			if (ballPosition.x === 13 && ballPosition.y === 9) {
-// 				alert('You win!');
-// 			}
-// 			drawMaze(); // Redraw the maze with the new player position
-// 		}
-// 	}
+		const amplify = 200;
+		const yAmplify = 80;
 
-// 	// Keyboard controls
-// 	document.addEventListener('keydown', (event) => {
-// 		switch (event.key) {
-// 			case 'ArrowUp':
-// 				moveBall(0, -1);
-// 				break;
-// 			case 'ArrowDown':
-// 				moveBall(0, 1);
-// 				break;
-// 			case 'ArrowLeft':
-// 				moveBall(-1, 0);
-// 				break;
-// 			case 'ArrowRight':
-// 				moveBall(1, 0);
-// 				break;
-// 		}
-// 	});
+		currentPoints = {
+			x1: defaultPoints.x1 + offset * -amplify,
+			y1: defaultPoints.y1 + offset * -yAmplify,
+			x2: defaultPoints.x2 + offset * -amplify,
+			y2: defaultPoints.y2 + offset * yAmplify,
+		};
 
-// 	// Initial drawing of the game
-// 	drawMaze();
+		updatePath(currentPoints);
+	});
 
-// 	// function drawMaze() {
-// 	//     ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+	container.addEventListener('mouseleave', () => {
+		animateBack();
+	});
 
-// 	//     // Draw maze walls or boundaries
-// 	//     ctx.beginPath();
-// 	//     ctx.rect(50, 50, 500, 500); // Simple square maze boundary
-// 	//     ctx.stroke();
+	function updatePath(points) {
+		const d = `M0,60 C${points.x1},${points.y1} ${points.x2},${points.y2} 1440,60 L1440,150 L0,150 Z`;
+		path.setAttribute('d', d);
+	}
 
-// 	//     // Draw end hole
-// 	//     ctx.beginPath();
-// 	//     ctx.arc(550, 550, 15, 0, 2 * Math.PI);
-// 	//     ctx.fillStyle = 'black';
-// 	//     ctx.fill();
+	function animateBack() {
+		function step() {
+			let done = true;
+			for (let key in currentPoints) {
+				const target = defaultPoints[key];
+				const value = currentPoints[key];
+				const delta = (target - value) * 0.1;
 
-// 	//     // Draw marble
-// 	//     ctx.beginPath();
-// 	//     ctx.arc(marble.x, marble.y, marble.radius, 0, 2 * Math.PI);
-// 	//     ctx.fillStyle = 'blue';
-// 	//     ctx.fill();
-// 	// }
+				if (Math.abs(delta) > 0.5) {
+					currentPoints[key] += delta;
+					done = false;
+				} else {
+					currentPoints[key] = target;
+				}
+			}
 
-// 	// function rotateMaze(direction) {
-// 	//     angle += (direction === 'right' ? 5 : -5) * Math.PI / 180; // Convert degrees to radians
-// 	//     canvas.style.transform = `rotate(${angle}rad)`;
-// 	//     updateMarblePosition();
-// 	// }
+			updatePath(currentPoints);
+			if (!done) animationId = requestAnimationFrame(step);
+		}
 
-// 	// function updateMarblePosition() {
-// 	//     // This is a simplified version of physics calculation
-// 	//     // In a real game, you'd use more complex physics to determine the marble's movement
-// 	//     const gravity = 0.1;
-// 	//     marble.x += Math.sin(angle) * gravity;
-// 	//     marble.y -= Math.cos(angle) * gravity;
+		animationId = requestAnimationFrame(step);
+	}
+	// Parallax effect for background - moves background based on mouse position
+	document.addEventListener('mousemove', (e) => {
+		const x = (e.clientX / window.innerWidth - 0.5) * 30; // range: -15 to 15
+		const y = (e.clientY / window.innerHeight - 0.5) * 30;
+		document.body.style.backgroundPosition = `${x}px ${y}px`;
+	});
 
-// 	//     // Collision detection with maze boundaries
-// 	//     if (marble.x < marble.radius || marble.x > canvas.width - marble.radius) marble.x = 50; // Reset on collision
-// 	//     if (marble.y < marble.radius || marble.y > canvas.height - marble.radius) marble.y = 50; // Reset on collision
+	// water ripple effect
+	const canvas = document.getElementById('canvas');
+	const ctx = canvas.getContext('2d');
 
-// 	//     drawMaze();
-// 	// }
+	let width = (canvas.width = window.innerWidth);
+	let height = (canvas.height = window.innerHeight);
 
-// 	// drawMaze();
+	window.addEventListener('resize', (e) => {
+		width = canvas.width = window.innerWidth;
+		height = canvas.height = window.innerHeight;
+	});
 
-// 	// Opening welcome screen on first load
-// 	// document.addEventListener("DOMContentLoaded", function() {
-// 	//     if (document.body.className === 'homePage') {
-// 	//         if (sessionStorage.getItem('pageloadcount') === null) {
-// 	//             document.querySelector('#opening').classList.add('show');
-// 	//             sessionStorage.setItem('pageloadcount', '1');
-// 	//             setTimeout(function() {
-// 	//                 $("#opening").removeClass('hide');
-// 	//             }, 1000);
-// 	//         }
-// 	//         // click to hide welcome screen
-// 	//         document.querySelector('#opening').addEventListener('click', function() {
-// 	//             document.querySelector('#opening').classList.remove('show');
-// 	//             document.querySelector('#hamburger').classList.remove('hide');
-// 	//             document.querySelector('.menu-large').classList.remove('hide');
-// 	//             sessionStorage.setItem('pageloadcount', '1');
-// 	//             // typewriter();
-// 	//         })
-// 	//     }
-// 	// })
+	const ripples = [];
+	const maxRipples = 6;
+	let mouse = { x: width / 2, y: height / 2 };
 
-// 	// const ball = document.querySelector('.welcome-ball');
-// 	// let positionX = 50; // Initial horizontal position
-// 	// let positionY = 0; // Initial vertical position
-// 	// const moveStep = 2; // Pixels to move each step
+	function addRipple(x, y) {
+		// Sophisticated color palette - deep blues and teals
+		const baseHue = 200 + Math.random() * 40; // 200-240 (blue to teal range)
+		const saturation = 60 + Math.random() * 20; // 60-80%
+		const lightness = 40 + Math.random() * 20; // 40-60%
 
-// 	// function moveBall(e) {
-// 	//     switch (e.key) {
-// 	//         case 'ArrowUp':
-// 	//             positionY -= moveStep;
-// 	//             break;
-// 	//         case 'ArrowDown':
-// 	//             positionY += moveStep;
-// 	//             break;
-// 	//         case 'ArrowLeft':
-// 	//             positionX -= moveStep;
-// 	//             break;
-// 	//         case 'ArrowRight':
-// 	//             positionX += moveStep;
-// 	//             break;
-// 	//         default:
-// 	//             return; // Exit if it's not an arrow key
-// 	//     }
+		ripples.push({
+			x,
+			y,
+			radius: 0,
+			maxRadius: 120 + Math.random() * 80,
+			speed: 1.5 + Math.random() * 1.5,
+			life: 1,
+			hue: baseHue,
+			saturation,
+			lightness,
+			waveCount: 2 + Math.floor(Math.random() * 2), // 2-3 wave rings
+			noise: Math.random() * 0.1, // Subtle distortion
+		});
 
-// 	//     // Update ball position
-// 	//     ball.style.top = `${positionY}%`;
-// 	//     ball.style.left = `${positionX}%`;
-// 	// }
+		if (ripples.length > maxRipples) {
+			ripples.shift();
+		}
+	}
 
-// 	// Listen for arrow key presses
-// 	// document.addEventListener('keydown', moveBall);
-// };
-// welcomePage();
+	function animate() {
+		// Clear the canvas completely to prevent dots from staying forever
+		ctx.clearRect(0, 0, width, height);
+
+		// Animate and draw ripples
+		for (let i = ripples.length - 1; i >= 0; i--) {
+			const ripple = ripples[i];
+
+			ripple.radius += ripple.speed;
+			ripple.life *= 0.96; // Faster fade to remove ripples quicker
+
+			// Remove ripples that have expanded too much or lost their life
+			if (ripple.radius > ripple.maxRadius || ripple.life < 0.05) {
+				ripples.splice(i, 1);
+				continue;
+			}
+
+			// Draw sophisticated wave rings
+			for (let wave = 0; wave < ripple.waveCount; wave++) {
+				const waveRadius = ripple.radius - wave * 20;
+				const waveOpacity = ripple.life * (1 - wave * 0.4) * 0.8; // Increased opacity for better visibility
+
+				if (waveRadius > 0 && waveOpacity > 0) {
+					ctx.beginPath();
+
+					// Create sophisticated stroke with varying opacity
+					const strokeColor = `hsla(${ripple.hue}, ${ripple.saturation}%, ${ripple.lightness}%, ${waveOpacity})`;
+					ctx.strokeStyle = strokeColor;
+					ctx.lineWidth = 2; // Slightly thicker lines for better visibility
+
+					// Add subtle noise to the circle for organic feel
+					const noiseRadius = Math.max(
+						1,
+						waveRadius + Math.sin(Date.now() * 0.001 + ripple.noise) * 2
+					);
+					ctx.arc(ripple.x, ripple.y, noiseRadius, 0, Math.PI * 2);
+					ctx.stroke();
+				}
+			}
+
+			// Sophisticated central effect - subtle glow
+			if (ripple.radius < 25) {
+				ctx.beginPath();
+				const gradient = ctx.createRadialGradient(
+					ripple.x,
+					ripple.y,
+					0,
+					ripple.x,
+					ripple.y,
+					ripple.radius
+				);
+				gradient.addColorStop(
+					0,
+					`hsla(${ripple.hue}, ${ripple.saturation}%, ${ripple.lightness}%, ${
+						ripple.life * 0.6
+					})`
+				);
+				gradient.addColorStop(
+					0.5,
+					`hsla(${ripple.hue}, ${ripple.saturation}%, ${ripple.lightness}%, ${
+						ripple.life * 0.3
+					})`
+				);
+				gradient.addColorStop(1, 'transparent');
+				ctx.fillStyle = gradient;
+				ctx.arc(ripple.x, ripple.y, ripple.radius, 0, Math.PI * 2);
+				ctx.fill();
+			}
+		}
+
+		requestAnimationFrame(animate);
+	}
+
+	// Refined mouse interaction - less frequent, more intentional
+	let lastRippleTime = 0;
+	document.addEventListener('mousemove', (e) => {
+		mouse.x = e.clientX;
+		mouse.y = e.clientY;
+
+		// Create ripples less frequently for more sophisticated feel
+		const now = Date.now();
+		if (now - lastRippleTime > 200) {
+			// 200ms minimum between ripples
+			if (Math.random() < 0.4) {
+				addRipple(mouse.x, mouse.y);
+				lastRippleTime = now;
+			}
+		}
+	});
+
+	// Subtle click effect
+	document.addEventListener('click', (e) => {
+		addRipple(e.clientX, e.clientY);
+	});
+
+	animate();
+
+	// skills ticker with intersection observer
+	const skillsTicker = document.querySelector('.skills-ticker');
+	const skillsTickerContent = document.querySelector('.skills-ticker-content');
+
+	if (skillsTicker && skillsTickerContent) {
+		// Initially pause the animation
+		skillsTickerContent.style.animationPlayState = 'paused';
+
+		// Create intersection observer
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						// Start animation when in view
+						skillsTickerContent.style.animationPlayState = 'running';
+					} else {
+						// Pause animation when out of view
+						skillsTickerContent.style.animationPlayState = 'paused';
+					}
+				});
+			},
+			{
+				threshold: 0.3, // Start when 30% of the element is visible
+			}
+		);
+
+		// Observe the skills ticker
+		observer.observe(skillsTicker);
+	}
+};
+
+homePage();
 
 // ------------------ about me ------------------
 const aboutMePage = () => {
+	// Run navigation animation when page loads
+	animateNavItems();
+
+	// Re-run navigation animation on window resize
+	window.addEventListener('resize', () => {
+		animateNavItems();
+	});
+
 	// upst viewBox based on screen size
 	const roomSvg = document.querySelector('.room_img svg');
 	if (window.innerWidth < 1023) {
@@ -705,6 +702,14 @@ const aboutMePage = () => {
 // ------------------ projects ------------------
 
 const projectPage = () => {
+	// Run navigation animation when page loads
+	animateNavItems();
+
+	// Re-run navigation animation on window resize
+	window.addEventListener('resize', () => {
+		animateNavItems();
+	});
+
 	// insert project cards to roledex
 	const projectCard = (projectId) => {
 		const { title, img, alt, id, tech } = projectCardContent[projectId];
@@ -879,4 +884,14 @@ if (window.location.pathname === '/projects.html') {
 
 if (window.location.pathname === '/about.html') {
 	aboutMePage();
+}
+
+if (window.location.pathname === '/contact.html') {
+	// Run navigation animation when page loads
+	animateNavItems();
+
+	// Re-run navigation animation on window resize
+	window.addEventListener('resize', () => {
+		animateNavItems();
+	});
 }

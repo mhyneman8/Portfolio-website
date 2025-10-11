@@ -30,27 +30,11 @@
 	</head>
 	
 	<body class="homePage">
-
-		<!-- welcome screen -->
-		<!-- ! stop scrolling when welcome screen showing -->
-		<!-- <div class="welcome">
-				
-				<div class="maze-wrapper">
-				<div class="gameContainer"></div>
-				<div class="img-wrapper">
-					<div class="end">&#9734;</div>
-					<img src="img/MH_Logo.png" alt="">
-				</div>
-				<div class="welcome-ball"></div>
-			</div>
-		</div> -->
-		<!-- <div class="welcome-title" id="opening">
-			<h1 class="opening" >Welcome</h1>
-		</div> -->
-		<div class="hero">
+		<canvas id="canvas"></canvas>
+		<section class="hero">
 			<!-- nav bar -->
 			<div class="hero-wrapper">
-				<a href="index.html">
+				<a href="index.html" class="logo">
 					<img src="img/MH_Logo.png" alt="MH logo" class="mh-logo  page-header__item">
 				</a>
 				<nav class="nav-desktop">
@@ -102,55 +86,98 @@
 			</div>
 
 			<div class="title-wrapper">
-				<h1 class="title">Mallory Hyneman</h1>
+				<h1 class="gradient-text">Mallory Hyneman</h1>
 				<div class="position-wrapper">
-					<h2 class="subtitle frontend">Front-end Engineer</h2>
-					<h2 class="subtitle experiment">Experiment Engineer</h2>
+					<h2 class="subtitle">Software Engineer</h2>
 				</div>
 			</div>
+			<div class="wave-container">
+				<svg id="wave" viewBox="0 0 1440 150" preserveAspectRatio="none">
+					<path id="wavePath" fill="#F9F7F4" d="M0,60 C360,120 1080,0 1440,60 L1440,150 L0,150 Z"></path>
+				</svg>
+			</div>
+			<div class="background-lines"></div>
+		</section>
+		<div class="profile">
+			<div class="profile_paragraph_wrapper">
+				<p class="profile_paragraph">
+					I'm a Software Engineer passionate about creating elegant solutions where design meets functionality. 
+					With expertise in JavaScript, React, and TypeScript, I specialize in building intuitive user 
+					experiences that deliver both performance and visual appeal.
+				</p>
+				<p class="profile_paragraph">
+					Beyond coding, I've led mentorship programs and professional development initiatives, 
+					driving successful feature launches and optimizing user workflows. I believe in the power 
+					of collaborative innovation to transform complex challenges into elegant digital solutions.
+				</p>
 
-		</div>
-
-			<div class="profile">
-				<div class="background"></div>
-				<div class="profile_paragraph_wrapper">
-					<p class="profile_paragraph">
-						Step into the digital realm where creativity collides with code! I'm a 
-						Frontend Engineer on a mission to blend dynamic designs with seamless user 
-						experiences. With a knack for impactful leadership and a toolbox filled with 
-						JavaScript, React, and a sprinkle of Typescript magic.
-					</p>
-					<p class="profile_paragraph">
-						I've spearheaded initiatives 
-						like mentorship programs and professional learning communities. From driving 
-						the successful launch of new features to optimizing website navigation for 
-						clarity, I thrive on transforming ideas into digital realities. So, buckle up 
-						and let's embark on a journey where innovation meets imagination!
-					</p>
-
-				</div>
-				
-				<div class="button_out">
-					<!-- <p>
-					<span style="font-size: 25px; display: block; text-align: left; width: 300px;">
-						Passionate and knowledgeable web developer
-					</span>
-					Mallory has excellent communication skills, is gifted at building websites and relationships 
-					and understands the full picture.
-				</p> -->
-					<a href="projects.html" class="primary_button">
-						View My Projects
-					</a>
-					<!-- <a href="files/mhyneman-dev.pdf" class="primary_button button" target="_blank">
-						View My Resume
-					</a>			 -->
-				</div> <!-- end of button_out -->
-			</div> <!-- end of profile -->
+			</div>
 			
-			<div class="right">
-				
+			<div class="button_out">
+				<a href="projects.html" class="primary_button">
+					View My Projects
+				</a>
+			</div> <!-- end of button_out -->
+			<!-- add a section that looks like a ticker, showing skills moving across the screen -->
+			<div class="skills-ticker">
+				<div class="skills-ticker-content">
+				</div>
 			</div>
+		</div> <!-- end of profile -->
 
+		<!-- Featured Projects Preview -->
+		<section class="featured-projects">
+			<div class="content-container">
+				<h2 class="section-title">Featured Work</h2>
+				<div class="projects-preview">
+					<div class="project-card">
+						<div class="project-image">
+							<img src="img/chat/chat.jpg" alt="Chat Application">
+						</div>
+						<div class="project-info">
+							<h3>Real-time Chat App</h3>
+							<p>Interactive messaging platform with real-time updates and user authentication</p>
+							<div class="project-tech">
+								<span>React</span>
+								<span>Socket.io</span>
+								<span>Node.js</span>
+							</div>
+						</div>
+					</div>
+					<div class="project-card">
+						<div class="project-image">
+							<img src="img/movie/movieAPi.jpg" alt="Movie API">
+						</div>
+						<div class="project-info">
+							<h3>Movie Database API</h3>
+							<p>Full-stack application with user authentication and movie management</p>
+							<div class="project-tech">
+								<span>MongoDB</span>
+								<span>Express</span>
+								<span>React</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="view-all-projects">
+					<a href="projects.html" class="secondary-button">View All Projects</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Call to Action Section -->
+		<section class="cta-section">
+			<div class="content-container">
+				<div class="cta-content">
+					<h2>Ready to Build Something Amazing?</h2>
+					<p>Let's collaborate on your next project and bring your ideas to life</p>
+					<div class="cta-buttons">
+						<a href="contact.html" class="primary-button">Get In Touch</a>
+						<a href="files/MH-Dev.pdf" class="secondary-button" target="_blank">Download Resume</a>
+					</div>
+				</div>
+			</div>
+		</section>
 
 	<!-- footer -->
 	<footer>
