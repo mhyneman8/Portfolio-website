@@ -511,7 +511,7 @@ const content = {
 	},
 };
 
-export function Modal(project) {
+export { Modal as modal };
 	console.log(project);
 	// const { title, overview, carouselImages, img, purpose, userStories, objective, approach, tech, duration, challenges, credits, github } = projectDescription[project];
 	const {
