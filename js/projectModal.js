@@ -511,8 +511,7 @@ const content = {
 	},
 };
 
-export { Modal as modal };
-const Modal = (project) => {
+export const Modal = (project) => {
 	const {
 		title,
 		overview,
@@ -528,7 +527,6 @@ const Modal = (project) => {
 		credits,
 		github,
 	} = content[project];
-	content[project];
 
 	const modal = document.createElement('aside');
 
