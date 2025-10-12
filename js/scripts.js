@@ -316,8 +316,6 @@ const homePage = () => {
 	}
 };
 
-homePage();
-
 // ------------------ about me ------------------
 const aboutMePage = () => {
 	// Run navigation animation when page loads
@@ -406,7 +404,7 @@ const aboutMePage = () => {
 					},
 					geometry: {
 						type: 'Point',
-						coordinates: [-83.51812, 8.901892],
+						coordinates: [-83.8078, 9.2548],
 					},
 				},
 				{
@@ -476,7 +474,7 @@ const aboutMePage = () => {
 					},
 					geometry: {
 						type: 'Point',
-						coordinates: [12.714547, 45.489622],
+						coordinates: [12.3327, 45.4371],
 					},
 				},
 				{
@@ -527,6 +525,96 @@ const aboutMePage = () => {
 					geometry: {
 						type: 'Point',
 						coordinates: [-88.91812, 20.701892],
+					},
+				},
+				{
+					type: 'Feature',
+					properties: {
+						className: 'bariloche',
+					},
+					geometry: {
+						type: 'Point',
+						coordinates: [-71.31812, -41.13189],
+					},
+				},
+				{
+					type: 'Feature',
+					properties: {
+						className: 'pat',
+					},
+					geometry: {
+						type: 'Point',
+						coordinates: [-71.4667, -41.1167],
+					},
+				},
+				{
+					type: 'Feature',
+					properties: {
+						className: 'fitz',
+					},
+					geometry: {
+						type: 'Point',
+						coordinates: [-73.0393, -49.2694],
+					},
+				},
+				{
+					type: 'Feature',
+					properties: {
+						className: 'jujuy',
+					},
+					geometry: {
+						type: 'Point',
+						coordinates: [-65.348609, -23.203963],
+					},
+				},
+				{
+					type: 'Feature',
+					properties: {
+						className: 'iguazu',
+					},
+					geometry: {
+						type: 'Point',
+						coordinates: [-54.4367, -25.6953],
+					},
+				},
+				{
+					type: 'Feature',
+					properties: {
+						className: 'moreno',
+					},
+					geometry: {
+						type: 'Point',
+						coordinates: [-73.0574, -50.4711],
+					},
+				},
+				{
+					type: 'Feature',
+					properties: {
+						className: 'uruguay',
+					},
+					geometry: {
+						type: 'Point',
+						coordinates: [-57.8398, -34.4626],
+					},
+				},
+				{
+					type: 'Feature',
+					properties: {
+						className: 'panama',
+					},
+					geometry: {
+						type: 'Point',
+						coordinates: [-82.24204, 9.34031],
+					},
+				},
+				{
+					type: 'Feature',
+					properties: {
+						className: 'panamaCity',
+					},
+					geometry: {
+						type: 'Point',
+						coordinates: [-79.535, 8.9525],
 					},
 				},
 			],
@@ -644,7 +732,12 @@ const aboutMePage = () => {
 		});
 
 		const hideAllModals = () => {
-			const modalSelectors = ['.frame', '.note', '.map'];
+			const modalSelectors = [
+				'.frame_modal',
+				'.note_modal',
+				'.map_modal',
+				'.fav_books_modal',
+			];
 
 			modalSelectors.forEach((selector) => {
 				const element = document.querySelector(selector);
@@ -655,19 +748,25 @@ const aboutMePage = () => {
 		// glowing on clickable items
 		document.querySelector('.about .globe').addEventListener('click', () => {
 			hideAllModals();
-			document.querySelector('.map').classList.toggle('hide');
+			document.querySelector('.map_modal').classList.toggle('hide');
 			document.querySelector('.globe').classList.remove('wait');
 		});
 
 		document.querySelector('.about .computer').addEventListener('click', () => {
 			hideAllModals();
-			document.querySelector('.note').classList.toggle('hide');
+			document.querySelector('.note_modal').classList.toggle('hide');
 			document.querySelector('.computer').classList.remove('wait');
+		});
+
+		document.querySelector('.about .book').addEventListener('click', () => {
+			hideAllModals();
+			document.querySelector('.fav_books_modal').classList.toggle('hide');
+			document.querySelector('.book').classList.remove('wait');
 		});
 
 		document.querySelector('.about .picture').addEventListener('click', () => {
 			hideAllModals();
-			document.querySelector('.frame').classList.toggle('hide');
+			document.querySelector('.frame_modal').classList.toggle('hide');
 			document.querySelector('.picture').classList.remove('wait');
 		});
 
@@ -675,7 +774,7 @@ const aboutMePage = () => {
 			document
 				.querySelector('.about .mobile-frame')
 				.addEventListener('click', () => {
-					document.querySelector('.frame').classList.toggle('hide');
+					document.querySelector('.frame_modal').classList.toggle('hide');
 					document.querySelector('.mobile-frame').classList.remove('wait');
 				});
 		}
@@ -877,6 +976,10 @@ const projectPage = () => {
 		const gradientHexCodes = generateGradientHexCodes('#952e6b', '#1f2833', 11);
 	};
 };
+
+if (window.location.pathname === '/index.html') {
+	homePage();
+}
 
 if (window.location.pathname === '/projects.html') {
 	projectPage();
