@@ -41,7 +41,7 @@ Run by opening index.html in your browser
 - Contact Form
 - Accessible
 - CSS Stylesheet
-- Responsive Grid Layout
+- Responsive Layout
 - Animations and Transitions
 - Preprocessed
 

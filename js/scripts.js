@@ -977,19 +977,31 @@ const projectPage = () => {
 	};
 };
 
-if (window.location.pathname === '/index.html') {
+if (
+	window.location.pathname === '/index.html' ||
+	window.location.pathname === '/'
+) {
 	homePage();
 }
 
-if (window.location.pathname === '/projects.html') {
+if (
+	window.location.pathname === '/projects.html' ||
+	window.location.pathname === '/projects'
+) {
 	projectPage();
 }
 
-if (window.location.pathname === '/about.html') {
+if (
+	window.location.pathname === '/about.html' ||
+	window.location.pathname === '/about'
+) {
 	aboutMePage();
 }
 
-if (window.location.pathname === '/contact.html') {
+if (
+	window.location.pathname === '/contact.html' ||
+	window.location.pathname === '/contact'
+) {
 	// Run navigation animation when page loads
 	animateNavItems();
 
