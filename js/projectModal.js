@@ -512,8 +512,7 @@ const content = {
 };
 
 export { Modal as modal };
-	console.log(project);
-	// const { title, overview, carouselImages, img, purpose, userStories, objective, approach, tech, duration, challenges, credits, github } = projectDescription[project];
+const Modal = (project) => {
 	const {
 		title,
 		overview,
@@ -529,9 +528,10 @@ export { Modal as modal };
 		credits,
 		github,
 	} = content[project];
-	console.log('project', project);
-	console.log('title', title);
+	content[project];
+
 	const modal = document.createElement('aside');
+
 	modal.className = 'modal-project';
 	modal.setAttribute('tabindex', '-1');
 	modal.setAttribute('role', 'dialog');
@@ -652,4 +652,4 @@ export { Modal as modal };
     `;
 
 	return modal;
-}
+};
