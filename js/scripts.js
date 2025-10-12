@@ -1,4 +1,4 @@
-import { Modal as modal } from './projectModal.js';
+import { Modal } from './projectModal.js';
 import { projectCardContent } from '../content/projectCardContent.js';
 
 const log = console.log;
@@ -846,7 +846,7 @@ const projectPage = () => {
 		if (!document.querySelector('.modal-project'))
 			document
 				.querySelector('body')
-				.insertAdjacentElement('afterbegin', modal(project));
+				.insertAdjacentElement('afterbegin', Modal(project));
 		document.querySelectorAll('.modal-project__close-icon').forEach((el) => {
 			el.addEventListener('click', closeModal);
 		});
